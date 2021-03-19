@@ -1,0 +1,72 @@
+{
+   "$schema": "Schema/Manifest.Schema.json",
+   "apiVersion": 1,
+   "modules": [
+      {
+         "type": "Control",
+         "basePath": "Controls/System/TcHmiControl",
+         "descriptionFile": "Description.json",
+         "toolboxCategory": "Beckhoff.TwinCAT.HMI:200"
+      },
+      {
+         "type": "Control",
+         "basePath": "Controls/System/TcHmiContainerControl",
+         "descriptionFile": "Description.json",
+         "toolboxCategory": "Beckhoff.TwinCAT.HMI:200"
+      },
+      {
+         "type": "Control",
+         "basePath": "Controls/System/TcHmiPartial",
+         "descriptionFile": "Description.json",
+         "toolboxCategory": "Beckhoff.TwinCAT.HMI:200"
+      },
+      {
+         "type": "Control",
+         "basePath": "Controls/System/TcHmiContainer",
+         "descriptionFile": "Description.json",
+         "toolboxCategory": "Beckhoff.TwinCAT.HMI:200"
+      },
+      {
+         "type": "Control",
+         "basePath": "Controls/System/TcHmiContent",
+         "descriptionFile": "Description.json",
+         "toolboxCategory": "Beckhoff.TwinCAT.HMI:200"
+      },
+      {
+         "type": "Control",
+         "basePath": "Controls/System/TcHmiGrid",
+         "descriptionFile": "Description.json",
+         "toolboxCategory": "Beckhoff.TwinCAT.HMI:200"
+      },
+      {
+         "type": "Control",
+         "basePath": "Controls/System/TcHmiHtmlHost",
+         "descriptionFile": "Description.json",
+         "toolboxCategory": "Beckhoff.TwinCAT.HMI:200"
+      },
+      {
+         "type": "Control",
+         "basePath": "Controls/System/TcHmiUserControl",
+         "descriptionFile": "Description.json",
+         "toolboxCategory": "Beckhoff.TwinCAT.HMI:200"
+      },
+      {
+         "type": "Control",
+         "basePath": "Controls/System/TcHmiView",
+         "descriptionFile": "Description.json",
+         "toolboxCategory": "Beckhoff.TwinCAT.HMI:200"
+      },
+      {
+         "type": "Control",
+         "basePath": "Controls/System/TcHmiRegion",
+         "descriptionFile": "Description.json",
+         "toolboxCategory": "Beckhoff.TwinCAT.HMI:200"
+      },
+      {
+         "type": "Control",
+         "basePath": "Controls/System/TcHmiUserControlHost",
+         "descriptionFile": "Description.json",
+         "toolboxCategory": "Beckhoff.TwinCAT.HMI:200"
+      }
+   ]
+}

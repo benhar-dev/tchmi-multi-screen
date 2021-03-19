@@ -1,0 +1,63 @@
+{
+   "$schema": "http://json-schema.org/draft-04/schema",
+   "title": "ThemeDescription",
+   "type": "object",
+   "description": "Definition of a Theme. This file is referenced with one themeName in tchmiconfig.json or control Description.json",
+   "properties": {
+      "$schema": {
+         "type": "string",
+         "description": "URL to a schema file"
+      },
+      "controlClassValues": {
+         "type": "object",
+         "description": "Project only: Theme values for for controls with this class. (This file is referenced in tchmiconfig.json)",
+         "additionalProperties": {
+            "type": "object",
+            "description": "Control class this value matches.",
+            "properties": {
+               "attributes": {
+                  "type": "object",
+                  "description": "List of control property names.",
+                  "additionalProperties": {
+                     "description": "Value of the control property in this theme"
+                  }
+               },
+               "themedResources": {
+                  "type": "object",
+                  "description": "List of general purpose themed resources for this control class.",
+                  "additionalProperties": {
+                     "description": "Value of the general purpose themed resources for a control class."
+                  }
+               }
+            },
+            "additionalProperties": false
+         }
+      },
+      "controlTypeValues": {
+         "type": "object",
+         "description": "Theme values for controls. (This file is referenced with one themeName in tchmiconfig.json or control Description.json)",
+         "additionalProperties": {
+            "type": "object",
+            "description": "Control type this value matches.",
+            "properties": {
+               "attributes": {
+                  "type": "object",
+                  "description": "List of control property names.",
+                  "additionalProperties": {
+                     "description": "Name of the control property in this theme"
+                  }
+               },
+               "themedResources": {
+                  "type": "object",
+                  "description": "List of general purpose themed resources for this control.",
+                  "additionalProperties": {
+                     "description": "Name of the general purpose themed resource for a control."
+                  }
+               }
+            },
+            "additionalProperties": false
+         }
+      }
+   },
+   "additionalProperties": false
+}

@@ -1,0 +1,12 @@
+﻿/** Styles for the theme: Base */
+
+/* Style for the main element */
+.TcHmi_Controls_Beckhoff_TcHmiBarChart, .tchmi-bar-chart {
+    background: #D7D7D9;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.6);
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiBarChart-template, .tchmi-bar-chart-template {
+    /*background: rgba(255, 255, 255, 0.5);*/
+    background: transparent;
+}

@@ -1,0 +1,31 @@
+﻿{
+  "$schema": "../../../../../TcHmiFramework/Schema/ThemeDescription.Schema.json",
+  "controlTypeValues": {
+    "TcHmi.Controls.Beckhoff.TcHmiLinearGauge": {
+      "attributes": {
+        "KnobColor": {
+          "color": "#4994DA"
+        },
+        "KnobArrowsColor": {
+          "color": "#FFFFFF"
+        }
+      },
+      "themedResources": {
+        "KnobConfigHorizontal": {
+          "imagePath": "KnobHorizontal.svg",
+          "width": 40,
+          "height": 40,
+          "offsetX": 20,
+          "offsetY": 20
+        },
+        "KnobConfigVertical": {
+          "imagePath": "KnobVertical.svg",
+          "width": 40,
+          "height": 40,
+          "offsetX": 20,
+          "offsetY": 20
+        }
+      }
+    }
+  }
+}

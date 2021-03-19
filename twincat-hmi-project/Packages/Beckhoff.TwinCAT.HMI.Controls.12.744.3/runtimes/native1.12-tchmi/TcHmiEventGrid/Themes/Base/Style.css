@@ -1,0 +1,337 @@
+/** Styles for the theme: Base */
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid,
+.tchmi-event-grid {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template .TcHmi_Controls_Beckhoff_TcHmiButton-template,
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-popup .TcHmi_Controls_Beckhoff_TcHmiButton-template,
+.tchmi-event-grid-template .tchmi-button-template,
+.tchmi-event-grid-template-popup .tchmi-button-template {
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-filter-button .TcHmi_Controls_Beckhoff_TcHmiButton-template,
+.tchmi-event-grid-template-filter-button .tchmi-button-template {
+    background-image: url("Images/filter.svg");
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-filter-button.down .TcHmi_Controls_Beckhoff_TcHmiButton-template,
+.tchmi-event-grid-template-filter-button.down .TcHmi_Controls_Beckhoff_TcHmiButton-template {
+    background-image: url("Images/filter-active.svg");
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-sort-button .TcHmi_Controls_Beckhoff_TcHmiButton-template,
+.tchmi-event-grid-template-sort-button .tchmi-button-template {
+    background-image: url("Images/sort.svg");
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-sort-button.down .TcHmi_Controls_Beckhoff_TcHmiButton-template,
+.tchmi-event-grid-template-sort-button.down .tchmi-button-template {
+    background-image: url("Images/sort-active.svg");
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-columns-button .TcHmi_Controls_Beckhoff_TcHmiButton-template,
+.tchmi-event-grid-template-columns-button .tchmi-button-template {
+    background-image: url("Images/columns.svg");
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-columns-button.down .TcHmi_Controls_Beckhoff_TcHmiButton-template,
+.tchmi-event-grid-template-columns-button.down .tchmi-button-template {
+    background-image: url("Images/columns-active.svg");
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-details-button .TcHmi_Controls_Beckhoff_TcHmiButton-template,
+.tchmi-event-grid-template-details-button .tchmi-button-template {
+    background-image: url("Images/details.svg");
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-details-button.down .TcHmi_Controls_Beckhoff_TcHmiButton-template,
+.tchmi-event-grid-template-details-button.down .tchmi-button-template {
+    background-image: url("Images/details-active.svg");
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-confirm-button .TcHmi_Controls_Beckhoff_TcHmiButton-template,
+.tchmi-event-grid-template-confirm-button .tchmi-button-template {
+    background-image: url("Images/confirm.svg");
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-confirm-button.down .TcHmi_Controls_Beckhoff_TcHmiButton-template,
+.tchmi-event-grid-template-confirm-button.down .tchmi-button-template {
+    background-image: url("Images/confirm-active.svg");
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-confirmall-button .TcHmi_Controls_Beckhoff_TcHmiButton-template,
+.tchmi-event-grid-template-confirmall-button .tchmi-button-template {
+    background-image: url("Images/confirmall.svg");
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-confirmall-button.down .TcHmi_Controls_Beckhoff_TcHmiButton-template,
+.tchmi-event-grid-template-confirmall-button.down .tchmi-button-template {
+    background-image: url("Images/confirmall-active.svg");
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-move-up-button .TcHmi_Controls_Beckhoff_TcHmiButton-template,
+.tchmi-event-grid-template-move-up-button .tchmi-button-template {
+    background-image: url("Images/move-up.svg");
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-move-up-button.down .TcHmi_Controls_Beckhoff_TcHmiButton-templatem,
+.tchmi-event-grid-template-move-up-button.down .tchmi-button-template {
+    background-image: url("Images/move-up-active.svg");
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-move-down-button .TcHmi_Controls_Beckhoff_TcHmiButton-template,
+.tchmi-event-grid-template-move-down-button .tchmi-button-template {
+    background-image: url("Images/move-down.svg");
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-move-down-button.down .TcHmi_Controls_Beckhoff_TcHmiButton-template,
+.tchmi-event-grid-template-move-down-button.down .tchmi-button-template {
+    background-image: url("Images/move-down-active.svg");
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-add-button .TcHmi_Controls_Beckhoff_TcHmiButton-template,
+.tchmi-event-grid-template-add-button .tchmi-button-template {
+    background-image: url("Images/add.svg");
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-add-button.down .TcHmi_Controls_Beckhoff_TcHmiButton-template,
+.tchmi-event-grid-template-add-button.down .tchmi-button-template {
+    background-image: url("Images/add-active.svg");
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-remove-button .TcHmi_Controls_Beckhoff_TcHmiButton-template,
+.tchmi-event-grid-template-remove-button .tchmi-button-template {
+    background-image: url("Images/remove.svg");
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-remove-button.down .TcHmi_Controls_Beckhoff_TcHmiButton-template,
+.tchmi-event-grid-template-remove-button.down .tchmi-button-template {
+    background-image: url("Images/remove-active.svg");
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-group-button .TcHmi_Controls_Beckhoff_TcHmiButton-template,
+.tchmi-event-grid-template-group-button .tchmi-button-template {
+    background-image: url("Images/group.svg");
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-group-button.down .TcHmi_Controls_Beckhoff_TcHmiButton-template,
+.tchmi-event-grid-template-group-button.down .tchmi-button-template {
+    background-image: url("Images/group-active.svg");
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-ungroup-button .TcHmi_Controls_Beckhoff_TcHmiButton-template,
+.tchmi-event-grid-template-ungroup-button .tchmi-button-template {
+    background-image: url("Images/ungroup.svg");
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-ungroup-button.down .TcHmi_Controls_Beckhoff_TcHmiButton-template,
+.tchmi-event-grid-template-ungroup-button.down .tchmi-button-template {
+    background-image: url("Images/ungroup-active.svg");
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-date-time-button .TcHmi_Controls_Beckhoff_TcHmiButton-template,
+.tchmi-event-grid-template-date-time-button .tchmi-button-template {
+    background-image: url("Images/date-time.svg");
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-date-time-button.down .TcHmi_Controls_Beckhoff_TcHmiButton-template,
+.tchmi-event-grid-template-date-time-button.down .tchmi-button-template {
+    background-image: url("Images/date-time-active.svg");
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template .TcHmi_Controls_Beckhoff_TcHmiDatagrid-template-data-scroll tr.focused td::before,
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-popup .TcHmi_Controls_Beckhoff_TcHmiDatagrid-template-data-scroll tr.focused td::before,
+.tchmi-event-grid-template .tchmi-datagrid-template-data-scroll tr.focused td::before,
+.tchmi-event-grid-template-popup .tchmi-datagrid-template-data-scroll tr.focused td::before {
+    background: #4C6374;
+    opacity: 0.25;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-popup,
+.tchmi-event-grid-template-popup {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.6);
+    padding: 10px;
+    font-size: 12px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-popup > h1,
+.tchmi-event-grid-template-popup > h1 {
+    font-size: 18px;
+    font-weight: normal;
+    color: #4C6374;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-details-popup dt,
+.tchmi-event-grid-template-details-popup dt {
+    background-color: #4C6374;
+    color: #FFFFFF;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-details-popup dd,
+.tchmi-event-grid-template-details-popup dd {
+    background-color: #EDEDED;
+    color: #4C6374;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-details-popup dd dt,
+.tchmi-event-grid-template-details-popup dd dt{
+    background-color: transparent;
+    font-weight: bold;
+    color: #4C6374;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-details-popup dd dt::after,
+.tchmi-event-grid-template-details-popup dd dt::after{
+    content: ":";
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-details-popup dd dd,
+.tchmi-event-grid-template-details-popup dd dd {
+    background-color: transparent;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-columns-config-column,
+.tchmi-event-grid-template-columns-config-column {
+    background-color: #EDEDED;
+    color: #4C6374;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-columns-config-selected-columns .TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-columns-config-column:not(.active):hover,
+.tchmi-event-grid-template-columns-config-selected-columns .tchmi-event-grid-template-columns-config-column:not(.active):hover {
+    background-color: #C0C0C5;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-columns-config-column.active,
+.tchmi-event-grid-template-columns-config-column.active {
+    background-image: linear-gradient(135deg, #4164B1, #4994DA);
+    color: #FFFFFF;
+    box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.3);
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-columns-config-available-columns .TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-columns-config-column-selection-toggle,
+.tchmi-event-grid-template-columns-config-available-columns .tchmi-event-grid-template-columns-config-column-selection-toggle {
+    background-image: url("Images/select.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-columns-config-available-columns .TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-columns-config-column-selection-toggle:active,
+.tchmi-event-grid-template-columns-config-available-columns .tchmi-event-grid-template-columns-config-column-selection-toggle:active{
+    background-image: url("Images/select-active.svg");
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-columns-config-selected-columns .TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-columns-config-column-selection-toggle,
+.tchmi-event-grid-template-columns-config-selected-columns .tchmi-event-grid-template-columns-config-column-selection-toggle {
+    background-image: url("Images/deselect.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+    .TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-columns-config-selected-columns .TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-columns-config-column-selection-toggle:active,
+    .TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-columns-config-selected-columns .TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-columns-config-column.active .TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-columns-config-column-selection-toggle:active,
+    .tchmi-event-grid-template-columns-config-selected-columns .tchmi-event-grid-template-columns-config-column-selection-toggle:active,
+    .tchmi-event-grid-template-columns-config-selected-columns .tchmi-event-grid-template-columns-config-column.active .tchmi-event-grid-template-columns-config-column-selection-toggle:active {
+        background-image: url("Images/deselect-active.svg");
+    }
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-columns-config-selected-columns .TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-columns-config-column.active .TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-columns-config-column-selection-toggle
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-columns-config-selected-columns .TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-columns-config-column.active .TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-columns-config-column-selection-toggle,
+.tchmi-event-grid-template-columns-config-selected-columns .tchmi-event-grid-template-columns-config-column.active .tchmi-event-grid-template-columns-config-column-selection-toggle
+.tchmi-event-grid-template-columns-config-selected-columns .tchmi-event-grid-template-columns-config-column.active .tchmi-event-grid-template-columns-config-column-selection-toggle {
+    background-image: url("Images/deselect-selected.svg");
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template td.TcHmi_Controls_Beckhoff_TcHmiDatagrid-template-cell:not([data-column-name=type]):not([data-column-name=severity]),
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-popup td.TcHmi_Controls_Beckhoff_TcHmiDatagrid-template-cell:not([data-column-name=type]):not([data-column-name=severity]),
+.tchmi-event-grid-template td.tchmi-datagrid-template-cell:not([data-column-name=type]):not([data-column-name=severity]),
+.tchmi-event-grid-template-popup td.tchmi-datagrid-template-cell:not([data-column-name=type]):not([data-column-name=severity]),
+{
+    padding: 0 5px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-filter-table-header tr,
+.tchmi-event-grid-template-filter-table-header tr {
+    border-bottom: 1px solid #ededed;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-filter-table-header th,
+.tchmi-event-grid-template-filter-table-header th {
+    background: #4794da;
+    color: #ffffff;
+    border-right: 1px solid #ededed;
+    border-top: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
+    font-weight: normal;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-filter-table td,
+.tchmi-event-grid-template-filter-table td {
+    background: #ffffff;
+    color: #4c6374;
+    border-color: #EDEDED;
+}
+
+.tchmi-event-grid-template-filter-table-header .tchmi-event-grid-template-filter-selection-column,
+.tchmi-event-grid-template-filter-table .tchmi-event-grid-template-filter-selection-column,
+.tchmi-event-grid-template-filter-table-header .tchmi-event-grid-template-filter-selection-column,
+.tchmi-event-grid-template-filter-table .tchmi-event-grid-template-filter-selection-column {
+    border-right: none;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-filter-table .TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-filter-indentation-column,
+.tchmi-event-grid-template-filter-table .tchmi-event-grid-template-filter-indentation-column {
+    border-bottom: none;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-filter-table .TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-filter-indentation-marker,
+.tchmi-event-grid-template-filter-table .tchmi-event-grid-template-filter-indentation-marker {
+    border-color: #4c6374;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template td[data-column-name=alarmState],
+.tchmi-event-grid-template td[data-column-name=alarmState] {
+    font-size: 0;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template tr.raised td[data-column-name=alarmState],
+.tchmi-event-grid-template tr.raised td[data-column-name=alarmState] {
+    background-image: linear-gradient(to bottom right, #DF4B47, #DF4B47 50%, #D81623);
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template tr.confirmed td[data-column-name=alarmState],
+.tchmi-event-grid-template tr.confirmed td[data-column-name=alarmState] {
+    background-image: linear-gradient(to bottom right, #ECAA1A, #ECAA1A 50%, #EB941A);
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template tr.cleared td[data-column-name=alarmState],
+.tchmi-event-grid-template tr.cleared td[data-column-name=alarmState] {
+    background-image: linear-gradient(to bottom right, #F1F218, #F1F218 50%, #EECE19);
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template tr.cleared-and-confirmed td[data-column-name=alarmState],
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template tr.cleared.no-confirmation-needed td[data-column-name=alarmState],
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template tr.cleared.confirmation-reset td[data-column-name=alarmState],
+.tchmi-event-grid-template tr.cleared-and-confirmed td[data-column-name=alarmState],
+.tchmi-event-grid-template tr.cleared.no-confirmation-needed td[data-column-name=alarmState],
+.tchmi-event-grid-template tr.cleared.confirmation-reset td[data-column-name=alarmState] {
+    background-image: linear-gradient(to bottom right, #37AE3F, #37AE3F 50%, #2E963F);
+}
+
+/* Do not show focus overlay over alarm state cells, as that somewhat obscures the colors. */
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template tr.raised td[data-column-name=alarmState]::before,
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template tr.confirmed td[data-column-name=alarmState]::before,
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template tr.cleared td[data-column-name=alarmState]::before,
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template tr.cleared-and-confirmed td[data-column-name=alarmState]::before,
+.tchmi-event-grid-template tr.raised td[data-column-name=alarmState]::before,
+.tchmi-event-grid-template tr.confirmed td[data-column-name=alarmState]::before,
+.tchmi-event-grid-template tr.cleared td[data-column-name=alarmState]::before,
+.tchmi-event-grid-template tr.cleared-and-confirmed td[data-column-name=alarmState]::before{
+    display: none;
+}

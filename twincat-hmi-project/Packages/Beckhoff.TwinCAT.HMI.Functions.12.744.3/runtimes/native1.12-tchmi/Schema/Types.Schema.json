@@ -1,0 +1,39 @@
+{
+   "$schema": "http://json-schema.org/draft-04/schema",
+   "definitions": {
+      "TcHmi.Functions.Beckhoff.Increment.IncrementValueSymbol": {
+         "allOf": [
+            {
+               "$ref": "tchmi:framework#/definitions/Symbol"
+            },
+            {
+               "frameworkSymbolSubType": {
+                  "$ref": "tchmi:general#/definitions/Number"
+               }
+            }
+         ]
+      },
+      "IncrementValueSymbol": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Functions.Beckhoff.Increment.IncrementValueSymbol"
+      },
+      "TcHmi.Functions.Beckhoff.Decrement.DecrementValueSymbol": {
+         "allOf": [
+            {
+               "$ref": "tchmi:framework#/definitions/Symbol"
+            },
+            {
+               "frameworkSymbolSubType": {
+                  "$ref": "tchmi:general#/definitions/Number"
+               }
+            }
+         ]
+      },
+      "DecrementValueSymbol": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Functions.Beckhoff.Decrement.DecrementValueSymbol"
+      },
+      "TcHmi.Functions.Beckhoff.Log.Level": {
+         "type": "string",
+         "enum": ["Error", "Warning", "Info", "Debug"]
+      }
+   }
+}

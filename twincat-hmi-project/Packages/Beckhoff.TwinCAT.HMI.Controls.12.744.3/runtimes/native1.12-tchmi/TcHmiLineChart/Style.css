@@ -1,0 +1,74 @@
+﻿/** Styles for all themes */
+
+/* Style for the main element */
+.TcHmi_Controls_Beckhoff_TcHmiLineChart,
+.tchmi-line-chart {
+    /* Prevent overflow if the border radius is huge */
+    overflow: hidden;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiLineChart-template-chart,
+.tchmi-line-chart-template-chart {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiLineChart-template,
+.tchmi-line-chart-template {
+    position: relative;
+    /* margin px are set in js code, too */
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    margin: 5px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiLineChart-template-tooltip,
+.tchmi-line-chart-template-tooltip {
+    position: absolute;
+    visibility: hidden;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiLineChart-template-tooltip .TcHmi_Controls_Beckhoff_TcHmiLineChart-template-tooltip-text,
+.tchmi-line-chart-template-tooltip .tchmi-line-chart-template-tooltip-text{
+    position: relative;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiLineChart-template-tooltip-arrow,
+.tchmi-line-chart-template-tooltip-arrow {
+    content: "";
+    position: absolute;
+    width: 8px; /** used in internal calculation */
+    height: 8px; /** used in internal calculation */
+    transform: rotate(45deg);
+    /*border-width: 6px; 
+    border-style: solid;*/
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiLineChart-template-tooltip-arrow-bottom,
+.tchmi-line-chart-template-tooltip-arrow-bottom {
+    top: calc(100% - 4px);
+    left: calc(50% - 4px);
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiLineChart-template-tooltip-arrow-top,
+.tchmi-line-chart-template-tooltip-arrow-top {
+    bottom: calc(100% - 4px);
+    left: calc(50% - 4px);
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiLineChart-template-tooltip-arrow-left,
+.tchmi-line-chart-template-tooltip-arrow-left {
+    top: calc(50% - 4px);
+    right: calc(100% - 4px);
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiLineChart-template-tooltip-arrow-right,
+.tchmi-line-chart-template-tooltip-arrow-right {
+    top: calc(50% - 4px);
+    left: calc(100% - 4px);
+}

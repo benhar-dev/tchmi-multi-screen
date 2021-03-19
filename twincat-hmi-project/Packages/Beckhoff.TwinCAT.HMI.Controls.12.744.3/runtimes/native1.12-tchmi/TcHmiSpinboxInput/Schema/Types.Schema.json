@@ -1,0 +1,31 @@
+{
+   "$schema": "http://json-schema.org/draft-04/schema",
+   "definitions":
+   {
+      "TcHmi.Controls.Beckhoff.TcHmiSpinboxInput":
+      {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "object",
+         "frameworkInstanceOf": "TcHmi.Controls.Beckhoff.TcHmiNumericInput",
+         "frameworkControlType": "TcHmiSpinboxInput",
+         "frameworkControlNamespace": "TcHmi.Controls.Beckhoff"
+      },
+      "TcHmiSpinboxInput":
+      {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiSpinboxInput"
+      },
+      "TcHmi.Controls.Beckhoff.TcHmiSpinboxInput.ButtonPosition":
+      {
+         "title": "SpinboxInputButtonPosition",
+         "type": "string",
+         "enum":
+         [
+            "BothLeft",
+            "BothRight",
+            "PlusLeftAndMinusRight",
+            "MinusLeftAndPlusRight"
+         ],
+         "default": "MinusLeftAndPlusRight"
+      }
+   }
+}

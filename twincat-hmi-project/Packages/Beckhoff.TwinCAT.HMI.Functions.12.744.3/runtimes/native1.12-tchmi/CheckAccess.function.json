@@ -1,0 +1,49 @@
+{
+   "$schema": "../TcHmiFramework/Schema/FunctionDescription.Schema.json",
+   "apiVersion": 1,
+   "version": {
+      "full": "1.12.744.3",
+      "major": 1,
+      "minor": 12,
+      "build": 744,
+      "revision": 3
+   },
+   "dependencyFiles": [
+      {
+         "name": "CheckAccess.js",
+         "type": "JavaScript",
+         "description": ""
+      }
+   ],
+   "function": {
+      "name": "CheckAccess",
+      "namespace": "TcHmi.Functions.Beckhoff",
+      "displayName": "CheckAccess",
+      "description": "Checks if an right is allowed for the current user on a control or its parents.",
+      "category": "UserManagement",
+      "returnValue": {
+         "type": "tchmi:general#/definitions/Boolean",
+         "description": "Result of the Access."
+      },
+      "arguments": [
+         {
+            "name": "tchmicontrol",
+            "displayName": "TcHmiControl",
+            "type": "tchmi:framework#/definitions/Control",
+            "description": "Control to check the AccessRight on it.",
+            "required": true,
+            "bindable": false,
+            "restParameter": false
+         },
+         {
+            "name": "AccessRightToCheck",
+            "displayName": "AccessRightToCheck",
+            "type": "tchmi:framework#/definitions/ControlAccessRightName",
+            "description": "Name of an AccessRight to check.",
+            "required": true,
+            "bindable": true,
+            "restParameter": false
+         }
+      ]
+   }
+}

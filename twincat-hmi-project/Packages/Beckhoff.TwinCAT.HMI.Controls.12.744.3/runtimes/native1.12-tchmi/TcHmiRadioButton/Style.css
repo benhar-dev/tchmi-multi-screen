@@ -1,0 +1,55 @@
+/** Styles for all themes */
+.TcHmi_Controls_Beckhoff_TcHmiRadioButton {
+    --square-size: 26px; /* drop default height of 26px */
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: calc(var(--square-size) + 5px) minmax(0, 1fr);
+    grid-auto-flow: dense;
+    white-space:pre;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiRadioButton-template {
+    width: var(--square-size);
+    height: var(--square-size);
+    justify-self: start;
+    z-index: 1;
+    overflow: hidden;
+    margin: 0;
+    font-size: 0; /* Set to 0, otherwise whitespace takes up space and pushes the checkmark out of the control */
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiRadioButton.text-left {
+    /* 2 columns: [ column1 (text): min 0, max all available space ] [ column2 (radiobutton): min square-size, max square-size + 5px ] */
+    grid-template-columns: minmax(0, 1fr) minmax(var(--square-size), calc(var(--square-size) + 5px));
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiRadioButton.text-left .TcHmi_Controls_Beckhoff_TcHmiRadioButton-template {
+    grid-column: 2;
+    justify-self: end;
+}
+
+/* The main use for this control is interaction. So mark when this is not allowed. */
+.TcHmi_Controls_Beckhoff_TcHmiRadioButton.TcHmi_Controls_System_TcHmiControl-disabled::after {
+    display: none;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiRadioButton.TcHmi_Controls_System_TcHmiControl-operate-disallowed .TcHmi_Controls_Beckhoff_TcHmiRadioButton-template::after,
+.TcHmi_Controls_Beckhoff_TcHmiRadioButton.TcHmi_Controls_System_TcHmiControl-disabled .TcHmi_Controls_Beckhoff_TcHmiRadioButton-template::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 100;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiRadioButton.TcHmi_Controls_System_TcHmiControl-operate-disallowed,
+.TcHmi_Controls_Beckhoff_TcHmiRadioButton.TcHmi_Controls_System_TcHmiControl-disabled {
+    color: #4c6374;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiRadioButton.TcHmi_Controls_System_TcHmiControl-operate-disallowed {
+    cursor: not-allowed;
+}

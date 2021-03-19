@@ -1,0 +1,82 @@
+{
+   "$schema": "../TcHmiFramework/Schema/FunctionDescription.Schema.json",
+   "apiVersion": 1,
+   "version": {
+      "full": "1.12.744.3",
+      "major": 1,
+      "minor": 12,
+      "build": 744,
+      "revision": 3
+   },
+   "dependencyFiles": [
+      {
+         "name": "LineChartTooltipFormatter.js",
+         "type": "JavaScript",
+         "description": ""
+      }
+   ],
+   "function": {
+      "name": "LineChartTooltipFormatter",
+      "namespace": "TcHmi.Functions.Beckhoff",
+      "displayName": "LineChartTooltipFormatter",
+      "visible": false,
+      "description": "Return a formatted string for the tooltip passed in.",
+      "category": "Formatting",
+      "returnValue": {
+         "type": "tchmi:general#/definitions/String"
+      },
+      "arguments": [
+         {
+            "name": "xValue",
+            "displayName": "xValue",
+            "type": "tchmi:general#/definitions/Number",
+            "description": "The xValue to format.",
+            "required": true,
+            "bindable": true
+         },
+         {
+            "name": "yValue",
+            "displayName": "yValue",
+            "type": "tchmi:general#/definitions/Number",
+            "description": "The yValue to format.",
+            "required": true,
+            "bindable": true
+         },
+         {
+            "name": "xShow",
+            "displayName": "xShow",
+            "type": "tchmi:general#/definitions/Boolean",
+            "description": "Shows the xValue to format.",
+            "required": false,
+            "bindable": true,
+            "defaultValue": true
+         },
+         {
+            "name": "yShow",
+            "displayName": "yShow",
+            "type": "tchmi:general#/definitions/Boolean",
+            "description": "Shows the yValue to format.",
+            "required": false,
+            "bindable": true,
+            "defaultValue": true
+         },
+         {
+            "name": "xMaxDecimals",
+            "displayName": "xMaxDecimals",
+            "type": "tchmi:general#/definitions/Number",
+            "description": "How many decimal places the xValue should have.",
+            "required": false,
+            "bindable": true
+         },
+         {
+            "name": "yMaxDecimals",
+            "displayName": "yMaxDecimals",
+            "type": "tchmi:general#/definitions/Number",
+            "description": "How many decimal places the yValue should have.",
+            "required": false,
+            "bindable": true
+         }
+      ]
+   },
+   "dataTypes": []
+}

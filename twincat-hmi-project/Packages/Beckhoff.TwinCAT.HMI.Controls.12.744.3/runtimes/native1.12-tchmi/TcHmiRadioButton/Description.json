@@ -1,0 +1,377 @@
+{
+   "$schema": "../../TcHmiFramework/Schema/ControlDescription.Schema.json",
+   "apiVersion": 1,
+   "name": "TcHmiRadioButton",
+   "namespace": "TcHmi.Controls.Beckhoff",
+   "displayName": "Radio Button",
+   "version": {
+      "full": "1.12.744.3",
+      "major": 1,
+      "minor": 12,
+      "build": 744,
+      "revision": 3
+   },
+   "visible": true,
+   "themeable": "Standard",
+   "base": "TcHmi.Controls.System.TcHmiControl",
+   "description": "A simple radio button.",
+   "defaultDesignerEvent": ".onRadioStateChanged",
+   "properties": {
+      "containerControl": false,
+      "geometry": {
+         "width": 100,
+         "height": 26
+      }
+   },
+   "icons": [
+      {
+         "name": "Icons/16x16.png",
+         "width": 16,
+         "height": 16
+      },
+      {
+         "name": "Icons/24x24.png",
+         "width": 24,
+         "height": 24
+      },
+      {
+         "name": "Icons/32x32.png",
+         "width": 32,
+         "height": 32
+      },
+      {
+         "name": "Icons/64x64.png",
+         "width": 64,
+         "height": 64
+      }
+   ],
+   "template": "Template.html",
+   "dependencyFiles": [
+      {
+         "name": "Style.css",
+         "type": "Stylesheet",
+         "description": ""
+      },
+      {
+         "name": "TcHmiRadioButton.js",
+         "type": "JavaScript",
+         "description": ""
+      }
+   ],
+   "themes": {
+      "Base": {
+         "resources": [
+            {
+               "name": "Themes/Base/Style.css",
+               "type": "Stylesheet",
+               "description": ""
+            }
+         ]
+      }
+   },
+   "attributes": [
+      {
+         "name": "data-tchmi-radio-group",
+         "propertyName": "RadioGroup",
+         "propertySetterName": "setRadioGroup",
+         "propertyGetterName": "getRadioGroup",
+         "displayName": "RadioGroup",
+         "visible": true,
+         "themeable": "Advanced",
+         "displayPriority": 21,
+         "type": "tchmi:general#/definitions/String",
+         "category": "Common",
+         "description": "Custom name for a radio group. Only one Control in a radioGroup is held active.",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": null
+      },
+      {
+         "name": "data-tchmi-radio-state",
+         "propertyName": "RadioState",
+         "propertySetterName": "setRadioState",
+         "propertyGetterName": "getRadioState",
+         "displayName": "RadioState",
+         "visible": true,
+         "themeable": "Advanced",
+         "displayPriority": 12,
+         "type": "tchmi:framework#/definitions/ToggleState",
+         "category": "Common",
+         "description": "Possible values are Normal, Active.",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": "Normal"
+      },
+      {
+         "name": "data-tchmi-radio-state-icon-color",
+         "propertyName": "RadioStateIconColor",
+         "propertySetterName": "setRadioStateIconColor",
+         "propertyGetterName": "getRadioStateIconColor",
+         "displayName": "RadioStateIconColor",
+         "visible": true,
+         "themeable": "Standard",
+         "displayPriority": 10,
+         "type": "tchmi:framework#/definitions/SolidColor",
+         "category": "Colors",
+         "description": "",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "allowSymbolExpressionsInObject": true,
+         "defaultValue": null,
+         "defaultValueInternal": null
+      },
+      {
+         "name": "data-tchmi-state-symbol",
+         "propertyName": "StateSymbol",
+         "propertySetterName": "setStateSymbol",
+         "propertyGetterName": "getStateSymbol",
+         "displayName": "StateSymbol",
+         "visible": true,
+         "themeable": "None",
+         "displayPriority": 11,
+         "type": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiRadioButton.StateSymbol",
+         "category": "Common",
+         "description": "A symbol of type tchmi:general#/definitions/Boolean which will be set to true if button is pressed and to false if button is released.",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": null
+      },
+      {
+         "name": "data-tchmi-text",
+         "propertyName": "Text",
+         "propertySetterName": "setText",
+         "propertyGetterName": "getText",
+         "displayName": "Text",
+         "visible": true,
+         "themeable": "Standard",
+         "displayPriority": 21,
+         "type": "tchmi:general#/definitions/String",
+         "category": "Common",
+         "description": "Text that is shown next to the radio button.",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": "Label",
+         "defaultValueInternal": null
+      },
+      {
+         "name": "data-tchmi-text-position",
+         "propertyName": "TextPosition",
+         "propertySetterName": "setTextPosition",
+         "propertyGetterName": "getTextPosition",
+         "displayName": "TextPosition",
+         "visible": true,
+         "themeable": "Advanced",
+         "displayPriority": 22,
+         "type": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiRadioButton.TextPosition",
+         "category": "Text",
+         "description": "Where the text should be displayed.",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": "Right"
+      },
+      {
+         "name": "data-tchmi-text-horizontal-alignment",
+         "propertyName": "TextHorizontalAlignment",
+         "propertySetterName": "setTextHorizontalAlignment",
+         "propertyGetterName": "getTextHorizontalAlignment",
+         "displayName": "TextHorizontalAlignment",
+         "visible": true,
+         "themeable": "Advanced",
+         "displayPriority": 30,
+         "type": "tchmi:framework#/definitions/HorizontalAlignment",
+         "category": "Text",
+         "description": "",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": "Left"
+      },
+      {
+         "name": "data-tchmi-text-vertical-alignment",
+         "propertyName": "TextVerticalAlignment",
+         "propertySetterName": "setTextVerticalAlignment",
+         "propertyGetterName": "getTextVerticalAlignment",
+         "displayName": "TextVerticalAlignment",
+         "visible": true,
+         "themeable": "Advanced",
+         "displayPriority": 30,
+         "type": "tchmi:framework#/definitions/VerticalAlignment",
+         "category": "Text",
+         "description": "",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": "Center"
+      },
+      {
+         "name": "data-tchmi-text-font-family",
+         "propertyName": "TextFontFamily",
+         "propertySetterName": "setTextFontFamily",
+         "propertyGetterName": "getTextFontFamily",
+         "displayName": "TextFontFamily",
+         "visible": true,
+         "themeable": "Standard",
+         "displayPriority": 60,
+         "type": "tchmi:framework#/definitions/FontFamily",
+         "category": "Text",
+         "description": "Comma separated list of family name or keyword: 'serif', 'sans-serif', 'monospace'.",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": null
+      },
+      {
+         "name": "data-tchmi-text-font-size",
+         "propertyName": "TextFontSize",
+         "propertySetterName": "setTextFontSize",
+         "propertyGetterName": "getTextFontSize",
+         "displayName": "TextFontSize",
+         "visible": true,
+         "themeable": "Standard",
+         "displayPriority": 30,
+         "type": "tchmi:framework#/definitions/MeasurementValue",
+         "category": "Text",
+         "description": "The size of the font. Percent values are relative to the parent elements font size.",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": null
+      },
+      {
+         "name": "data-tchmi-text-font-size-unit",
+         "propertyName": "TextFontSizeUnit",
+         "propertySetterName": "setTextFontSizeUnit",
+         "propertyGetterName": "getTextFontSizeUnit",
+         "refTo": "TextFontSize",
+         "displayName": "TextFontSizeUnit",
+         "visible": true,
+         "themeable": "Advanced",
+         "displayPriority": 30,
+         "type": "tchmi:framework#/definitions/MeasurementUnit",
+         "category": "Text",
+         "description": "Could be 'px' or for relative sizing '%'.",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": "px"
+      },
+      {
+         "name": "data-tchmi-text-font-style",
+         "propertyName": "TextFontStyle",
+         "propertySetterName": "setTextFontStyle",
+         "propertyGetterName": "getTextFontStyle",
+         "displayName": "TextFontStyle",
+         "visible": true,
+         "themeable": "Standard",
+         "displayPriority": 60,
+         "type": "tchmi:framework#/definitions/FontStyle",
+         "category": "Text",
+         "description": "'Normal', 'Italic' (slanted with special glyphs), 'Oblique' (slanted normal glyphs) or 'Auto' for inherited.",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": "Auto"
+      },
+      {
+         "name": "data-tchmi-text-font-weight",
+         "propertyName": "TextFontWeight",
+         "propertySetterName": "setTextFontWeight",
+         "propertyGetterName": "getTextFontWeight",
+         "displayName": "TextFontWeight",
+         "visible": true,
+         "themeable": "Standard",
+         "displayPriority": 60,
+         "type": "tchmi:framework#/definitions/FontWeight",
+         "category": "Text",
+         "description": "'Normal', 'Bold' (glyphs with more weight) or 'Auto' for inherited.",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": "Auto"
+      },
+      {
+         "name": "data-tchmi-text-color",
+         "propertyName": "TextColor",
+         "propertySetterName": "setTextColor",
+         "propertyGetterName": "getTextColor",
+         "displayName": "TextColor",
+         "visible": true,
+         "themeable": "Standard",
+         "displayPriority": 10,
+         "type": "tchmi:framework#/definitions/SolidColor",
+         "category": "Colors",
+         "description": "The color of the optional button text.",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "allowSymbolExpressionsInObject": true,
+         "defaultValue": null,
+         "defaultValueInternal": null
+      }
+   ],
+   "attributeCategories": [
+      {
+         "name": "Text",
+         "displayPriority": 500,
+         "defaultCollapsed": true,
+         "description": "Attributes defining the text of the control."
+      }
+   ],
+   "functions": [],
+   "events": [
+      {
+         "name": ".onRadioStateChanged",
+         "displayName": ".onRadioStateChanged",
+         "visible": true,
+         "displayPriority": 10,
+         "category": "Control",
+         "description": "The radiostatechanged event is fired when the state of the radiobutton has changed.",
+         "heritable": true
+      },
+      {
+         "name": ".onStateChanged",
+         "displayName": ".onStateChanged",
+         "visible": true,
+         "displayPriority": 10,
+         "category": "Control",
+         "description": "The onStateChanged event is fired when the state of the radiobutton has changed.",
+         "heritable": true
+      }
+   ],
+   "dataTypes": [
+      {
+         "schema": "Schema/Types.Schema.json"
+      }
+   ]
+}

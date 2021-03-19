@@ -1,0 +1,27 @@
+﻿/** Styles for all themes */
+
+/* Style for the main element */
+.TcHmi_Controls_Beckhoff_TcHmiPolygon,
+.tchmi-polygon {
+    /* Prevent overflow if the border radius is huge */
+    overflow: hidden;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiPolygon-template,
+.tchmi-polygon-template {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiPolygon-template-svg,
+.tchmi-polygon-template-svg {
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiPolygon-template-svg-polygon,
+.tchmi-polygon-template-svg-polygon {
+    /* SVG default is stroke:1px and fill:black */
+    stroke-width: 0;
+    fill: transparent;
+}

@@ -1,0 +1,79 @@
+﻿/** Styles for all themes */
+.TcHmi_Controls_Beckhoff_TcHmiCheckbox, .tchmi-checkbox {
+    --square-size: 26px; /* drop default height of 26px */
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: var(--square-size) minmax(0, 1fr);
+    grid-auto-flow: dense;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiCheckbox-template, .tchmi-checkbox-template {
+    width: var(--square-size);
+    height: var(--square-size);
+    justify-self: start;
+    z-index: 1;
+    overflow: hidden;
+    margin: 0;
+    font-size: 0; /* Set to 0, otherwise whitespace takes up space and pushes the checkmark out of the control */
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiCheckbox-label {
+    width: 100%;
+    height: 100%;
+    place-items: inherit;
+    display: grid;
+    padding-left: 5px;
+    padding-right: 5px;
+    box-sizing: border-box;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiCheckbox.text-left, tchmi-checkbox.text-left {
+    /* 2 columns: [ column1 (text): min 0, max all available space ] [ column2 (radiobutton): min square-size, max square-size + 5px ] */
+    grid-template-columns: minmax(0, 1fr) minmax(var(--square-size), calc(var(--square-size) + 5px));
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiCheckbox.text-left .TcHmi_Controls_Beckhoff_TcHmiCheckbox-template, tchmi-checkbox {
+    grid-column: 2;
+    justify-self: end;
+}
+
+/* class TcHmi_Controls_Beckhoff_TcHmiCheckbox-active will be set/unset in the control */
+.TcHmi_Controls_Beckhoff_TcHmiCheckbox:not(.TcHmi_Controls_Beckhoff_TcHmiCheckbox-active) .TcHmi_Controls_Beckhoff_TcHmiCheckbox-toggle-state-icon,
+.tchmi-checkbox:not(.tchmi-checkbox-active) .tchmi-checkbox-toggle-state-icon {
+    display: none;
+}
+
+/* The main use for this control is interaction. So mark when this is not allowed. */
+.TcHmi_Controls_Beckhoff_TcHmiCheckbox.TcHmi_Controls_System_TcHmiControl-operate-disallowed::after,
+.TcHmi_Controls_Beckhoff_TcHmiCheckbox.TcHmi_Controls_System_TcHmiControl-disabled::after,
+.tchmi-checkbox.tchmi-control-operate-disallowed::after,
+.tchmi-checkbox.tchmi-control-operate-disabled::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--square-size);
+    height: var(--square-size);
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 100;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiCheckbox.text-left.TcHmi_Controls_System_TcHmiControl-operate-disallowed::after,
+.TcHmi_Controls_Beckhoff_TcHmiCheckbox.text-left.TcHmi_Controls_System_TcHmiControl-disabled::after,
+.tchmi.tchmi-checkbox.text-left.tchmi-control-operate-disallowed::after,
+.tchmi.tchmi-checkbox.text-left.tchmi-control-operate-disabled::after {
+    left: unset;
+    right: 0;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiCheckbox.TcHmi_Controls_System_TcHmiControl-operate-disallowed,
+.TcHmi_Controls_Beckhoff_TcHmiCheckbox.TcHmi_Controls_System_TcHmiControl-disabled,
+.tchmi.tchmi-checkbox.tchmi-control-operate-disallowed::after,
+.tchmi.tchmi-checkbox.tchmi-control-operate-disabled::after {
+    color: #4c6374;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiCheckbox.TcHmi_Controls_System_TcHmiControl-operate-disallowed,
+.tchmi.tchmi-checkbox.tchmi-control-operate-disallowed {
+    cursor: not-allowed;
+}

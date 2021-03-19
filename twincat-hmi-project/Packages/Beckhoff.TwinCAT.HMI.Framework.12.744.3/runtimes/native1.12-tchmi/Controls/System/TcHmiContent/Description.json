@@ -1,0 +1,62 @@
+{
+   "$schema": "../../../Schema/ControlDescription.Schema.json",
+   "apiVersion": 1,
+   "name": "TcHmiContent",
+   "namespace": "TcHmi.Controls.System",
+   "displayName": "Content",
+   "version": {
+      "full": "1.12.744.3",
+      "major": 1,
+      "minor": 12,
+      "build": 744,
+      "revision": 3
+   },
+   "visible": false,
+   "themeable": "Standard",
+   "base": "TcHmi.Controls.System.TcHmiPartial",
+   "description": "A reusable Container which can be loaded in a Region.",
+   "properties": {
+      "containerControl": true,
+      "geometry": {
+         "width": 500,
+         "height": 500
+      }
+   },
+   "icons": [
+      {
+         "name": "Icons/16x16.png",
+         "width": 16,
+         "height": 16
+      },
+      {
+         "name": "Icons/24x24.png",
+         "width": 24,
+         "height": 24
+      },
+      {
+         "name": "Icons/32x32.png",
+         "width": 32,
+         "height": 32
+      },
+      {
+         "name": "Icons/64x64.png",
+         "width": 64,
+         "height": 64
+      }
+   ],
+   "dependencyFiles": [
+      {
+         "name": "TcHmiContent.js",
+         "type": "JavaScript",
+         "description": ""
+      }
+   ],
+   "themes": {},
+   "attributes": [],
+   "functions": [],
+   "dataTypes": [
+      {
+         "schema": "Schema/Types.Schema.json"
+      }
+   ]
+}

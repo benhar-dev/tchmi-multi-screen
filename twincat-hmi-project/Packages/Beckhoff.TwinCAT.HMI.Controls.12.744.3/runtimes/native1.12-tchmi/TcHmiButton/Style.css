@@ -1,0 +1,38 @@
+﻿/** Styles for all themes */
+
+/* Style for the main element */
+.TcHmi_Controls_Beckhoff_TcHmiButton, tchmi-button {
+    /* Prevent overflow if the border radius is huge */
+    overflow: hidden;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiButton-template, tchmi-button-template {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiButton-template-content-text, tchmi-button-template-content-text {
+    width: 100%;
+    white-space: nowrap;
+    cursor: default;
+    text-align: center;
+}
+
+
+/* The main use for this control is interaction. So mark when this is not allowed. */
+.TcHmi_Controls_Beckhoff_TcHmiButton.TcHmi_Controls_System_TcHmiControl-operate-disallowed::after, .tchmi-button.tchmi-control-operate-disallowed::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 100;
+    cursor: not-allowed;
+}

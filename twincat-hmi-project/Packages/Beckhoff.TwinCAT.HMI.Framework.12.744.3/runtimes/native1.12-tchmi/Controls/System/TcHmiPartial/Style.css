@@ -1,0 +1,13 @@
+﻿/** Styles for all themes */
+
+/* Style for the main element */
+.TcHmi_Controls_System_TcHmiPartial, .tchmi-partial {
+    overflow: hidden; /* DO NOT CHANGE Would cut 100% sized child control shadows */
+}
+
+.TcHmi_Controls_System_TcHmiPartial-template, .tchmi-partial-template {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* DO NOT CHANGE Would cut 100% sized child control shadows */
+}

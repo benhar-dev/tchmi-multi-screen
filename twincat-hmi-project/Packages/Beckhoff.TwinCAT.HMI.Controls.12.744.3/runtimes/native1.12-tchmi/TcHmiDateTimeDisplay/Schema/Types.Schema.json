@@ -1,0 +1,26 @@
+{
+   "$schema": "http://json-schema.org/draft-04/schema",
+   "definitions":
+   {
+      "TcHmi.Controls.Beckhoff.TcHmiDateTimeDisplay":
+      {
+         "type": "object",
+         "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+         "frameworkControlType": "TcHmiTime",
+         "frameworkControlNamespace": "TcHmi.Controls.Beckhoff"
+      },
+      "TcHmi.Controls.Beckhoff.TcHmiDateTimeDisplay.TimeDisplayLayout":
+      {
+         "type": "string",
+         "enum":
+         [
+            "Time",
+            "Date",
+            "TimeDateSingleLine",
+            "TimeDateMultiLine",
+            "DateTimeSingleLine",
+            "DateTimeMultiLine"
+         ]
+      }
+   }
+}

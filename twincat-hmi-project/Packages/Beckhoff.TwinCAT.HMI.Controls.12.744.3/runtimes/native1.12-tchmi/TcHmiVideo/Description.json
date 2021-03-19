@@ -1,0 +1,507 @@
+{
+   "$schema": "../../TcHmiFramework/Schema/ControlDescription.Schema.json",
+   "apiVersion": 1,
+   "name": "TcHmiVideo",
+   "namespace": "TcHmi.Controls.Beckhoff",
+   "displayName": "Video",
+   "version": {
+      "full": "1.12.744.3",
+      "major": 1,
+      "minor": 12,
+      "build": 744,
+      "revision": 3
+   },
+   "visible": true,
+   "themeable": "Standard",
+   "base": "TcHmi.Controls.System.TcHmiControl",
+   "description": "Displays a Video.",
+   "defaultDesignerEvent": "",
+   "properties": {
+      "containerControl": false,
+      "geometry": {
+         "width": 300,
+         "height": 200
+      }
+   },
+   "icons": [
+      {
+         "name": "Icons/16x16.png",
+         "width": 16,
+         "height": 16
+      },
+      {
+         "name": "Icons/24x24.png",
+         "width": 24,
+         "height": 24
+      },
+      {
+         "name": "Icons/32x32.png",
+         "width": 32,
+         "height": 32
+      },
+      {
+         "name": "Icons/64x64.png",
+         "width": 64,
+         "height": 64
+      }
+   ],
+   "template": "Template.html",
+   "dependencyFiles": [
+      {
+         "name": "Style.css",
+         "type": "Stylesheet",
+         "description": ""
+      },
+      {
+         "name": "TcHmiVideo.js",
+         "type": "JavaScript",
+         "description": ""
+      }
+   ],
+   "themes": {},
+   "attributes": [
+      {
+         "name": "data-tchmi-src-list",
+         "propertyName": "SrcList",
+         "propertySetterName": "setSrcList",
+         "propertyGetterName": "getSrcList",
+         "displayName": "SrcList",
+         "visible": true,
+         "themeable": "Advanced",
+         "displayPriority": 10,
+         "type": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiVideo.VideoSourceList",
+         "category": "Common",
+         "description": "",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "allowSymbolExpressionsInObject": true,
+         "defaultValue": null,
+         "defaultValueInternal": null
+      },
+      {
+         "name": "data-tchmi-volume",
+         "propertyName": "Volume",
+         "propertySetterName": "setVolume",
+         "propertyGetterName": "getVolume",
+         "displayName": "Volume",
+         "visible": true,
+         "themeable": "Advanced",
+         "displayPriority": 20,
+         "type": "tchmi:framework#/definitions/Fraction",
+         "category": "Video",
+         "description": "The volume value between 0 and 1.",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": 1
+      },
+      {
+         "name": "data-tchmi-mute",
+         "propertyName": "Mute",
+         "propertySetterName": "setMute",
+         "propertyGetterName": "getMute",
+         "displayName": "Mute",
+         "visible": true,
+         "themeable": "Advanced",
+         "displayPriority": 20,
+         "type": "tchmi:general#/definitions/Boolean",
+         "category": "Video",
+         "description": "If set true, the audio will be silenced. Be aware that autoplay will probably disabled with unmuted videos.",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": true,
+         "defaultValueInternal": false
+      },
+      {
+         "name": "data-tchmi-playbackrate",
+         "propertyName": "Playbackrate",
+         "propertySetterName": "setPlaybackrate",
+         "propertyGetterName": "getPlaybackrate",
+         "displayName": "Playbackrate",
+         "visible": true,
+         "themeable": "Advanced",
+         "displayPriority": 70,
+         "type": "tchmi:general#/definitions/Number",
+         "category": "Video",
+         "description": "The normal playback rate is multiplied by this value to obtain the current rate, so a value of 1.0 indicates normal speed.",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": 1
+      },
+      {
+         "name": "data-tchmi-current-time",
+         "propertyName": "CurrentTime",
+         "propertySetterName": "setCurrentTime",
+         "propertyGetterName": "getCurrentTime",
+         "displayName": "CurrentTime",
+         "visible": true,
+         "themeable": "Advanced",
+         "displayPriority": 200,
+         "type": "tchmi:general#/definitions/Number",
+         "category": "Video",
+         "description": "The current playback time of the video.",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": 0
+      },
+      {
+         "name": "data-tchmi-duration",
+         "propertyName": "duration",
+         "propertyGetterName": "getDuration",
+         "displayName": "Duration",
+         "visible": true,
+         "displayPriority": 200,
+         "type": "tchmi:general#/definitions/Number",
+         "category": "Video",
+         "description": "Returns a number indicating the length of the media in seconds or 0 if no media is available.",
+         "readOnly": true,
+         "bindable": false,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": 0
+      },
+      {
+         "name": "data-tchmi-is-ended",
+         "propertyName": "isEnded",
+         "propertyGetterName": "getIsEnded",
+         "displayName": "isEnded",
+         "visible": true,
+         "displayPriority": 200,
+         "type": "tchmi:general#/definitions/Boolean",
+         "category": "Video",
+         "description": "Returns a Boolean that indicates whether the media element has finished playing.",
+         "readOnly": true,
+         "bindable": false,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": false
+      },
+      {
+         "name": "data-tchmi-is-playing",
+         "propertyName": "isPlaying",
+         "propertyGetterName": "getIsPlaying",
+         "displayName": "isPlaying",
+         "visible": true,
+         "displayPriority": 200,
+         "type": "tchmi:general#/definitions/Boolean",
+         "category": "Video",
+         "description": "Returns a Boolean that indicates whether the media element is playing right now.",
+         "readOnly": true,
+         "bindable": false,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": false
+      },
+      {
+         "name": "data-tchmi-original-width",
+         "propertyName": "OriginalWidth",
+         "propertyGetterName": "getOriginalWidth",
+         "displayName": "OriginalWidth",
+         "visible": true,
+         "displayPriority": 200,
+         "type": "tchmi:general#/definitions/Number",
+         "category": "Video",
+         "description": "The original width of the video resource before sizing or 0 if no media is available.",
+         "readOnly": true,
+         "bindable": false,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": 0
+      },
+      {
+         "name": "data-tchmi-original-height",
+         "propertyName": "OriginalHeight",
+         "propertyGetterName": "getOriginalHeight",
+         "displayName": "OriginalHeight",
+         "visible": true,
+         "displayPriority": 200,
+         "type": "tchmi:general#/definitions/Number",
+         "category": "Video",
+         "description": "The original height of the video resource before sizing or 0 if no media is available.",
+         "readOnly": true,
+         "bindable": false,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": 0
+      },
+      {
+         "name": "data-tchmi-controls",
+         "propertyName": "Controls",
+         "propertySetterName": "setControls",
+         "propertyGetterName": "getControls",
+         "displayName": "Controls",
+         "visible": true,
+         "themeable": "Standard",
+         "displayPriority": 10,
+         "type": "tchmi:general#/definitions/Boolean",
+         "category": "Player",
+         "description": "If set true, the browser will offer controls to allow the user to control video playback, including volume, seeking, and pause/resume playback.",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": true,
+         "defaultValueInternal": false
+      },
+      {
+         "name": "data-tchmi-autoplay",
+         "propertyName": "Autoplay",
+         "propertySetterName": "setAutoplay",
+         "propertyGetterName": "getAutoplay",
+         "displayName": "Autoplay",
+         "visible": true,
+         "themeable": "Standard",
+         "displayPriority": 20,
+         "type": "tchmi:general#/definitions/Boolean",
+         "category": "Player",
+         "description": "If set true, the video automatically begins to play back.\nNote: On modern browsers this is not allowed for unmuted videos.",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": false
+      },
+      {
+         "name": "data-tchmi-loop",
+         "propertyName": "Loop",
+         "propertySetterName": "setLoop",
+         "propertyGetterName": "getLoop",
+         "displayName": "Loop",
+         "visible": true,
+         "themeable": "Standard",
+         "displayPriority": 20,
+         "type": "tchmi:general#/definitions/Boolean",
+         "category": "Player",
+         "description": "If set true, we will, upon reaching the end of the video, automatically seek back to the start.",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": false
+      },
+      {
+         "name": "data-tchmi-poster",
+         "propertyName": "Poster",
+         "propertySetterName": "setPoster",
+         "propertyGetterName": "getPoster",
+         "displayName": "Poster",
+         "visible": true,
+         "themeable": "Standard",
+         "displayPriority": 60,
+         "type": "tchmi:framework#/definitions/Path",
+         "category": "Player",
+         "description": "A URL indicating a poster frame to show until the user plays or seeks. If this attribute isn't specified, nothing is displayed until the first frame is available; then the first frame is shown as the poster frame.",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": null
+      },
+      {
+         "name": "data-tchmi-width-mode",
+         "propertyName": "WidthMode",
+         "propertySetterName": "setWidthMode",
+         "propertyGetterName": "getWidthMode",
+         "displayName": "WidthMode",
+         "visible": true,
+         "themeable": "Advanced",
+         "displayPriority": 60,
+         "type": "tchmi:framework#/definitions/SizeModeWithContent",
+         "category": "Layout",
+         "description": "Defines if the width is taken from the width value, calculated from left and right (parent) or taken from the video size or calculated from the height keeping the aspect ratio if height is fixed.",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": "Value"
+      },
+      {
+         "name": "data-tchmi-height-mode",
+         "propertyName": "HeightMode",
+         "propertySetterName": "setHeightMode",
+         "propertyGetterName": "getHeightMode",
+         "displayName": "HeightMode",
+         "visible": true,
+         "themeable": "Advanced",
+         "displayPriority": 60,
+         "type": "tchmi:framework#/definitions/SizeModeWithContent",
+         "category": "Layout",
+         "description": "Defines if the height is taken from the height value, calculated from top and bottom (parent) or taken from the video size or calculated from the width keeping the aspect ratio if width is fixed.",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": "Value"
+      }
+   ],
+   "attributeCategories": [
+      {
+         "name": "Video",
+         "displayPriority": 500,
+         "defaultCollapsed": true,
+         "description": "Attributes defining the video playback of the control."
+      },
+      {
+         "name": "Player",
+         "displayPriority": 510,
+         "defaultCollapsed": true,
+         "description": "Attributes defining the video player of the control."
+      }
+   ],
+   "functions": [
+      {
+         "name": "play",
+         "displayName": "play",
+         "visible": true,
+         "description": "Begins playback of the video.",
+         "category": "Playback handling",
+         "params": [],
+         "type": null,
+         "heritable": false
+      },
+      {
+         "name": "pause",
+         "displayName": "pause",
+         "visible": true,
+         "description": "Pauses the media playback.",
+         "category": "Playback handling",
+         "params": [],
+         "type": null,
+         "heritable": false
+      },
+      {
+         "name": "stop",
+         "displayName": "stop",
+         "visible": true,
+         "description": "Stops the media playback which means pause playback and set current time to 0.",
+         "category": "Playback handling",
+         "params": [],
+         "type": null,
+         "heritable": false
+      },
+      {
+         "name": "skipForward",
+         "displayName": "skipForward",
+         "visible": true,
+         "description": "Move the current time position forward.",
+         "category": "Playback handling",
+         "params": [
+            {
+               "name": "valueNew",
+               "displayName": "valueNew",
+               "description": "Delta time in seconds.",
+               "type": "tchmi:general#/definitions/Number",
+               "bindable": true,
+               "visible": true
+            }
+         ],
+         "type": null,
+         "heritable": false
+      },
+      {
+         "name": "skipBackward",
+         "displayName": "skipBackward",
+         "visible": true,
+         "description": "Move the current time position backwards.",
+         "category": "Playback handling",
+         "params": [
+            {
+               "name": "valueNew",
+               "displayName": "valueNew",
+               "description": "Delta time in seconds.",
+               "type": "tchmi:general#/definitions/Number",
+               "bindable": true,
+               "visible": true
+            }
+         ],
+         "type": null,
+         "heritable": false
+      }
+   ],
+   "events": [
+      {
+         "name": ".onLoadedData",
+         "displayName": ".onLoadedData",
+         "visible": true,
+         "category": "Control",
+         "description": "The loadedData event is fired after the browser has loaded the video data.",
+         "heritable": true
+      },
+      {
+         "name": ".onError",
+         "displayName": ".onError",
+         "visible": true,
+         "displayPriority": 30,
+         "category": "Control",
+         "description": "The error event is fired when the video was not loaded successfully.",
+         "heritable": true
+      },
+      {
+         "name": ".onVolumeChange",
+         "displayName": ".onVolumeChange",
+         "visible": true,
+         "category": "Control",
+         "description": "The volumechange event is fired when the volume has changed.",
+         "heritable": true
+      },
+      {
+         "name": ".onDurationChange",
+         "displayName": ".onDurationChange",
+         "visible": true,
+         "category": "Control",
+         "description": "The durationchange event is fired when the duration has changed.",
+         "heritable": true
+      },
+      {
+         "name": ".onIsEndedChange",
+         "displayName": ".onIsEndedChange",
+         "visible": true,
+         "category": "Control",
+         "description": "The onIsEndedChange event is fired when the video playback has ended.",
+         "heritable": true
+      },
+      {
+         "name": ".onIsPlayingChange",
+         "displayName": ".onIsPlayingChange",
+         "visible": true,
+         "category": "Control",
+         "description": "The onIsPlayingChange event is fired when the video playback has started.",
+         "heritable": true
+      },
+      {
+         "name": ".onTimeUpdate",
+         "displayName": ".onTimeUpdate",
+         "visible": true,
+         "category": "Control",
+         "description": "The timeupdate event is fired when the time of video is updated.",
+         "heritable": true
+      }
+   ],
+   "dataTypes": [
+      {
+         "schema": "Schema/Types.Schema.json"
+      }
+   ]
+}

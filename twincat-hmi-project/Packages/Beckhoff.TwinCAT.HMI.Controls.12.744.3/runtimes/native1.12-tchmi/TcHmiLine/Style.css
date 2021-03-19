@@ -1,0 +1,26 @@
+﻿/** Styles for all themes */
+
+/* Style for the main element */
+.TcHmi_Controls_Beckhoff_TcHmiLine,
+.tchmi-line {
+
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiLine-template,
+.tchmi-line-template {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiLine-template-svg,
+.tchmi-line-template-svg {
+    overflow: visible;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiLine-template-svg-line,
+.tchmi-template-svg-line {
+    /* SVG default is stroke:1px */
+    stroke-width: 0;
+}

@@ -1,0 +1,27 @@
+{
+   "$schema": "http://json-schema.org/draft-04/schema",
+   "definitions": {
+      "FillMode": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiPolygon.FillMode"
+      },
+      "TcHmi.Controls.Beckhoff.TcHmiPolygon": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "object",
+         "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+         "frameworkControlType": "TcHmiPolygon",
+         "frameworkControlNamespace": "TcHmi.Controls.Beckhoff"
+      },
+      "TcHmi.Controls.Beckhoff.TcHmiPolygon.FillMode": {
+         "title": "FillMode",
+         "type": "string",
+         "enum": [
+            "NonZero",
+            "EvenOdd"
+         ],
+         "default": "NonZero"
+      },
+      "TcHmiPolygon": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiPolygon"
+      }
+   }
+}

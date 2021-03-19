@@ -1,0 +1,47 @@
+{
+   "$schema": "../TcHmiFramework/Schema/FunctionDescription.Schema.json",
+   "apiVersion": 1,
+   "version": {
+      "full": "1.12.744.3",
+      "major": 1,
+      "minor": 12,
+      "build": 744,
+      "revision": 3
+   },
+   "dependencyFiles": [
+      {
+         "name": "ConvertBooleanToVisibility.js",
+         "type": "JavaScript",
+         "description": ""
+      }
+   ],
+   "function": {
+      "name": "ConvertBooleanToVisibility",
+      "namespace": "TcHmi.Functions.Beckhoff",
+      "displayName": "ConvertBooleanToVisibility",
+      "visible": true,
+      "description": "Converts boolean values to visibility enumeration values.",
+      "category": "Data Conversion",
+      "returnValue": {
+         "type": "tchmi:framework#/definitions/Visibility"
+      },
+      "arguments": [
+         {
+            "name": "value",
+            "displayName": "value",
+            "type": "tchmi:general#/definitions/Boolean",
+            "description": "Value to be converted",
+            "required": true,
+            "bindable": true
+         },
+         {
+            "name": "FalseValue",
+            "displayName": "FalseValue",
+            "type": "tchmi:framework#/definitions/Visibility",
+            "description": "VisibilityValue if source value is false",
+            "required": false,
+            "bindable": true
+         }
+      ]
+   }
+}

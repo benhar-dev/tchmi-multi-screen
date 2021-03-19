@@ -1,0 +1,140 @@
+{
+   "$schema": "../../TcHmiFramework/Schema/ControlDescription.Schema.json",
+   "apiVersion": 1,
+   "name": "TcHmiToggleButton",
+   "namespace": "TcHmi.Controls.Beckhoff",
+   "displayName": "Toggle Button",
+   "version": {
+      "full": "1.12.744.3",
+      "major": 1,
+      "minor": 12,
+      "build": 744,
+      "revision": 3
+   },
+   "visible": true,
+   "themeable": "Standard",
+   "base": "TcHmi.Controls.Beckhoff.TcHmiButton",
+   "description": "A Button which toggles between two States.",
+   "defaultDesignerEvent": ".onPressed",
+   "properties": {
+      "containerControl": false,
+      "geometry": {
+         "width": 100,
+         "height": 50
+      }
+   },
+   "icons": [
+      {
+         "name": "Icons/16x16.png",
+         "width": 16,
+         "height": 16
+      },
+      {
+         "name": "Icons/24x24.png",
+         "width": 24,
+         "height": 24
+      },
+      {
+         "name": "Icons/32x32.png",
+         "width": 32,
+         "height": 32
+      },
+      {
+         "name": "Icons/64x64.png",
+         "width": 64,
+         "height": 64
+      }
+   ],
+   "dependencyFiles": [
+      {
+         "name": "TcHmiToggleButton.js",
+         "type": "JavaScript",
+         "description": ""
+      }
+   ],
+   "themes": {},
+   "attributes": [
+      {
+         "name": "data-tchmi-toggle-group",
+         "propertyName": "ToggleGroup",
+         "propertySetterName": "setToggleGroup",
+         "propertyGetterName": "getToggleGroup",
+         "displayName": "ToggleGroup",
+         "visible": true,
+         "themeable": "Advanced",
+         "displayPriority": 51,
+         "type": "tchmi:general#/definitions/String",
+         "category": "Common",
+         "description": "Custom name for a toggle group. Only one Control in a toggleGroup is held active.",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": null
+      },
+      {
+         "name": "data-tchmi-toggle-state",
+         "propertyName": "ToggleState",
+         "propertySetterName": "setToggleState",
+         "propertyGetterName": "getToggleState",
+         "displayName": "ToggleState",
+         "visible": true,
+         "themeable": "Advanced",
+         "displayPriority": 20,
+         "type": "tchmi:framework#/definitions/ToggleState",
+         "category": "Common",
+         "description": "Possible values are Normal, Active.",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": "Normal"
+      }
+   ],
+   "functions": [],
+   "events": [
+      {
+         "name": ".onToggleStateChanged",
+         "displayName": ".onToggleStateChanged",
+         "visible": true,
+         "displayPriority": 10,
+         "category": "Control",
+         "description": "The onToggleStateChanged event is fired when the toggle state of the button has changed.",
+         "heritable": true
+      },
+      {
+         "name": ".onStateChanged",
+         "displayName": ".onStateChanged",
+         "visible": true,
+         "displayPriority": 10,
+         "category": "Control",
+         "description": "The onStateChanged event is fired when the state of the button has changed.",
+         "heritable": true
+      },
+      {
+         "name": ".onStatePressed",
+         "displayName": ".onStatePressed",
+         "visible": true,
+         "displayPriority": 10,
+         "category": "Control",
+         "description": "The onStatePressed event is fired when the state of the button has changed to true.",
+         "heritable": true
+      },
+      {
+         "name": ".onStateReleased",
+         "displayName": ".onStateReleased",
+         "visible": true,
+         "displayPriority": 10,
+         "category": "Control",
+         "description": "The onStateReleased event is fired when the state of the button has changed to false.",
+         "heritable": true
+      }
+   ],
+   "dataTypes": [
+      {
+         "schema": "Schema/Types.Schema.json"
+      }
+   ]
+}

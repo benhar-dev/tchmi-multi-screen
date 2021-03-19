@@ -1,0 +1,11 @@
+/* Theme depended control css. */
+/*Base Theme*/
+.TcHmi_Controls_Beckhoff_TcHmiDateTimeDisplay {
+    --tchmi-time-text-color: #000000;
+    --tchmi-time-font-size: 16px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiDateTimeDisplay-Template {
+    color: var(--tchmi-time-text-color);
+    font-size: var(--tchmi-time-font-size);
+}

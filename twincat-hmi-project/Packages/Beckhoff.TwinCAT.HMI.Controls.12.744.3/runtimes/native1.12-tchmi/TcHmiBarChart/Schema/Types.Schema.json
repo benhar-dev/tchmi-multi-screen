@@ -1,0 +1,71 @@
+{
+   "$schema": "http://json-schema.org/draft-04/schema",
+   "definitions": {
+      "ChartBarGraphColorList": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiBarChart.ChartBarGraphColorList"
+      },
+      "ChartBarGraphDataDefinitionList": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiBarChart.ChartBarGraphDataDefinitionList"
+      },
+      "ChartBarGraphPosition": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiBarChart.ChartBarGraphPosition"
+      },
+      "TcHmi.Controls.Beckhoff.TcHmiBarChart": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "object",
+         "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+         "frameworkControlType": "TcHmiBarChart",
+         "frameworkControlNamespace": "TcHmi.Controls.Beckhoff"
+      },
+      "TcHmi.Controls.Beckhoff.TcHmiBarChart.ChartBarGraphColorList": {
+         "title": "ChartBarGraphColorList",
+         "engineeringDefaultDatatype": 0,
+         "anyOf": [
+            {
+               "type": "array",
+               "items": {
+                  "$ref": "tchmi:framework#/definitions/SolidColor"
+               }
+            },
+            {
+               "$ref": "tchmi:framework#/definitions/SolidColor"
+            }
+         ]
+      },
+      "TcHmi.Controls.Beckhoff.TcHmiBarChart.ChartBarGraphDataDefinitionList": {
+         "title": "ChartBarGraphDataDefinitionList",
+         "engineeringDefaultDatatype": 0,
+         "anyOf": [
+            {
+               "type": "array",
+               "title": "Array<Array<number>>",
+               "items": {
+                  "type": "array",
+                  "items": {
+                     "type": "number"
+                  }
+               }
+            },
+            {
+               "type": "array",
+               "title": "Array<number>",
+               "items": {
+                  "type": "number"
+               }
+            }
+         ]
+      },
+      "TcHmi.Controls.Beckhoff.TcHmiBarChart.ChartBarGraphPosition": {
+         "title": "ChartBarGraphPosition",
+         "type": "string",
+         "enum": [
+            "Left",
+            "Right"
+         ],
+         "default": "Left"
+      },
+      "TcHmiBarChart": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiBarChart"
+      }
+   }
+}

@@ -1,0 +1,34 @@
+{
+   "$schema": "http://json-schema.org/draft-04/schema",
+   "definitions": {
+      "TcHmi.Controls.Beckhoff.TcHmiCheckbox": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "object",
+         "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+         "frameworkControlType": "TcHmiCheckbox",
+         "frameworkControlNamespace": "TcHmi.Controls.Beckhoff"
+      },
+      "TcHmi.Controls.Beckhoff.TcHmiCheckbox.StateSymbol": {
+         "allOf": [
+            {
+               "$ref": "tchmi:framework#/definitions/Symbol"
+            },
+            {
+               "frameworkSymbolSubType": {
+                  "$ref": "tchmi:general#/definitions/Boolean"
+               }
+            }
+         ]
+      },
+      "TcHmi.Controls.Beckhoff.TcHmiCheckbox.TextPosition": {
+         "type": "string",
+         "enum": [ "Left", "Right" ]
+      },
+      "TcHmiCheckbox": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiCheckbox"
+      },
+      "TcHmiCheckboxStateSymbol": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiCheckbox.StateSymbol"
+      }
+   }
+}

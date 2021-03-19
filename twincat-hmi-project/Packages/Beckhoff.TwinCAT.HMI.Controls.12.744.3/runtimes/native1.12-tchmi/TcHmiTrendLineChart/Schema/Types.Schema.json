@@ -1,0 +1,555 @@
+{
+   "$schema": "http://json-schema.org/draft-04/schema",
+   "definitions": {
+      "ChartMenuBarPosition": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiTrendLineChart.ChartMenuBarPosition"
+      },
+      "ChartMouseMode": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiTrendLineChart.ChartMouseMode"
+      },
+      "ChartYAxisDefinition": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiTrendLineChart.ChartYAxisDefinition"
+      },
+      "ChartYAxisDefinitionList": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiTrendLineChart.ChartYAxisDefinitionList"
+      },
+      "TcHmi.Controls.Beckhoff.TcHmiTrendLineChart": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "object",
+         "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+         "frameworkControlType": "TcHmiTrendLineChart",
+         "frameworkControlNamespace": "TcHmi.Controls.Beckhoff"
+      },
+      "TcHmi.Controls.Beckhoff.TcHmiTrendLineChart.ChartEnd": {
+         "anyOf": [
+            {
+               "title": "Time",
+               "$ref": "tchmi:general#/definitions/DateTime"
+            },
+            {
+               "title": "Timespan",
+               "$ref": "tchmi:general#/definitions/TimeSpan"
+            },
+            {
+               "title": "KeyWords",
+               "type": "string",
+               "enum": [
+                  "Latest"
+               ]
+            }
+         ],
+         "default": "Latest"
+      },
+      "TcHmi.Controls.Beckhoff.TcHmiTrendLineChart.ChartLineGraphDescriptionDefinitionList": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "title": "TrendLineChartLineGraphDescriptionDefinitionList",
+         "type": "array",
+         "items": {
+            "type": "object",
+            "title": "Line graph description",
+            "description": "Defines one line graph descriptions.",
+            "propertiesMeta": [
+               {
+                  "name": "lineColor",
+                  "displayName": "Line color",
+                  "category": "Colors",
+                  "displayPriority": 10,
+                  "description": "Color for this line",
+                  "defaultValue": "rgba(71, 148, 218, 1)",
+                  "defaultValueInternal": null
+               },
+               {
+                  "name": "pointDotFillColor",
+                  "displayName": "Point dot fill color",
+                  "category": "Colors",
+                  "displayPriority": 10,
+                  "description": "Color for the fill of the dots",
+                  "defaultValue": "rgba(71, 148, 218, 1)",
+                  "defaultValueInternal": null
+               },
+               {
+                  "name": "pointDotStrokeColor",
+                  "displayName": "Point dot stroke color",
+                  "category": "Colors",
+                  "displayPriority": 10,
+                  "description": "Color for the stroke of the dots",
+                  "defaultValue": "rgba(71, 148, 218, 1)",
+                  "defaultValueInternal": null
+               },
+               {
+                  "name": "symbol",
+                  "displayName": "symbol",
+                  "category": "General",
+                  "displayPriority": 10,
+                  "description": "Name of the historized Symbol",
+                  "defaultValue": null,
+                  "defaultValueInternal": null
+               },
+               {
+                  "name": "yAxisId",
+                  "displayName": "Y-Axis Id",
+                  "category": "General",
+                  "displayPriority": 10,
+                  "description": "Id of the y-axis to use for this graph",
+                  "defaultValue": null,
+                  "defaultValueInternal": null
+               },
+               {
+                  "name": "lineWidth",
+                  "displayName": "Line width",
+                  "category": "General",
+                  "displayPriority": 10,
+                  "description": "Line width in pixel",
+                  "defaultValue": 1,
+                  "defaultValueInternal": null
+               },
+               {
+                  "name": "pointDot",
+                  "displayName": "Point dot",
+                  "category": "General",
+                  "displayPriority": 10,
+                  "description": "Defines if the line has dots on the data points",
+                  "defaultValue": false,
+                  "defaultValueInternal": false
+               },
+               {
+                  "name": "pointDotInStopMode",
+                  "displayName": "Point dot in stopmode",
+                  "category": "General",
+                  "displayPriority": 10,
+                  "description": "Defines if the line has dots on the data points",
+                  "defaultValue": false,
+                  "defaultValueInternal": false
+               },
+               {
+                  "name": "pointDotRadius",
+                  "displayName": "Point dot radius",
+                  "category": "General",
+                  "displayPriority": 10,
+                  "description": "Dot radius",
+                  "defaultValue": 3,
+                  "defaultValueInternal": 3
+               },
+               {
+                  "name": "pointDotStrokeWidth",
+                  "displayName": "Point dot stroke width",
+                  "category": "General",
+                  "displayPriority": 10,
+                  "description": "Dot stroke width",
+                  "defaultValue": 1,
+                  "defaultValueInternal": 1
+               }
+            ],
+            "properties": {
+               "symbol": {
+                  "type": "string"
+               },
+               "yAxisId": {
+                  "type": "number"
+               },
+               "lineWidth": {
+                  "type": "number"
+               },
+               "lineColor": {
+                  "$ref": "tchmi:framework#/definitions/SolidColor"
+               },
+               "pointDot": {
+                  "type": "boolean"
+               },
+               "pointDotInStopMode": {
+                  "type": "boolean"
+               },
+               "pointDotRadius": {
+                  "type": "number",
+                  "minimum": 0
+               },
+               "pointDotFillColor": {
+                  "$ref": "tchmi:framework#/definitions/SolidColor"
+               },
+               "pointDotStrokeWidth": {
+                  "type": "number",
+                  "minimum": 0
+               },
+               "pointDotStrokeColor": {
+                  "$ref": "tchmi:framework#/definitions/SolidColor"
+               }
+            },
+            "required": [
+               "yAxisId"
+            ]
+         }
+      },
+      "TcHmi.Controls.Beckhoff.TcHmiTrendLineChart.ChartMenuBarPosition": {
+         "title": "ChartMenuBarPosition",
+         "type": "string",
+         "enum": [
+            "Bottom",
+            "Top"
+         ],
+         "default": "Bottom"
+      },
+      "TcHmi.Controls.Beckhoff.TcHmiTrendLineChart.ChartMouseMode": {
+         "title": "ChartMouseMode",
+         "type": "string",
+         "enum": [
+            "ZoomX",
+            "ZoomXY",
+            "PanX",
+            "PanXY"
+         ],
+         "default": "ZoomX"
+      },
+      "TcHmi.Controls.Beckhoff.TcHmiTrendLineChart.ChartStart": {
+         "anyOf": [
+            {
+               "title": "Time",
+               "$ref": "tchmi:general#/definitions/DateTime"
+            },
+            {
+               "title": "Timespan",
+               "$ref": "tchmi:general#/definitions/TimeSpan"
+            },
+            {
+               "title": "KeyWords",
+               "type": "string",
+               "enum": [
+                  "First"
+               ]
+            }
+         ],
+         "default": "First"
+      },
+      "TcHmi.Controls.Beckhoff.TcHmiTrendLineChart.ChartTooltipErrorInformationList": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "title": "ChartTooltipErrorInformationList",
+         "type": "array",
+         "items": {
+            "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiTrendLineChart.ChartTooltipErrorInformationObject"
+         }
+      },
+      "TcHmi.Controls.Beckhoff.TcHmiTrendLineChart.ChartTooltipErrorInformationObject": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "object",
+         "title": "TrendLineChart tooltip error information object",
+         "properties": {
+            "yAxis": {
+               "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiTrendLineChart.ChartYAxisDefinition"
+            },
+            "beginTime": {
+               "type": "number"
+            },
+            "endTime": {
+               "type": "number"
+            },
+            "errorCode": {
+               "type": "number"
+            },
+            "symbolname": {
+               "type": "string"
+            }
+         },
+         "required": [
+            "symbolname"
+         ]
+      },
+      "TcHmi.Controls.Beckhoff.TcHmiTrendLineChart.ChartTooltipInformationList": {
+         "title": "ChartTooltipInformationList",
+         "type": "array",
+         "items": {
+            "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiTrendLineChart.ChartTooltipInformationObject"
+         }
+      },
+      "TcHmi.Controls.Beckhoff.TcHmiTrendLineChart.ChartTooltipInformationObject": {
+         "type": "object",
+         "title": "TrendLineChart tooltip information object",
+         "properties": {
+            "point": {
+               "type": "object",
+               "properties": {
+                  "x": {
+                     "type": "number"
+                  },
+                  "y": {
+                     "type": "number"
+                  }
+               },
+               "required": [
+                  "x",
+                  "y"
+               ]
+            },
+            "yAxis": {
+               "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiTrendLineChart.ChartYAxisDefinition"
+            },
+            "symbolname": {
+               "type": "string"
+            }
+         },
+         "required": [
+            "point",
+            "symbolname"
+         ]
+      },
+      "TcHmi.Controls.Beckhoff.TcHmiTrendLineChart.ChartYAxisDefinition": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "title": "ChartYAxisDefinition",
+         "type": "object",
+         "propertiesMeta": [
+            {
+               "name": "labelFontColor",
+               "category": "Colors",
+               "displayName": "Label font color",
+               "displayPriority": 10,
+               "description": "",
+               "defaultValue": null,
+               "defaultValueInternal": {
+                  "color": "#4794da"
+               }
+            },
+            {
+               "name": "axisColor",
+               "category": "Colors",
+               "displayName": "Axis color",
+               "displayPriority": 10,
+               "description": "",
+               "defaultValue": null,
+               "defaultValueInternal": {
+                  "color": "#4794da"
+               }
+            },
+            {
+               "name": "axisNameFontColor",
+               "category": "Colors",
+               "displayName": "Axis name font color",
+               "displayPriority": 10,
+               "description": "",
+               "defaultValue": null,
+               "defaultValueInternal": {
+                  "color": "#4794da"
+               }
+            },
+            {
+               "name": "id",
+               "category": "General",
+               "displayName": "Id",
+               "displayPriority": 10,
+               "description": "",
+               "defaultValue": null,
+               "defaultValueInternal": 1
+            },
+            {
+               "name": "position",
+               "category": "General",
+               "displayName": "Position",
+               "displayPriority": 10,
+               "description": "",
+               "defaultValue": null,
+               "defaultValueInternal": "Left"
+            },
+            {
+               "name": "mainTickMinValue",
+               "category": "General",
+               "displayName": "Main-tick min-value",
+               "displayPriority": 10,
+               "description": "",
+               "defaultValue": null,
+               "defaultValueInternal": 0
+            },
+            {
+               "name": "mainTickMaxValue",
+               "category": "General",
+               "displayName": "Main-tick max-value",
+               "displayPriority": 10,
+               "description": "",
+               "defaultValue": null,
+               "defaultValueInternal": 100
+            },
+            {
+               "name": "autoScaling",
+               "category": "General",
+               "displayName": "Auto scaling",
+               "displayPriority": 10,
+               "description": "",
+               "defaultValue": null,
+               "defaultValueInternal": false
+            },
+            {
+               "name": "decimalPlaces",
+               "category": "General",
+               "displayName": "decimalPlaces",
+               "displayPriority": 10,
+               "description": "",
+               "defaultValue": null,
+               "defaultValueInternal": 2
+            },
+            {
+               "name": "showLabels",
+               "category": "General",
+               "displayName": "showLabels",
+               "displayPriority": 10,
+               "description": "",
+               "defaultValue": null,
+               "defaultValueInternal": true
+            },
+            {
+               "name": "showAxisName",
+               "category": "General",
+               "displayName": "Show axis name",
+               "displayPriority": 10,
+               "description": "",
+               "defaultValue": null,
+               "defaultValueInternal": true
+            },
+            {
+               "name": "axisName",
+               "category": "General",
+               "displayName": "Axis name",
+               "displayPriority": 10,
+               "description": "",
+               "defaultValue": null,
+               "defaultValueInternal": "y axis 1"
+            },
+            {
+               "name": "axisNameFontFamily",
+               "category": "General",
+               "displayName": "Axis name font-family",
+               "displayPriority": 10,
+               "description": "",
+               "defaultValue": null,
+               "defaultValueInternal": null
+            },
+            {
+               "name": "axisNameFontSize",
+               "category": "General",
+               "displayName": "Axis name font-size",
+               "displayPriority": 10,
+               "description": "",
+               "defaultValue": null,
+               "defaultValueInternal": 15
+            },
+            {
+               "name": "axisNameFontSizeUnit",
+               "refTo": "axisNameFontSize",
+               "category": "General",
+               "displayName": "Axis name font-size unit",
+               "displayPriority": 10,
+               "description": "",
+               "defaultValue": null,
+               "defaultValueInternal": "px"
+            },
+            {
+               "name": "axisNameFontWeight",
+               "category": "General",
+               "displayName": "Axis name font-weight",
+               "displayPriority": 10,
+               "description": "",
+               "defaultValue": null,
+               "defaultValueInternal": "Bold"
+            },
+            {
+               "name": "unit",
+               "category": "General",
+               "displayName": "Unit",
+               "displayPriority": 10,
+               "description": "",
+               "defaultValue": null,
+               "defaultValueInternal": null
+            }
+         ],
+         "properties": {
+            "labelFontColor": {
+               "$ref": "tchmi:framework#/definitions/SolidColor"
+            },
+            "axisColor": {
+               "$ref": "tchmi:framework#/definitions/SolidColor"
+            },
+            "axisNameFontColor": {
+               "$ref": "tchmi:framework#/definitions/SolidColor"
+            },
+            "id": {
+               "type": "number"
+            },
+            "position": {
+               "type": "string",
+               "enum": [
+                  "Left",
+                  "Right"
+               ]
+            },
+            "mainTickMinValue": {
+               "type": "number"
+            },
+            "mainTickMaxValue": {
+               "type": "number"
+            },
+            "autoScaling": {
+               "type": "boolean"
+            },
+            "decimalPlaces": {
+               "type": "number",
+               "minimum": 0
+            },
+            "showLabels": {
+               "type": "boolean"
+            },
+            "showAxisName": {
+               "type": "boolean"
+            },
+            "axisName": {
+               "type": "string"
+            },
+            "axisNameFontFamily": {
+               "$ref": "tchmi:framework#/definitions/FontFamily"
+            },
+            "axisNameFontSize": {
+               "$ref": "tchmi:framework#/definitions/MeasurementValue"
+            },
+            "axisNameFontSizeUnit": {
+               "$ref": "tchmi:framework#/definitions/FontSizeUnit"
+            },
+            "axisNameFontWeight": {
+               "$ref": "tchmi:framework#/definitions/FontWeight"
+            },
+            "unit": {
+               "type": "string"
+            }
+         },
+         "required": [
+            "id",
+            "position"
+         ]
+      },
+      "TcHmi.Controls.Beckhoff.TcHmiTrendLineChart.ChartYAxisDefinitionList": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "title": "ChartYAxisDefinitionList",
+         "type": "array",
+         "items": {
+            "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiTrendLineChart.ChartYAxisDefinition"
+         }
+      },
+      "TcHmiTrendLineChart": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiTrendLineChart"
+      },
+      "TrendLineChartEnd": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiTrendLineChart.ChartEnd"
+      },
+      "TrendLineChartLineGraphDescriptionDefinitionList": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiTrendLineChart.ChartLineGraphDescriptionDefinitionList"
+      },
+      "TrendLineChartStart": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiTrendLineChart.ChartStart"
+      },
+      "TrendLineChartTooltipErrorInformationList": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiTrendLineChart.ChartTooltipErrorInformationList"
+      },
+      "TrendLineChartTooltipErrorInformationObject": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiTrendLineChart.ChartTooltipErrorInformationObject"
+      },
+      "TrendLineChartTooltipInformationList": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiTrendLineChart.ChartTooltipInformationList"
+      },
+      "TrendLineChartTooltipInformationObject": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiTrendLineChart.ChartTooltipInformationObject"
+      }
+   }
+}

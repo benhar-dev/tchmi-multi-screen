@@ -1,0 +1,107 @@
+﻿{
+	"$schema": "http://json-schema.org/draft-04/schema",
+	"type": "object",
+	"properties": {
+    "$schema": {
+      "type": "string",
+      "description": "URL to a schema file"
+    },
+		"version": {
+			"type": "object",
+      "properties": {
+        "full": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]+$"
+        },
+        "major": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "minor": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "build": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [ "full", "major", "minor", "revision", "build" ]
+		},
+		"dependencyFiles": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"name": {
+            "type": "string",
+            "description": "Path to the file",
+						"minLength": 1
+					},
+					"type": {
+						"type": "string",
+						"enum": [ "Stylesheet", "JavaScript" ],
+            "description": "Type of the framework asset."
+					},
+					"description": {
+            "type": "string",
+            "description": "A long description of this file."
+          }
+				},
+				"required": [ "name", "type", "description" ]
+			}
+		},
+		"events": {
+      "type": "array",
+      "description": "A list of events assoziated to the framework.",
+			"items": {
+				"type": "object",
+				"properties": {
+					"name": {
+						"type": "string",
+						"minLength": 1,
+            "description": "Internal name of the event."
+					},
+          "displayName": {
+            "type": "string",
+            "description": "Name which should be presented the user."
+          },
+          "description": {
+            "type": "string",
+            "description": "A long description of this event."
+          },
+          "category": {
+            "type": "string",
+            "enum": ["Framework"],
+            "description": ""
+          },
+          "allowsPreventDefault": {
+            "type": "boolean",
+            "description": "The event can have the option preventDefault."
+          }
+				},
+				"required": [ "name", "displayName", "description" ]
+			}
+		},
+		"dataTypes": {
+      "type": "array",
+      "description": "List of custom data types",
+			"items": {
+				"type": "object",
+				"properties": {
+                "schema": {
+                  "type": "string",
+                  "minLength": 1,
+                  "description": "Path to the schema describing the datatype."
+                }
+				},
+				"required": [ "schema" ]
+			}
+		}
+	},
+	"required": [ "version", "dependencyFiles", "events", "dataTypes" ]
+}

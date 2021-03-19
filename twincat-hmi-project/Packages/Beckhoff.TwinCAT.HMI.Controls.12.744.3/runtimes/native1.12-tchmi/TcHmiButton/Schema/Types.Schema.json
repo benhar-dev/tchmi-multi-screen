@@ -1,0 +1,30 @@
+{
+   "$schema": "http://json-schema.org/draft-04/schema",
+   "definitions": {
+      "TcHmi.Controls.Beckhoff.TcHmiButton": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "object",
+         "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+         "frameworkControlType": "TcHmiButton",
+         "frameworkControlNamespace": "TcHmi.Controls.Beckhoff"
+      },
+      "TcHmi.Controls.Beckhoff.TcHmiButton.StateSymbol": {
+         "allOf": [
+            {
+               "$ref": "tchmi:framework#/definitions/Symbol"
+            },
+            {
+               "frameworkSymbolSubType": {
+                  "$ref": "tchmi:general#/definitions/Boolean"
+               }
+            }
+         ]
+      },
+      "TcHmiButton": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiButton"
+      },
+      "TcHmiButtonStateSymbol": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiButton.StateSymbol"
+      }
+   }
+}

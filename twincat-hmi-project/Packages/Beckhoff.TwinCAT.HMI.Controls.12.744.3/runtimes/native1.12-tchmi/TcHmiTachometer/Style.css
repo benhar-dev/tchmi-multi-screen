@@ -1,0 +1,44 @@
+/** Styles for all themes */
+
+/* Style for the main element */
+.TcHmi_Controls_Beckhoff_TcHmiTachometer{
+    /* Prevent overflow if the border radius is huge */
+    overflow: hidden;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTachometer-template{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTachometer-template-main-tick,
+.TcHmi_Controls_Beckhoff_TcHmiTachometer-template-sub-tick{
+    pointer-events: none;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTachometer-template-label{
+    text-anchor: middle;
+    dominant-baseline: central;
+    pointer-events: none;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTachometer-template-range-container path{
+    fill: none;
+    pointer-events: none;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTachometer-template-circle-under,
+.TcHmi_Controls_Beckhoff_TcHmiTachometer-template-circle-over{
+    pointer-events: none;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTachometer-template-display-value,
+.TcHmi_Controls_Beckhoff_TcHmiTachometer-template-display-unit{
+    text-anchor: middle;
+    pointer-events: none;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTachometer-template-svg{
+    position: relative;
+}

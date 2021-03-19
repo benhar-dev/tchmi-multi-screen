@@ -1,0 +1,391 @@
+{
+   "$schema": "http://json-schema.org/draft-04/schema",
+   "definitions": {
+      "EventGridColumnList": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiEventGrid.ColumnList"
+      },
+      "EventGridMenuBarPosition": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiEventGrid.MenuBarPosition"
+      },
+      "ServerEvent": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiEventGrid.ServerEvent"
+      },
+      "TcHmi.Controls.Beckhoff.TcHmiEventGrid": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "object",
+         "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+         "frameworkControlType": "TcHmiEventGrid",
+         "frameworkControlNamespace": "TcHmi.Controls.Beckhoff"
+      },
+      "TcHmi.Controls.Beckhoff.TcHmiEventGrid.ColumnList": {
+         "title": "ColumnList",
+         "type": "array",
+         "items": {
+            "anyOf": [
+               {
+                  "title": "Column",
+                  "type": "object",
+                  "engineeringColumns": [
+                     "columnName"
+                  ],
+                  "propertiesMeta": [
+                     {
+                        "name": "columnName",
+                        "displayName": "Column Name",
+                        "category": "General",
+                        "displayPriority": 10,
+                        "description": "Source of this column",
+                        "defaultValue": null,
+                        "defaultValueInternal": null
+                     },
+                     {
+                        "name": "width",
+                        "displayName": "Width",
+                        "category": "General",
+                        "displayPriority": 10,
+                        "description": "Width of this column",
+                        "defaultValue": null,
+                        "defaultValueInternal": null
+                     },
+                     {
+                        "name": "widthUnit",
+                        "refTo": "width",
+                        "displayName": "Width Unit",
+                        "category": "General",
+                        "displayPriority": 10,
+                        "description": "Width unit of this column",
+                        "defaultValue": null,
+                        "defaultValueInternal": "px"
+                     },
+                     {
+                        "name": "sortable",
+                        "displayName": "sortable",
+                        "category": "General",
+                        "displayPriority": 10,
+                        "description": "Whether it should be possible to sort this column",
+                        "defaultValue": true,
+                        "defaultValueInternal": null
+                     }
+                  ],
+                  "properties": {
+                     "columnName": {
+                        "type": "string",
+                        "enum": [
+                           "severity",
+                           "type",
+                           "alarmState",
+                           "domain",
+                           "sourceDomain",
+                           "name",
+                           "text",
+                           "timeAndDateRaised",
+                           "timeRaised",
+                           "dateRaised",
+                           "timeAndDateConfirmed",
+                           "timeConfirmed",
+                           "dateConfirmed",
+                           "timeAndDateCleared",
+                           "timeCleared",
+                           "dateCleared"
+                        ]
+                     },
+                     "width": {
+                        "$ref": "tchmi:framework#/definitions/MeasurementValue"
+                     },
+                     "widthUnit": {
+                        "$ref": "tchmi:framework#/definitions/MeasurementUnit"
+                     },
+                     "sortable": {
+                        "type": "boolean",
+                        "default": true
+                     }
+                  },
+                  "required": [
+                     "columnName"
+                  ]
+               },
+               {
+                  "title": "Custom column",
+                  "type": "object",
+                  "engineeringColumns": [
+                     "columnName"
+                  ],
+                  "propertiesMeta": [
+                     {
+                        "name": "columnName",
+                        "displayName": "Column Name",
+                        "category": "General",
+                        "displayPriority": 10,
+                        "description": "Source of this column",
+                        "defaultValue": null,
+                        "defaultValueInternal": null
+                     },
+                     {
+                        "name": "label",
+                        "displayName": "Label",
+                        "category": "General",
+                        "displayPriority": 10,
+                        "description": "Label of this column",
+                        "defaultValue": null,
+                        "defaultValueInternal": null
+                     },
+                     {
+                        "name": "width",
+                        "displayName": "Width",
+                        "category": "General",
+                        "displayPriority": 10,
+                        "description": "Width of this column",
+                        "defaultValue": null,
+                        "defaultValueInternal": null
+                     },
+                     {
+                        "name": "widthUnit",
+                        "refTo": "width",
+                        "displayName": "Width Unit",
+                        "category": "General",
+                        "displayPriority": 10,
+                        "description": "Width unit of this column",
+                        "defaultValue": null,
+                        "defaultValueInternal": "px"
+                     },
+                     {
+                        "name": "sortable",
+                        "displayName": "sortable",
+                        "category": "General",
+                        "displayPriority": 10,
+                        "description": "Whether it should be possible to sort this column",
+                        "defaultValue": true,
+                        "defaultValueInternal": null
+                     }
+                  ],
+                  "properties": {
+                     "columnName": {
+                        "type": "string",
+                        "pattern": "^params::"
+                     },
+                     "label": {
+                        "type": "string"
+                     },
+                     "width": {
+                        "$ref": "tchmi:framework#/definitions/MeasurementValue"
+                     },
+                     "widthUnit": {
+                        "$ref": "tchmi:framework#/definitions/MeasurementUnit"
+                     },
+                     "sortable": {
+                        "type": "boolean",
+                        "default": true
+                     }
+                  },
+                  "required": [
+                     "columnName"
+                  ]
+               }
+            ]
+         }
+      },
+      "TcHmi.Controls.Beckhoff.TcHmiEventGrid.MenuBarPosition": {
+         "type": "string",
+         "enum": [
+            "Top",
+            "Bottom",
+            "Left",
+            "Right"
+         ],
+         "default": "Top"
+      },
+      "TcHmi.Controls.Beckhoff.TcHmiEventGrid.ServerEvent": {
+         "anyOf": [
+            {
+               "title": "Message",
+               "type": "object",
+               "properties": {
+                  "type": {
+                     "type": "integer",
+                     "enum": [ 0 ],
+                     "options": [
+                        {
+                           "label": "ENUM_0_MESSAGE",
+                           "value": 0
+                        }
+                     ],
+                     "default": 0
+                  },
+                  "domain": {
+                     "type": "string"
+                  },
+                  "name": {
+                     "type": "string"
+                  },
+                  "timeReceived": {
+                     "type": "string",
+                     "format": "date-time"
+                  },
+                  "sessionId": {
+                     "type": "string"
+                  },
+                  "severity": {
+                     "$ref": "tchmi:server#/definitions/severity"
+                  },
+                  "sourceDomain": {
+                     "type": "string"
+                  },
+                  "text": {
+                     "type": "string"
+                  },
+                  "timeRaised": {
+                     "type": "string",
+                     "format": "date-time"
+                  },
+                  "params": {
+                     "type": "object"
+                  }
+               },
+               "required": [ "type", "domain", "name", "timeReceived", "severity", "sourceDomain", "text", "timeRaised", "params" ]
+            },
+            {
+               "title": "Alarm",
+               "type": "object",
+               "properties": {
+                  "type": {
+                     "type": "integer",
+                     "enum": [ 1 ],
+                     "options": [
+                        {
+                           "label": "ENUM_1_ALARM",
+                           "value": 1
+                        }
+                     ],
+                     "default": 1
+                  },
+                  "domain": {
+                     "type": "string"
+                  },
+                  "name": {
+                     "type": "string"
+                  },
+                  "timeReceived": {
+                     "type": "string",
+                     "format": "date-time"
+                  },
+                  "sessionId": {
+                     "type": "string"
+                  },
+                  "severity": {
+                     "$ref": "tchmi:server#/definitions/severity"
+                  },
+                  "sourceDomain": {
+                     "type": "string"
+                  },
+                  "text": {
+                     "type": "string"
+                  },
+                  "timeRaised": {
+                     "type": "string",
+                     "format": "date-time"
+                  },
+                  "params": {
+                     "type": "object"
+                  },
+                  "id": {
+                     "type": "integer"
+                  },
+                  "timeCleared": {
+                     "$ref": "tchmi:server#/definitions/nullableDateTime"
+                  },
+                  "timeConfirmed": {
+                     "$ref": "tchmi:server#/definitions/nullableDateTime"
+                  },
+                  "alarmState": {
+                     "$ref": "tchmi:server#/definitions/alarmState"
+                  },
+                  "confirmationState": {
+                     "$ref": "tchmi:server#/definitions/confirmationState"
+                  }
+               },
+               "required": [ "type", "domain", "name", "timeReceived", "severity", "sourceDomain", "text", "timeRaised", "params", "id", "timeCleared", "timeConfirmed", "alarmState", "confirmationState" ]
+            },
+            {
+               "title": "PayloadEvent",
+               "type": "object",
+               "properties": {
+                  "type": {
+                     "type": "integer",
+                     "enum": [ 2 ],
+                     "options": [
+                        {
+                           "label": "ENUM_2_PAYLOAD",
+                           "value": 2
+                        }
+                     ],
+                     "default": 2
+                  },
+                  "domain": {
+                     "type": "string"
+                  },
+                  "name": {
+                     "type": "string"
+                  },
+                  "timeReceived": {
+                     "type": "string",
+                     "format": "date-time"
+                  },
+                  "sessionId": {
+                     "type": "string"
+                  },
+                  "payload": {}
+               },
+               "required": [ "type", "domain", "name", "timeReceived" ]
+            }
+         ]
+      },
+      "TcHmi.Controls.Beckhoff.TcHmiEventGrid.IconDefinition": {
+         "title": "IconDefinition",
+         "type": "object",
+         "propertiesMeta": [
+            {
+               "name": "imagePath",
+               "category": "General",
+               "displayName": "ImagePath",
+               "displayPriority": 10,
+               "description": "Path to a Pixel or Vector Image.",
+               "defaultValue": null,
+               "defaultValueInternal": null
+            },
+            {
+               "name": "width",
+               "category": "General",
+               "displayName": "Width",
+               "displayPriority": 10,
+               "description": "Width of the icon",
+               "defaultValue": null,
+               "defaultValueInternal": null
+            },
+            {
+               "name": "height",
+               "category": "General",
+               "displayName": "Height",
+               "displayPriority": 10,
+               "description": "Height of the icon",
+               "defaultValue": null,
+               "defaultValueInternal": null
+            }
+         ],
+         "properties": {
+            "imagePath": {
+               "$ref": "tchmi:framework#/definitions/Path"
+            },
+            "width": {
+               "type": "number"
+            },
+            "height": {
+               "type": "number"
+            }
+         },
+         "required": [ "imagePath", "width", "height" ]
+      },
+      "TcHmiEventGrid": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiEventGrid"
+      }
+   }
+}

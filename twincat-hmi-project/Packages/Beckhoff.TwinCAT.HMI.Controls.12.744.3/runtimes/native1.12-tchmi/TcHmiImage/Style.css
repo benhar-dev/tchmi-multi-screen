@@ -1,0 +1,34 @@
+﻿/** Styles for all themes */
+
+/* Style for the main element */
+.TcHmi_Controls_Beckhoff_TcHmiImage,
+.tchmi-image {
+    /* Prevent overflow if the border radius is huge */
+    overflow: hidden;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiImage-template,
+.tchmi-image-template {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiImage-template-content,
+.tchmi-image-template-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiImage-template-content[src=""],
+.tchmi-image-template-content[src=""]{
+	display: none;
+}
+
+
+/* class TcHmi_Controls_System_TcHmiControl-disabled will be set/unset in the system */
+.TcHmi_Controls_Beckhoff_TcHmiImage.TcHmi_Controls_System_TcHmiControl-disabled,
+.tchmi-image.tchmi-control-disabled {
+    opacity: 0.4 !important;
+}

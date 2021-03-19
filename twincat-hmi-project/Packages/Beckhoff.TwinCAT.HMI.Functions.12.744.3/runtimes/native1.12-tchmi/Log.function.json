@@ -1,0 +1,59 @@
+{
+   "$schema": "../TcHmiFramework/Schema/FunctionDescription.Schema.json",
+   "apiVersion": 1,
+   "version": {
+      "full": "1.12.744.3",
+      "major": 1,
+      "minor": 12,
+      "build": 744,
+      "revision": 3
+   },
+   "dependencyFiles": [
+      {
+         "name": "Log.js",
+         "type": "JavaScript",
+         "description": ""
+      }
+   ],
+   "function": {
+      "name": "Log",
+      "namespace": "TcHmi.Functions.Beckhoff",
+      "displayName": "Log",
+      "visible": true,
+      "category": "Diagnostics",
+      "waitMode": "Synchronous",
+      "injectContextObject": false,
+      "description": "Logs a message to the browser console.",
+      "returnValue": null,
+      "arguments": [
+         {
+            "name": "level",
+            "displayName": "level",
+            "type": "tchmi:framework#/definitions/TcHmi.Functions.Beckhoff.Log.Level",
+            "description": "The log level.",
+            "defaultValue": "Debug",
+            "required": true,
+            "bindable": true
+         },
+         {
+            "name": "message",
+            "displayName": "message",
+            "type": "tchmi:general#/definitions/String",
+            "description": "The log message.",
+            "defaultValue": "",
+            "required": true,
+            "bindable": true
+         },
+         {
+            "name": "optionalParameters",
+            "displayName": "optionalParameters",
+            "type": "tchmi:general#/definitions/Any",
+            "description": "Optional parameters of underlying browser log function.",
+            "defaultValue": "",
+            "restParameter": true,
+            "required": false,
+            "bindable": true
+         }
+      ]
+   }
+}

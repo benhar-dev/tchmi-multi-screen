@@ -1,0 +1,15 @@
+{
+   "$schema": "http://json-schema.org/draft-04/schema",
+   "definitions": {
+      "TcHmi.Controls.System.TcHmiUserControl": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "object",
+         "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+         "frameworkControlType": "TcHmiUserControl",
+         "frameworkControlNamespace": "TcHmi.Controls.System"
+      },
+      "TcHmiUserControl": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.System.TcHmiUserControl"
+      }
+   }
+}

@@ -1,0 +1,65 @@
+/** Styles for all themes */
+
+/* Style for the main element */
+.TcHmi_Controls_Beckhoff_TcHmiRadialGauge,
+.tchmi-radial-gauge {
+    /* Prevent overflow if the border radius is huge */
+    overflow: hidden;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiRadialGauge-template,
+.tchmi-radial-gauge-template {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiRadialGauge-template-main-tick,
+.TcHmi_Controls_Beckhoff_TcHmiRadialGauge-template-sub-tick,
+.tchmi-radial-gauge-template-main-tick,
+.tchmi-radial-gauge-template-sub-tick {
+    pointer-events: none;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiRadialGauge-template-label,
+.tchmi-radial-gauge-template-label {
+    text-anchor: middle;
+    dominant-baseline: central;
+    pointer-events: none;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiRadialGauge-template-range-container path,
+.tchmi-radial-gauge-template-range-container path {
+    fill: none;
+    pointer-events: none;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiRadialGauge-template-circle-under,
+.TcHmi_Controls_Beckhoff_TcHmiRadialGauge-template-circle-over,
+.tchmi-radial-gauge-template-circle-under,
+.tchmi-radial-gauge-template-circle-over {
+    pointer-events: none;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiRadialGauge-template-display-value,
+.TcHmi_Controls_Beckhoff_TcHmiRadialGauge-template-display-unit,
+.tchmi-radial-gauge-template-display-value,
+.tchmi-radial-gauge-template-display-unit {
+    text-anchor: middle;
+    pointer-events: none;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiRadialGauge-template-knob,
+.tchmi-radial-gauge-template-knob {
+    cursor: move;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiRadialGauge.TcHmi_Controls_System_TcHmiControl-operate-disallowed .TcHmi_Controls_Beckhoff_TcHmiRadialGauge-template-knob,
+.tchmi-radial-gauge.tchmi-control-operate-disallowed .tchmi-radial-gauge-template-knob {
+    cursor: not-allowed;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiRadialGauge-template-svg,
+.tchmi-radial-gauge-template-svg {
+    position: relative;
+}

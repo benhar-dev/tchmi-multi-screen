@@ -1,0 +1,1 @@
+var TcHmi;!function(TcHmi){let Functions;!function(Functions){let Beckhoff;!function(Beckhoff){Beckhoff.GetTheme=function(){return TcHmi.Theme.get()}}(Beckhoff=Functions.Beckhoff||(Functions.Beckhoff={})),Functions.registerFunctionEx("GetTheme","TcHmi.Functions.Beckhoff",Beckhoff.GetTheme)}(Functions=TcHmi.Functions||(TcHmi.Functions={}))}(TcHmi||(TcHmi={}));

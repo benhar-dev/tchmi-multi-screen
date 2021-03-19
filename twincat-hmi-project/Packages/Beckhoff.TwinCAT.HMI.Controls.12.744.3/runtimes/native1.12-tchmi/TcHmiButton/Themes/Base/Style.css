@@ -1,0 +1,21 @@
+/** Styles for the theme: Base */
+
+/* Style for the main element */
+.TcHmi_Controls_Beckhoff_TcHmiButton, .tchmi-button {
+    /* Color gradient for default view */
+    background-image: linear-gradient(135deg, #eff1f3, #aeb9c2);
+    /* Default color for button text */
+    color: #4794da;
+    /* Default color for border. Important! This has to be defined to an explicit value. If not an override of color will also effect the color of the border if theres no value defined for the color attribute. */
+    border-color: #4794da;
+    /* Default box shadow */
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.6);
+}
+
+/* Class down will be set/unset in the control on mouse/touch down */
+.TcHmi_Controls_Beckhoff_TcHmiButton.down, .tchmi-button.down {
+    /* Another color gradient */
+    background-image: linear-gradient(135deg, #aeb9c2, #eff1f3);
+    color: #4c6374;
+    box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.3);
+}

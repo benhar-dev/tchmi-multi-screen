@@ -1,0 +1,6 @@
+﻿/** Styles for all themes */
+
+/* container have no own visual representation so the white overlay is not nice on non white backgrounds */
+.TcHmi_Controls_System_TcHmiContainerControl.TcHmi_Controls_System_TcHmiControl-disabled::after, .tchmi-container-control.tchmi-control-disabled::after {
+    background-color: transparent;
+}

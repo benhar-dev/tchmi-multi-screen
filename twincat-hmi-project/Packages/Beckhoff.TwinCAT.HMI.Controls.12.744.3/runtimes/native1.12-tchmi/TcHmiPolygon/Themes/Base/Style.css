@@ -1,0 +1,12 @@
+﻿/** Styles for the theme: Base */
+
+/* Style for the main element */
+.TcHmi_Controls_Beckhoff_TcHmiPolygon,
+.tchmi-polygon {
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiPolygon-template-svg-polygon,
+.tchmi-polygon-template-svg-polygon {
+    stroke: rgba(0, 0, 0, 1);
+    stroke-width: 1px;
+}

@@ -1,0 +1,427 @@
+/** Styles for all themes */
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template,
+.tchmi-event-grid-template {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-menu-bar,
+.tchmi-event-grid-template-menu-bar {
+    display: flex;
+    flex-shrink: 1;
+    flex-wrap: wrap;
+    margin-left: -5px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-menu-bar > div,
+.tchmi-event-grid-template-menu-bar > div{
+	display: flex;
+	flex-wrap: wrap;
+    flex-direction: inherit;
+	margin-left: 5px;
+    padding: 2.5px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-menu-bar .TcHmi_Controls_System_TcHmiControl,
+.tchmi-event-grid-template-menu-bar .tchmi-control{
+	position: relative;
+	margin: 2.5px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-menu-bar .TcHmi_Controls_Beckhoff_TcHmiButton-template,
+.tchmi-event-grid-template-menu-bar .tchmi-button-template {
+	background-size: contain;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-grid-container,
+.tchmi-event-grid-template-grid-container {
+    flex-grow: 1;
+    position: relative;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template .TcHmi_Controls_Beckhoff_TcHmiDatagrid-template-data-scroll tr.focused td::before,
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-popup .TcHmi_Controls_Beckhoff_TcHmiDatagrid-template-data-scroll tr.focused td::before,
+.tchmi-event-grid-template .tchmi-datagrid-template-data-scroll tr.focused td::before,
+.tchmi-event-grid-template-popup .tchmi-datagrid-template-data-scroll tr.focused td::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10000px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-popup,
+.tchmi-event-grid-template-popup {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-popup > h1,
+.tchmi-event-grid-template-popup > h1{
+    margin-top: 0;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-popup-content,
+.tchmi-event-grid-template-popup-content {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-bottom: 10px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-popup-footer,
+.tchmi-event-grid-template-popup-footer {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-popup-footer .TcHmi_Controls_System_TcHmiControl,
+.tchmi-event-grid-template-popup-footer .tchmi-control{
+	position: relative;
+	margin-left: 5px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid .TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-popup,
+.tchmi-event-grid .tchmi-event-grid-template-popup {
+    display: none;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-details-popup .TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-popup-content,
+.tchmi-event-grid-template-details-popup .tchmi-event-grid-template-popup-content {
+    overflow: auto;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-details-popup dl,
+.tchmi-event-grid-template-details-popup dl {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 702px;
+    margin: 0;
+    text-align: left;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-details-popup dt,
+.tchmi-event-grid-template-details-popup dt {
+    width: 92px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 1px;
+    padding: 5px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-details-popup dd,
+.tchmi-event-grid-template-details-popup dd {
+    width: calc(100% - 112px);
+    margin-left: 0;
+    word-wrap: break-word;
+    margin-bottom: 1px;
+    padding: 5px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-details-popup dd dl,
+.tchmi-event-grid-template-details-popup dd dl{
+    display: inline;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-details-popup dd dt,
+.tchmi-event-grid-template-details-popup dd dt {
+    width: auto;
+    min-width: 16px;
+    padding: 0;
+	margin-right: 5px;
+    margin-bottom: 0;
+	float: left;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-details-popup dd dd,
+.tchmi-event-grid-template-details-popup dd dd{
+    display: block;
+	width: auto;
+    min-height: 16px;
+    padding: 0;
+    padding-left: 20px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-details-popup dd dd dl,
+.tchmi-event-grid-template-details-popup dd dd dl{
+	display: inline-block;
+    width: 100%;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-details-popup .TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-confirm-button,
+.tchmi-event-grid-template-details-popup .tchmi-event-grid-template-confirm-button {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-columns-popup .TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-popup-content,
+.tchmi-event-grid-template-columns-popup .tchmi-event-grid-template-popup-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-columns-popup .TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-columns-selector,
+.tchmi-event-grid-template-columns-popup .tchmi-event-grid-template-columns-selector {
+    display: flex;
+    margin: 0 -3px 5px -3px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-columns-popup .TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-columns-selector > div,
+.tchmi-event-grid-template-columns-popup .tchmi-event-grid-template-columns-selector > div{
+    margin: 0 3px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-columns-popup .TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-columns-selector .TcHmi_Controls_System_TcHmiControl,
+.tchmi-event-grid-template-columns-popup .tchmi-event-grid-template-columns-selector .tchmi-control{
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-columns-config-available-columns, .TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-columns-config-selected-columns,
+.tchmi-event-grid-template-columns-config-available-columns, .tchmi-event-grid-template-columns-config-selected-columns {
+    width: 170px;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-columns-config-column,
+.tchmi-event-grid-template-columns-config-column {
+    padding: 5px;
+    position: relative;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-columns-config-column-selection-toggle,
+.tchmi-event-grid-template-columns-config-column-selection-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 26px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-column-properties,
+.tchmi-event-grid-template-column-properties {
+    display: flex;
+    flex-direction: column;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-column-properties > div,
+.tchmi-event-grid-template-column-properties > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 10px;
+    margin-bottom: 2px;
+    position: relative;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-column-properties > div.hidden,
+.tchmi-event-grid-template-column-properties > div.hidden{
+    display: none;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-column-property-label,
+.tchmi-event-grid-template-column-property-label {
+    margin-right: 3px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-column-properties div[data-tchmi-type],
+.tchmi-event-grid-template-column-properties div[data-tchmi-type] {
+    position: relative;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-column-properties div[data-tchmi-type] + div[data-tchmi-type],
+.tchmi-event-grid-template-column-properties div[data-tchmi-type] + div[data-tchmi-type]{
+    margin-left: 2px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-in-textbox,
+.tchmi-event-grid-template-in-textbox {
+    position: absolute;
+    z-index: 1;
+    width: 0;
+    right: 117px;
+    line-height: 26px;
+    color: #4c6374;
+    pointer-events: none;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-confirm-all-popup .TcHmi_Controls_Beckhoff_TcHmiDatagrid,
+.tchmi-event-grid-template-confirm-all-popup .tchmi-datagrid {
+    position: relative;
+    margin-top: 6px;
+    width: 528px;
+    max-width: 100%;
+    height: calc(100% - 16px);
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-confirm-all-popup .TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-popup-content,
+.tchmi-event-grid-template-confirm-all-popup .tchmi-event-grid-template-popup-content {
+    display: flex;
+    flex-direction: column;
+    max-height: 370px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-filter-popup .TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-popup-content,
+.tchmi-event-grid-template-filter-popup .tchmi-event-grid-template-popup-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-filter-popup .TcHmi_Controls_Beckhoff_TcHmiButton,
+.tchmi-event-grid-template-filter-popup .tchmi-button {
+    position: relative;
+    display: inline-block;
+    margin-right: 5px;
+}
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-filter-popup .TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-remove-button,
+.tchmi-event-grid-template-filter-popup .tchmi-event-grid-template-remove-button {
+    margin-right: 15px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-filter-popup table,
+.tchmi-event-grid-template-filter-popup table {
+    border-collapse: collapse;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-filter-table-header,
+.tchmi-event-grid-template-filter-table-header {
+    display: block;
+    overflow: hidden;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-filter-table-header th,
+.tchmi-event-grid-template-filter-table-header th {
+    height: 30px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-filter-table-header .TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-filter-scroll-placeholder,
+.tchmi-event-grid-template-filter-table-header .tchmi-event-grid-template-filter-scroll-placeholder{
+    width: 200px;
+    position: absolute;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-filter-table,
+.tchmi-event-grid-template-filter-table {
+    overflow: auto;
+    display: block;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-filter-table .TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-filter-indentation-column,
+.tchmi-event-grid-template-filter-table .tchmi-event-grid-template-filter-indentation-column {
+    display: flex;
+    padding: 0;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-filter-selection-column,
+.tchmi-event-grid-template-filter-selection-column {
+    min-width: 30px;
+    max-width: 30px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-filter-logic-column,
+.tchmi-event-grid-template-filter-logic-column {
+    min-width: 60px;
+    max-width: 60px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-filter-path-column,
+.tchmi-event-grid-template-filter-path-column {
+    min-width: 120px;
+    max-width: 120px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-filter-comparator-column,
+.tchmi-event-grid-template-filter-comparator-column {
+    min-width: 160px;
+    max-width: 160px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-filter-value-column,
+.tchmi-event-grid-template-filter-value-column {
+    min-width: 250px;
+    max-width: 250px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-filter-table td,
+.tchmi-event-grid-template-filter-table td {
+    position: relative;
+    white-space: nowrap;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    padding: 0;
+    height: 30px;
+    overflow: hidden;
+    cursor: default;
+    box-sizing: border-box;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-filter-table .TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-filter-indentation-marker,
+.tchmi-event-grid-template-filter-table .tchmi-event-grid-template-filter-indentation-marker {
+    width: 5px;
+    height: 30px;
+    border-left: 1px solid;
+    float: left;
+    box-sizing: border-box;
+    margin-left: 4px;
+    margin-right: -3px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-filter-table .TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-filter-indentation-marker:last-child,
+.tchmi-event-grid-template-filter-table .tchmi-event-grid-template-filter-indentation-marker:last-child{
+    margin-right: 1px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-filter-table .TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-filter-indentation-marker.first,
+.tchmi-event-grid-template-filter-table .tchmi-event-grid-template-filter-indentation-marker.first{
+    border-top: 1px solid;
+    height: 28px;
+	margin-top: 2px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-filter-table .TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-filter-indentation-marker.last,
+.tchmi-event-grid-template-filter-table .tchmi-event-grid-template-filter-indentation-marker.last{
+	border-bottom: 1px solid;
+    height: 28px;
+	margin-bottom: 2px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-filter-table .TcHmi_Controls_Beckhoff_TcHmiCombobox,
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-filter-table .TcHmi_Controls_Beckhoff_TcHmiTextbox,
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-filter-table .TcHmi_Controls_Beckhoff_TcHmiCheckbox,
+.tchmi-event-grid-template-filter-table .tchmi-combobox,
+.tchmi-event-grid-template-filter-table .tchmi-textbox,
+.tchmi-event-grid-template-filter-table .tchmi-checkbox {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 30px; /* Fix for IE who refuses to properly size absolutely positioned elements in table cells */
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEventGrid-template-filter-table .TcHmi_Controls_Beckhoff_TcHmiButton,
+.tchmi-event-grid-template-filter-table .tchmi-button {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}

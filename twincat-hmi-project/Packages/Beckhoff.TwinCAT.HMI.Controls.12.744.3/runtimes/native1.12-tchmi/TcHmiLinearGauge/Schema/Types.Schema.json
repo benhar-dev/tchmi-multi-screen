@@ -1,0 +1,56 @@
+{
+   "$schema": "http://json-schema.org/draft-04/schema",
+   "definitions": {
+      "LinearGaugeLabelPosition": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiLinearGauge.LabelPosition"
+      },
+      "LinearGaugeOrientation": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiLinearGauge.Orientation"
+      },
+      "LinearGaugeUnitOrientation": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiLinearGauge.UnitOrientation"
+      },
+      "TcHmi.Controls.Beckhoff.TcHmiLinearGauge": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "object",
+         "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+         "frameworkControlType": "TcHmiLinearGauge",
+         "frameworkControlNamespace": "TcHmi.Controls.Beckhoff"
+      },
+      "TcHmi.Controls.Beckhoff.TcHmiLinearGauge.LabelPosition": {
+         "title": "LabelPosition",
+         "type": "string",
+         "enum": [
+            "Top",
+            "Bottom",
+            "Left",
+            "Right"
+         ],
+         "default": "Top"
+      },
+      "TcHmi.Controls.Beckhoff.TcHmiLinearGauge.Orientation": {
+         "title": "LinearGaugeOrientation",
+         "type": "string",
+         "enum": [
+            "Horizontal",
+            "Vertical",
+            "HorizontalInverted",
+            "VerticalInverted"
+         ],
+         "default": "Horizontal"
+      },
+      "TcHmi.Controls.Beckhoff.TcHmiLinearGauge.UnitOrientation": {
+         "title": "LinearGaugeUnitOrientation",
+         "type": "string",
+         "enum": [
+            "Theme",
+            "Horizontal",
+            "Vertical"
+         ],
+         "default": "Theme"
+      },
+      "TcHmiLinearGauge": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiLinearGauge"
+      }
+   }
+}

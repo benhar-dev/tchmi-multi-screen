@@ -1,0 +1,241 @@
+{
+   "$schema": "../../TcHmiFramework/Schema/ControlDescription.Schema.json",
+   "apiVersion": 1,
+   "name": "TcHmiPolygon",
+   "namespace": "TcHmi.Controls.Beckhoff",
+   "displayName": "Polygon",
+   "version": {
+      "full": "1.12.744.3",
+      "major": 1,
+      "minor": 12,
+      "build": 744,
+      "revision": 3
+   },
+   "visible": true,
+   "themeable": "Standard",
+   "base": "TcHmi.Controls.System.TcHmiControl",
+   "description": "The polygon control defines a closed shape consisting of a set of connected straight line segments.\nThe last point is connected to the first point.",
+   "defaultDesignerEvent": ".onPressed",
+   "properties": {
+      "containerControl": false,
+      "geometry": {
+         "width": 200,
+         "height": 200
+      }
+   },
+   "icons": [
+      {
+         "name": "Icons/16x16.png",
+         "width": 16,
+         "height": 16
+      },
+      {
+         "name": "Icons/24x24.png",
+         "width": 24,
+         "height": 24
+      },
+      {
+         "name": "Icons/32x32.png",
+         "width": 32,
+         "height": 32
+      },
+      {
+         "name": "Icons/64x64.png",
+         "width": 64,
+         "height": 64
+      }
+   ],
+   "template": "Template.html",
+   "dependencyFiles": [
+      {
+         "name": "Style.css",
+         "type": "Stylesheet",
+         "description": ""
+      },
+      {
+         "name": "TcHmiPolygon.js",
+         "type": "JavaScript",
+         "description": ""
+      }
+   ],
+   "themes": {
+      "Base": {
+         "resources": [
+            {
+               "name": "Themes/Base/Style.css",
+               "type": "Stylesheet",
+               "description": ""
+            }
+         ]
+      }
+   },
+   "attributes": [
+      {
+         "name": "data-tchmi-fill-color",
+         "propertyName": "FillColor",
+         "propertySetterName": "setFillColor",
+         "propertyGetterName": "getFillColor",
+         "displayName": "FillColor",
+         "visible": true,
+         "themeable": "Standard",
+         "displayPriority": 10,
+         "type": "tchmi:framework#/definitions/Color",
+         "category": "Colors",
+         "description": "Defines the color of the interior of the control.",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "allowSymbolExpressionsInObject": true,
+         "defaultValue": null,
+         "defaultValueInternal": null
+      },
+      {
+         "name": "data-tchmi-stroke-color",
+         "propertyName": "StrokeColor",
+         "propertySetterName": "setStrokeColor",
+         "propertyGetterName": "getStrokeColor",
+         "displayName": "StrokeColor",
+         "visible": true,
+         "themeable": "Standard",
+         "displayPriority": 10,
+         "type": "tchmi:framework#/definitions/SolidColor",
+         "category": "Colors",
+         "description": "Specifies the color of the outline of the control.",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "allowSymbolExpressionsInObject": true,
+         "defaultValue": null,
+         "defaultValueInternal": null
+      },
+      {
+         "name": "data-tchmi-points",
+         "propertyName": "Points",
+         "propertySetterName": "setPoints",
+         "propertyGetterName": "getPoints",
+         "displayName": "Points",
+         "visible": true,
+         "themeable": "Standard",
+         "displayPriority": 10,
+         "type": "tchmi:general#/definitions/String",
+         "category": "Common",
+         "description": "Each point is defined by a X and a Y coordinate.\nIt's a common practice (but not required) to use a comma to mark out the X and Y coordinate of each point and to use space to mark out each point.",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": "0,100 100,0 200,100 100,200 0,100",
+         "defaultValueInternal": null
+      },
+      {
+         "name": "data-tchmi-stroke-thickness",
+         "propertyName": "StrokeThickness",
+         "propertySetterName": "setStrokeThickness",
+         "propertyGetterName": "getStrokeThickness",
+         "displayName": "StrokeThickness",
+         "visible": true,
+         "themeable": "Standard",
+         "displayPriority": 20,
+         "type": "tchmi:framework#/definitions/MeasurementValue",
+         "category": "Shape",
+         "description": "Specifies the width of the outline of the control in pixel.",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": null
+      },
+      {
+         "name": "data-tchmi-stroke-thickness-unit",
+         "propertyName": "StrokeThicknessUnit",
+         "propertyGetterName": "getStrokeThicknessUnit",
+         "refTo": "StrokeThickness",
+         "displayName": "StrokeThicknessUnit",
+         "visible": true,
+         "displayPriority": 20,
+         "type": "tchmi:framework#/definitions/PixelUnit",
+         "category": "Shape",
+         "description": "Only Pixel is allowed.",
+         "readOnly": true,
+         "bindable": false,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": "px"
+      },
+      {
+         "name": "data-tchmi-stroke-style",
+         "propertyName": "StrokeStyle",
+         "propertySetterName": "setStrokeStyle",
+         "propertyGetterName": "getStrokeStyle",
+         "displayName": "StrokeStyle",
+         "visible": true,
+         "themeable": "Standard",
+         "displayPriority": 20,
+         "type": "tchmi:general#/definitions/String",
+         "category": "Shape",
+         "description": "It's a list of comma and/or white space separated numbers that specify the lengths of alternating dashes and gaps.\nIf an odd number of values is provided, then the list of values is repeated to yield an even number of values. Thus, 5,3,2 is equivalent to 5,3,2,5,3,2.",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": ""
+      },
+      {
+         "name": "data-tchmi-fill-mode",
+         "propertyName": "FillMode",
+         "propertySetterName": "setFillMode",
+         "propertyGetterName": "getFillMode",
+         "displayName": "FillMode",
+         "visible": true,
+         "themeable": "Standard",
+         "displayPriority": 60,
+         "type": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiPolygon.FillMode",
+         "category": "Shape",
+         "description": "Defines the algorithm which is to be used to determine what parts of the canvas are included inside the shape (used with self intersecting polygons).",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": "NonZero"
+      },
+      {
+         "name": "data-tchmi-scale-mode",
+         "propertyName": "ScaleMode",
+         "propertySetterName": "setScaleMode",
+         "propertyGetterName": "getScaleMode",
+         "displayName": "ScaleMode",
+         "visible": true,
+         "themeable": "Standard",
+         "displayPriority": 60,
+         "type": "tchmi:framework#/definitions/ScaleMode",
+         "category": "Shape",
+         "description": "Scale the content to control size.",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": "ScaleToFill",
+         "defaultValueInternal": "None"
+      }
+   ],
+   "attributeCategories": [
+      {
+         "name": "Shape",
+         "displayPriority": 500,
+         "defaultCollapsed": true,
+         "description": ""
+      }
+   ],
+   "functions": [],
+   "dataTypes": [
+      {
+         "schema": "Schema/Types.Schema.json"
+      }
+   ]
+}

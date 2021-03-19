@@ -1,0 +1,83 @@
+{
+   "$schema": "../../../Schema/ControlDescription.Schema.json",
+   "apiVersion": 1,
+   "name": "TcHmiView",
+   "namespace": "TcHmi.Controls.System",
+   "displayName": "View",
+   "version": {
+      "full": "1.12.744.3",
+      "major": 1,
+      "minor": 12,
+      "build": 744,
+      "revision": 3
+   },
+   "visible": false,
+   "themeable": "Standard",
+   "base": "TcHmi.Controls.System.TcHmiPartial",
+   "description": "A top level control for a TcHmi visualization.",
+   "properties": {
+      "containerControl": true,
+      "geometry": {
+         "width": 500,
+         "height": 500
+      }
+   },
+   "icons": [
+      {
+         "name": "Icons/16x16.png",
+         "width": 16,
+         "height": 16
+      },
+      {
+         "name": "Icons/24x24.png",
+         "width": 24,
+         "height": 24
+      },
+      {
+         "name": "Icons/32x32.png",
+         "width": 32,
+         "height": 32
+      },
+      {
+         "name": "Icons/64x64.png",
+         "width": 64,
+         "height": 64
+      }
+   ],
+   "dependencyFiles": [
+      {
+         "name": "Style.css",
+         "type": "Stylesheet",
+         "description": ""
+      },
+      {
+         "name": "TcHmiView.js",
+         "type": "JavaScript",
+         "description": ""
+      }
+   ],
+   "themes": {},
+   "attributes": [],
+   "access": [
+      {
+         "name": "operate",
+         "displayName": "Operate",
+         "description": "Controls the ability to operate. This defaults to true.",
+         "visible": true,
+         "defaultValueInternal": true
+      },
+      {
+         "name": "observe",
+         "displayName": "Observe",
+         "description": "Controls the ability to observe. This defaults to true.",
+         "visible": true,
+         "defaultValueInternal": true
+      }
+   ],
+   "functions": [],
+   "dataTypes": [
+      {
+         "schema": "Schema/Types.Schema.json"
+      }
+   ]
+}

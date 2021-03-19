@@ -1,0 +1,421 @@
+/** Styles for the theme: Base */
+
+/* Style for the main element */
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart,
+.tchmi-trend-line-chart {
+    background: #D7D7D9;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.6);
+}
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-chart,
+.tchmi-trend-line-chart-template-chart {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-tooltip .TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-tooltip-text,
+.tchmi-trend-line-chart-template-tooltip .tchmi-trend-line-chart-template-tooltip-text {
+    background: #EDEDED;
+    color: #4794da;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.6);
+    border-radius: 6px;
+    padding: 5px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-tooltip .TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-tooltip-text table,
+.tchmi-trend-line-chart-template-tooltip .tchmi-trend-line-chart-template-tooltip-text table{
+    text-align: left;
+    border-collapse: collapse;
+    border: none; /** No border defined */
+    width:100%;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-tooltip-time-table,
+.tchmi-trend-line-chart-template-tooltip-time-table {
+    margin-bottom: 10px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-tooltip-time-table tr td:first-child,
+.tchmi-trend-line-chart-template-tooltip-time-table tr td:first-child{
+    font-weight:bold;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-tooltip .TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-tooltip-text table tr,
+.tchmi-trend-line-chart-template-tooltip .tchmi-trend-line-chart-template-tooltip-text table tr {
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-tooltip .TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-tooltip-text table td,
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-tooltip .TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-tooltip-text table th,
+.tchmi-trend-line-chart-template-tooltip .tchmi-trend-line-chart-template-tooltip-text table td,
+.tchmi-trend-line-chart-template-tooltip .tchmi-trend-line-chart-template-tooltip-text table th {
+    padding: 5px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-tooltip .TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-tooltip-text table td,
+.tchmi-trend-line-chart-template-tooltip .tchmi-trend-line-chart-template-tooltip-text table td {
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-tooltip-arrow,
+.tchmi-trend-line-chart-template-tooltip-arrow {
+    background: #EDEDED;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-menu-bar > .TcHmi_Controls_Beckhoff_TcHmiButton, .TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-menu-bar-dropdown > .TcHmi_Controls_Beckhoff_TcHmiButton,
+.tchmi-trend-line-chart-template-menu-bar > .tchmi-button, .tchmi-trend-line-chart-template-menu-bar-dropdown > .tchmi-button {
+    box-shadow: none;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-stop,
+.tchmi-trend-line-chart-template-stop {
+    background-image: linear-gradient(135deg, #eff1f3, #aeb9c2);
+    background-repeat: no-repeat;
+}
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-stop > div,
+.tchmi-trend-line-chart-template-stop > div{
+    background-image: url('Images/pause_normal.svg');
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-stop.down,
+.tchmi-trend-line-chart-template-stop.down{
+    background-image: linear-gradient(135deg, #aeb9c2, #eff1f3);
+}
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-stop.down > div,
+.tchmi-trend-line-chart-template-stop.down > div{
+    background-image: url('Images/pause_pressed.svg');
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+}
+
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-panx,
+.tchmi-trend-line-chart-template-panx {
+    background-image: linear-gradient(135deg, #eff1f3, #aeb9c2);
+    background-repeat: no-repeat;
+}
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-panx > div,
+.tchmi-trend-line-chart-template-panx > div{
+    background-image: url('Images/panx_normal.svg');
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-panx.down,
+.tchmi-trend-line-chart-template-panx.down {
+    background-image: linear-gradient(135deg, #aeb9c2, #eff1f3);
+}
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-panx.down > div,
+.tchmi-trend-line-chart-template-panx.down > div{
+    background-image: url('Images/panx_pressed.svg');
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+}
+
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-panxy,
+.tchmi-trend-line-chart-template-panxy {
+    background-image: linear-gradient(135deg, #eff1f3, #aeb9c2);
+    background-repeat: no-repeat;
+}
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-panxy > div,
+.tchmi-trend-line-chart-template-panxy > div{
+    background-image: url('Images/panxy_normal.svg');
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-panxy.down,
+.tchmi-trend-line-chart-template-panxy.down {
+    background-image: linear-gradient(135deg, #aeb9c2, #eff1f3);
+}
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-panxy.down > div,
+.tchmi-trend-line-chart-template-panxy.down > div{
+    background-image: url('Images/panxy_pressed.svg');
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-zoomx,
+.tchmi-trend-line-chart-template-zoomx {
+    background-image: linear-gradient(135deg, #eff1f3, #aeb9c2);
+    background-repeat: no-repeat;
+}
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-zoomx > div,
+.tchmi-trend-line-chart-template-zoomx > div{
+    background-image: url('Images/zoomx_normal.svg');
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-zoomx.down,
+.tchmi-trend-line-chart-template-zoomx.down{
+    background-image: linear-gradient(135deg, #aeb9c2, #eff1f3);
+}
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-zoomx.down > div,
+.tchmi-trend-line-chart-template-zoomx.down > div 
+{
+    background-image: url('Images/zoomx_pressed.svg');
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+}
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-zoomxy,
+.tchmi-trend-line-chart-template-zoomxy {
+    background-image: linear-gradient(135deg, #eff1f3, #aeb9c2);
+    background-repeat: no-repeat;
+}
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-zoomxy > div,
+.tchmi-trend-line-chart-template-zoomxy > div{
+    background-image: url('Images/zoomxy_normal.svg');
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-zoomxy.down,
+.tchmi-trend-line-chart-template-zoomxy.down{
+    background-image: linear-gradient(135deg, #aeb9c2, #eff1f3);
+}
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-zoomxy.down > div,
+.tchmi-trend-line-chart-template-zoomxy.down > div{
+    background-image: url('Images/zoomxy_pressed.svg');
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+}
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-reset-zoom,
+.tchmi-trend-line-chart-template-reset-zoom {
+    background-image: linear-gradient(135deg, #eff1f3, #aeb9c2);
+    background-repeat: no-repeat;
+}
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-reset-zoom > div,
+.tchmi-trend-line-chart-template-reset-zoom > div{
+    background-image: url('Images/zoomdel_normal.svg');
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-reset-zoom.down,
+.tchmi-trend-line-chart-template-reset-zoom.down{
+    background-image: linear-gradient(135deg, #aeb9c2, #eff1f3);
+}
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-reset-zoom.down > div,
+.tchmi-trend-line-chart-template-reset-zoom.down > div{
+    background-image: url('Images/zoomdel_pressed.svg');
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+}
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-reset,
+.tchmi-trend-line-chart-template-reset {
+    background-image: linear-gradient(135deg, #eff1f3, #aeb9c2);
+    background-repeat: no-repeat;
+}
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-reset > div,
+.tchmi-trend-line-chart-template-reset > div {
+    background-image: url('Images/play_normal.svg');
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-reset.down,
+.tchmi-trend-line-chart-template-reset.down{
+    background-image: linear-gradient(135deg, #aeb9c2, #eff1f3);
+}
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-reset.down > div,
+.tchmi-trend-line-chart-template-reset.down > div{
+    background-image: url('Images/play_pressed.svg');
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+}
+.TcHmi_Controls_Beckhoff_TcHmiButton.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-options,
+.tchmi-button.tchmi-trend-line-chart-template-options {
+    box-shadow: none;
+    background: white;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiButton.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-options:before,
+.tchmi-button.tchmi-trend-line-chart-template-options:before {
+    content: "\25bc";
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+    font-size:12px;
+    font-weight:normal;
+    font-style:normal;
+    font-family:sans-serif;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-menu-bar,
+.tchmi-trend-line-chart-template-menu-bar {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-menu-bar > label,
+.tchmi-trend-line-chart-template-menu-bar > label{
+    color: #4794da;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-menu-bar-dropdown,
+.tchmi-trend-line-chart-template-menu-bar-dropdown {
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.6);
+    background: #ffffff;
+}
+
+/* timespanpicker and datetimepicker buttons*/
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-timespan-button-start,
+.tchmi-trend-line-chart-template-timespan-button-start {
+    background-image: linear-gradient(135deg, #eff1f3, #aeb9c2);
+    background-repeat: no-repeat;
+}
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-timespan-button-start > div,
+.tchmi-trend-line-chart-template-timespan-button-start > div{
+    background-image: url('Images/timespanpicker_normal.svg');
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-timespan-button-start.down,
+.tchmi-trend-line-chart-template-timespan-button-start.down{
+    background-image: linear-gradient(135deg, #aeb9c2, #eff1f3);
+}
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-timespan-button-start.down > div,
+.tchmi-trend-line-chart-template-timespan-button-start.down > div{
+    background-image: url('Images/timespanpicker_pressed.svg');
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-datetime-button-start,
+.tchmi-trend-line-chart-template-datetime-button-start {
+    background-image: linear-gradient(135deg, #eff1f3, #aeb9c2);
+    background-repeat: no-repeat;
+}
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-datetime-button-start > div,
+.tchmi-trend-line-chart-template-datetime-button-start > div{
+    background-image: url('Images/datetimepicker_normal.svg');
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-datetime-button-start.down,
+.tchmi-trend-line-chart-template-datetime-button-start.down{
+    background-image: linear-gradient(135deg, #aeb9c2, #eff1f3);
+}
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-datetime-button-start.down > div,
+.tchmi-trend-line-chart-template-datetime-button-start.down > div{
+    background-image: url('Images/datetimepicker_pressed.svg');
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-timespan-button-end,
+.tchmi-trend-line-chart-template-timespan-button-end {
+    background-image: linear-gradient(135deg, #eff1f3, #aeb9c2);
+    background-repeat: no-repeat;
+}
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-timespan-button-end > div,
+.tchmi-trend-line-chart-template-timespan-button-end > div{
+    background-image: url('Images/timespanpicker_normal.svg');
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-timespan-button-end.down,
+.tchmi-trend-line-chart-template-timespan-button-end.down{
+    background-image: linear-gradient(135deg, #aeb9c2, #eff1f3);
+}
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-timespan-button-end.down > div,
+.tchmi-trend-line-chart-template-timespan-button-end.down > div {
+    background-image: url('Images/timespanpicker_pressed.svg');
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-datetime-button-end,
+.tchmi-trend-line-chart-template-datetime-button-end {
+    background-image: linear-gradient(135deg, #eff1f3, #aeb9c2);
+    background-repeat: no-repeat;
+}
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-datetime-button-end > div,
+.tchmi-trend-line-chart-template-datetime-button-end > div{
+    background-image: url('Images/datetimepicker_normal.svg');
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-datetime-button-end.down,
+.tchmi-trend-line-chart-template-datetime-button-end.down{
+    background-image: linear-gradient(135deg, #aeb9c2, #eff1f3);
+}
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-datetime-button-end.down > div,
+.tchmi-trend-line-chart-template-datetime-button-end.down > div{
+    background-image: url('Images/datetimepicker_pressed.svg');
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+}
+
+/** 
+    Loading Spinner
+    Usage: <div class="TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-loading-spinner-container"><div class="TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-loading-spinner"><div></div><div></div><div></div><div></div></div></div>
+*/
+
+:root {
+    --TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-loading-spinner-color: #4c6374;
+}
+
+@keyframes TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-loading-spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-loading-spinner-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-loading-spinner {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+    .TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-loading-spinner div {
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        width: 51px;
+        height: 51px;
+        margin: 6px;
+        border: 6px solid var(--TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-loading-spinner-color);
+        border-radius: 50%;
+        animation: TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-loading-spinner 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        border-color: var(--TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-loading-spinner-color) transparent transparent transparent;
+    }
+
+        .TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-loading-spinner div:nth-child(1) {
+            animation-delay: -0.45s;
+        }
+
+        .TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-loading-spinner div:nth-child(2) {
+            animation-delay: -0.3s;
+        }
+
+        .TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-loading-spinner div:nth-child(3) {
+            animation-delay: -0.15s;
+        }

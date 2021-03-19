@@ -1,0 +1,461 @@
+/** Engineering */
+
+/* The variables in the first selector are manipulated by DesignerModeMasterControlHighlightManager
+    be carefully when changing values here */
+:root {
+    /* Blink engine only */
+    /** Color of the outline of an untransformed control fragment */
+    --tchmi-designer-control-untransformed-color: rgb(51, 51, 51);
+    /** Color of the outline of an unselected control  */
+    --tchmi-designer-control-unselected-color: rgb(27, 243, 31);
+    /** Color of the outline of a selected control  */
+    --tchmi-designer-control-selected-color: rgb(25, 62, 237);
+    /** Secondary color for selected controls (fill of anchors, control name background) */
+    --tchmi-designer-control-selected-secondary-color: rgb(204, 204, 204);
+    /** Color of the snap lines */
+    --tchmi-designer-control-snap-color: rgb(255, 0, 0);
+    /** Distance of the remote snap lines */
+    --tchmi-designer-control-remote-snap-distance: 10px;
+}
+
+.TcHmi_Controls_System_TcHmiControl.tchmi-creator-controlhidden {
+    /* Force this value to be valid and override style display definitions if available! */
+    display: none !important; /* csslint allow: important */
+}
+
+.tchmi-creator-hierarchy-controlposition,
+.tchmi-creator-hierarchy-anchorcontainer,
+.tchmi-creator-hierarchy-gridanchor,
+.tchmi-creator-hierarchy-gridcellposition {
+    position: absolute;
+    pointer-events: none;
+}
+
+.tchmi-creator-controlposition,
+.tchmi-creator-gridcell {
+    position: absolute;
+    outline-width: 1px;
+    outline-style: solid;
+    outline-color: transparent;
+    pointer-events: auto;
+}
+
+.tchmi-creator-originalposition {
+    position: absolute;
+    outline-width: 1px;
+    outline-style: dotted;
+    /** Using transparent to allow getBoundingClientRect for snapping */
+    outline-color: transparent;
+    pointer-events: none;
+}
+
+    /* ***************** Untransformed container */
+    .tchmi-creator-originalposition.tchmi-creator-active-highlight.tchmi-creator-control-selected {
+        outline-color: var(--tchmi-designer-control-untransformed-color);
+    }
+
+/* ***************** Transformed unselected container */
+.tchmi-creator-controlposition.tchmi-creator-active-highlight {
+    outline-color: var(--tchmi-designer-control-unselected-color);
+}
+
+/* ***************** Transformed selected container */
+.tchmi-creator-controlposition.tchmi-creator-control-selected {
+    outline-color: var(--tchmi-designer-control-selected-color);
+}
+
+    /* ***************** Cells of a selected grid */
+    .tchmi-creator-controlposition.tchmi-creator-childcontrol-selected > .tchmi-creator-gridcell,
+    .tchmi-creator-controlposition.tchmi-creator-control-selected > .tchmi-creator-gridcell {
+        outline: 1px solid var(--tchmi-designer-control-selected-color); /* the outlines of two neighbour cells are both visible */
+        opacity: 0.5;
+    }
+
+/* ************************* Control Name ************************* */
+.tchmi-creator-controlname {
+    font-family: 'Segoe UI', Tahoma, /* same as in VS */
+    'Microsoft YaHei', /* nicer chinese */
+    'Meiryo', /* nicer japanese */
+    sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    cursor: default;
+    position: absolute;
+    font-size: 11px;
+    bottom: 100%;
+    left: -1px; /* the outline of the control is not a border */
+    padding: 2px;
+    color: var(--tchmi-designer-control-selected-color);
+    background-color: var(--tchmi-designer-control-selected-secondary-color);
+    border-color: var(--tchmi-designer-control-selected-color);
+    border-style: solid;
+    border-width: 1px;
+    max-width: 100%;
+    overflow: hidden; /* If too small cut ... */
+    text-overflow: ellipsis; /* ... with ellipsis... */
+    direction: rtl; /* ...but cut from the left */
+    white-space: nowrap; /* prevent multi line even for chinese chars */
+    display: none;
+}
+
+.tchmi-creator-control-selected > .tchmi-creator-controlname {
+    display: block;
+}
+
+/* ************************* Distance Lines ************************* */
+.tchmi-creator-distance-line {
+    font-family: 'Segoe UI', Tahoma; /* numbers, px, % only */ /* stylelint-disable-line font-family-no-missing-generic-family-keyword */
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    position: absolute;
+    height: 15px;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    background-color: var(--tchmi-designer-control-selected-color);
+    background-clip: content-box;
+    pointer-events: none;
+    color: var(--tchmi-designer-control-selected-color);
+    text-shadow: 0 0 4px var(--tchmi-designer-control-selected-secondary-color), 0 0 4px var(--tchmi-designer-control-selected-secondary-color), 0 0 4px var(--tchmi-designer-control-selected-secondary-color), 0 0 4px var(--tchmi-designer-control-selected-secondary-color), 0 0 4px var(--tchmi-designer-control-selected-secondary-color), 0 0 4px var(--tchmi-designer-control-selected-secondary-color), 0 0 4px var(--tchmi-designer-control-selected-secondary-color), 0 0 4px var(--tchmi-designer-control-selected-secondary-color), 0 0 4px var(--tchmi-designer-control-selected-secondary-color), 0 0 4px var(--tchmi-designer-control-selected-secondary-color), 0 0 4px var(--tchmi-designer-control-selected-secondary-color), 0 0 4px var(--tchmi-designer-control-selected-secondary-color), 0 0 4px var(--tchmi-designer-control-selected-secondary-color);
+    display: none;
+}
+
+.tchmi-creator-control-selected > .tchmi-creator-distance-line {
+    display: block;
+}
+
+.tchmi-creator-distance-top {
+    bottom: calc(100% - 7px); /* offset to center the box anchor */
+    left: 50%;
+    transform: rotate(-90deg);
+    transform-origin: left;
+    text-align: right;
+}
+
+.tchmi-creator-distance-left {
+    bottom: calc(50% - 7px); /* offset to center the box anchor */
+    text-align: left;
+    right: 100%;
+}
+
+.tchmi-creator-distance-width {
+    top: calc(100% + 5px);
+    left: -1px;
+    text-align: left;
+    /* Different default on this lines*/
+    border-right: 3px var(--tchmi-designer-control-selected-color) solid; /* End triangle */
+    border-left: 3px var(--tchmi-designer-control-selected-color) solid; /* End triangle */
+}
+
+.tchmi-creator-distance-right {
+    bottom: calc(50% - 7px); /* offset to center the box anchor */
+    text-align: right;
+    left: 100%;
+}
+
+.tchmi-creator-distance-height {
+    bottom: -8px; /* offset to center the box anchor */
+    left: calc(100% + 15px);
+    transform: rotate(-90deg);
+    transform-origin: left;
+    text-align: left;
+    /* Different default on this lines*/
+    border-right: 3px var(--tchmi-designer-control-selected-color) solid; /* End triangle */
+    border-left: 3px var(--tchmi-designer-control-selected-color) solid; /* End triangle */
+}
+
+.tchmi-creator-distance-bottom {
+    top: calc(100% - 7px); /* offset to center the box anchor */
+    right: 50%;
+    transform: rotate(-90deg);
+    transform-origin: right;
+    text-align: left;
+}
+
+.tchmi-creator-control-definedfromtop > .tchmi-creator-distance-top {
+    border-right: 3px var(--tchmi-designer-control-selected-color) solid; /* End triangle */
+}
+
+.tchmi-creator-distance-top.no-triangle {
+    border-right: 0px var(--tchmi-designer-control-selected-color) solid; /* End triangle */
+}
+
+.tchmi-creator-control-definedfromleft > .tchmi-creator-distance-left {
+    border-left: 3px var(--tchmi-designer-control-selected-color) solid; /* End triangle */
+}
+
+.tchmi-creator-distance-left.no-triangle {
+    border-left: 0px var(--tchmi-designer-control-selected-color) solid; /* End triangle */
+}
+
+.tchmi-creator-control-definedfromleft.tchmi-creator-control-definedfromright > .tchmi-creator-distance-width {
+    border-right: 0px var(--tchmi-designer-control-selected-color) solid; /* No end triangle */
+    border-left: 0px var(--tchmi-designer-control-selected-color) solid; /* No end triangle */
+}
+
+.tchmi-creator-control-definedfromright > .tchmi-creator-distance-right {
+    border-right: 3px var(--tchmi-designer-control-selected-color) solid; /* End triangle */
+}
+
+.tchmi-creator-distance-right.no-triangle {
+    border-right: 0px var(--tchmi-designer-control-selected-color) solid; /* End triangle */
+}
+
+.tchmi-creator-control-definedfromtop.tchmi-creator-control-definedfrombottom > .tchmi-creator-distance-height {
+    border-right: 0px var(--tchmi-designer-control-selected-color) solid; /* No end triangle */
+    border-left: 0px var(--tchmi-designer-control-selected-color) solid; /* No end triangle */
+}
+
+.tchmi-creator-control-definedfrombottom > .tchmi-creator-distance-bottom {
+    border-left: 3px var(--tchmi-designer-control-selected-color) solid; /* End triangle */
+}
+
+.tchmi-creator-distance-bottom.no-triangle {
+    border-left: 0px var(--tchmi-designer-control-selected-color) solid; /* End triangle */
+}
+
+
+.tchmi-creator-snapline-top,
+.tchmi-creator-snapline-left,
+.tchmi-creator-snapline-bottom,
+.tchmi-creator-snapline-right {
+    position: absolute;
+    pointer-events: none;
+    border-style: dotted;
+    border-color: var(--tchmi-designer-control-snap-color);
+    border-width: 0px;
+    display: none;
+}
+
+.tchmi-creator-control-selected.tchmi-creator-control-snaptop > .tchmi-creator-snapline-top,
+.tchmi-creator-control-selected.tchmi-creator-control-snapleft > .tchmi-creator-snapline-left,
+.tchmi-creator-control-selected.tchmi-creator-control-snapbottom > .tchmi-creator-snapline-bottom,
+.tchmi-creator-control-selected.tchmi-creator-control-snapright > .tchmi-creator-snapline-right {
+    display: block;
+}
+
+.tchmi-creator-snapline-top {
+    width: 10000px;
+    height: calc(var(--tchmi-designer-control-remote-snap-distance));
+    left: -5000px;
+    top: calc(var(--tchmi-designer-control-remote-snap-distance) * -1);
+    border-bottom-width: 1px;
+}
+
+.tchmi-creator-snapline-left {
+    width: calc(var(--tchmi-designer-control-remote-snap-distance));
+    height: 10000px;
+    left: calc(var(--tchmi-designer-control-remote-snap-distance) * -1);
+    top: -5000px;
+    border-right-width: 1px;
+}
+
+.tchmi-creator-snapline-right {
+    width: calc(var(--tchmi-designer-control-remote-snap-distance));
+    height: 10000px;
+    left: 100%;
+    top: -5000px;
+    border-left-width: 1px;
+}
+
+.tchmi-creator-snapline-bottom {
+    width: 10000px;
+    height: calc(var(--tchmi-designer-control-remote-snap-distance));
+    left: -5000px;
+    bottom: calc(var(--tchmi-designer-control-remote-snap-distance) * -1);
+    border-top-width: 1px;
+}
+
+.tchmi-creator-control-selected.tchmi-creator-control-snaptop-remote > .tchmi-creator-snapline-top,
+.tchmi-creator-control-selected.tchmi-creator-control-snapleft-remote > .tchmi-creator-snapline-left,
+.tchmi-creator-control-selected.tchmi-creator-control-snapbottom-remote > .tchmi-creator-snapline-bottom,
+.tchmi-creator-control-selected.tchmi-creator-control-snapright-remote > .tchmi-creator-snapline-right {
+    background-color: var(--tchmi-designer-control-snap-color);
+    opacity: 0.1;
+    border-width: 0;
+}
+
+/** Hide distance lines with values */
+.tchmi-creator-will-get-new-parent > .tchmi-creator-distance-line,
+.tchmi-creator-will-get-new-parent > .tchmi-creator-snapline {
+    display: none;
+}
+
+
+/* ************************* Anchor container ************************* */
+.tchmi-creator-anchorcontainer {
+    position: absolute;
+    border: 1px solid transparent;
+    pointer-events: none;
+    display: none;
+}
+
+    .tchmi-creator-anchorcontainer.tchmi-creator-control-selected {
+        display: block;
+    }
+
+.tchmi-creator-anchor-rect {
+    position: absolute;
+    pointer-events: auto;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--tchmi-designer-control-selected-color);
+    background-color: var(--tchmi-designer-control-selected-secondary-color);
+    width: 9px;
+    height: 9px;
+}
+
+/** disable height anchors */
+.tchmi-creator-control-height-inactive > .tchmi-creator-anchor-top-center,
+.tchmi-creator-control-height-inactive > .tchmi-creator-anchor-bottom-center {
+    border-color: transparent;
+    background-color: transparent;
+    pointer-events: none;
+}
+/** disable width anchors */
+.tchmi-creator-control-width-inactive > .tchmi-creator-anchor-center-left,
+.tchmi-creator-control-width-inactive > .tchmi-creator-anchor-center-right {
+    border-color: transparent;
+    background-color: transparent;
+    pointer-events: none;
+}
+/** disable corner anchors */
+.tchmi-creator-control-height-inactive.tchmi-creator-control-width-inactive > .tchmi-creator-anchor-top-left,
+.tchmi-creator-control-height-inactive.tchmi-creator-control-width-inactive > .tchmi-creator-anchor-top-right,
+.tchmi-creator-control-height-inactive.tchmi-creator-control-width-inactive > .tchmi-creator-anchor-bottom-left,
+.tchmi-creator-control-height-inactive.tchmi-creator-control-width-inactive > .tchmi-creator-anchor-bottom-right {
+    border-color: transparent;
+    background-color: transparent;
+    pointer-events: none;
+}
+
+/** Lock icon for lock from the parent */
+.tchmi-creator-control-locked .tchmi-creator-anchorcontainer::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    width: 8px;
+    height: 10px;
+    background-color: var(--tchmi-designer-control-selected-secondary-color);
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="10"> <rect stroke-width="1" style="stroke:rgb(25, 62, 237);fill:none;" x="0.5" y="4.5" width="7" height="5" /> <path stroke-width="1" style="stroke:rgb(25, 62, 237);fill:none;" d="M1.5,4.5 v-1 a2,2 90 1 1 5,0 v1" /> </svg>');
+    box-shadow: 0 0 4px var(--tchmi-designer-control-selected-secondary-color),0 0 4px var(--tchmi-designer-control-selected-secondary-color);
+}
+
+/** Lock icon for direct lock */
+.tchmi-creator-anchorcontainer.tchmi-creator-control-locked::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    width: 8px;
+    height: 10px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="10"> <rect stroke-width="1" style="stroke:rgb(25, 62, 237);fill:rgb(25, 62, 237);" x="0.5" y="4.5" width="7" height="5" /> <path stroke-width="1" style="stroke:rgb(25, 62, 237);fill:none;" d="M1.5,4.5 v-1 a2,2 90 1 1 5,0 v1" /> </svg>');
+    box-shadow: 0 0 4px var(--tchmi-designer-control-selected-secondary-color),0 0 4px var(--tchmi-designer-control-selected-secondary-color);
+}
+
+.tchmi-creator-control-locked .tchmi-creator-anchor-rect {
+    border-color: transparent;
+    background-color: transparent;
+    pointer-events: none;
+}
+
+.tchmi-creator-root-partial > .tchmi-creator-anchor-top-left,
+.tchmi-creator-root-partial > .tchmi-creator-anchor-top-center,
+.tchmi-creator-root-partial > .tchmi-creator-anchor-top-right,
+.tchmi-creator-root-partial > .tchmi-creator-anchor-center-left,
+.tchmi-creator-root-partial > .tchmi-creator-anchor-bottom-left {
+    border-color: transparent;
+    background-color: transparent;
+    pointer-events: none;
+}
+
+.tchmi-creator-anchor-top-left {
+    top: -5px;
+    left: -5px;
+    cursor: nwse-resize;
+}
+
+.tchmi-creator-anchor-top-center {
+    top: -5px;
+    left: calc(50% - 5px);
+    cursor: ns-resize;
+}
+
+.tchmi-creator-anchor-top-right {
+    top: -5px;
+    right: -5px;
+    cursor: nesw-resize;
+}
+
+.tchmi-creator-anchor-center-left {
+    top: calc(50% - 5px);
+    left: -5px;
+    cursor: ew-resize;
+}
+
+.tchmi-creator-anchor-center-right {
+    top: calc(50% - 5px);
+    right: -5px;
+    cursor: ew-resize;
+}
+
+.tchmi-creator-anchor-bottom-left {
+    bottom: -5px;
+    left: -5px;
+    cursor: nesw-resize;
+}
+
+.tchmi-creator-anchor-bottom-center {
+    bottom: -5px;
+    left: calc(50% - 5px);
+    cursor: ns-resize;
+}
+
+
+.tchmi-creator-anchor-bottom-right {
+    bottom: -5px;
+    right: -5px;
+    cursor: nwse-resize;
+}
+
+.tchmi-creator-view-port-simulator {
+    transform-origin: 0 0 0;
+    position: absolute;
+    overflow: hidden;
+}
+
+    .tchmi-creator-view-port-simulator[data-tchmi-creator-target-control-type="TcHmi.Controls.System.TcHmiView"] {
+        background-color: rgb(255, 255, 255);
+    }
+
+.tchmi-creator-view-port-highlighting {
+    position: absolute;
+}
+
+.tchmi-creator-chessboard {
+    background-image: linear-gradient(45deg, var(--tchmi-designer-vs-theme-chessboard-light) 25%, transparent 25%,transparent 75%, var(--tchmi-designer-vs-theme-chessboard-light) 75%, var(--tchmi-designer-vs-theme-chessboard-light) 100%), linear-gradient(45deg, var(--tchmi-designer-vs-theme-chessboard-light) 25%, transparent 25%,transparent 75%, var(--tchmi-designer-vs-theme-chessboard-light) 75%, var(--tchmi-designer-vs-theme-chessboard-light) 100%);
+    background-size: 16px 16px;
+    background-position: 0 0, 8px 8px;
+    background-color: var(--tchmi-designer-vs-theme-chessboard-dark);
+}
+
+.tchmi-creator-possibledroptarget {
+    box-shadow: inset 0px 0px 0px 10px rgba(255, 0, 0, 0.1);
+}
+
+.tchmi-creator-selection-drag-container {
+    position: absolute;
+    z-index: 10000;
+    border: 1px solid rgb(51, 51, 255);
+    background: rgba(51, 51, 255, 0.1);
+    overflow: hidden;
+    text-align: center;
+}
+
+.tchmi-creator-copymove-container {
+    position: absolute;
+    z-index: 10000;
+    border: 1px solid gray;
+    pointer-events: none;
+}

@@ -1,0 +1,138 @@
+﻿/** Styles for the theme: Base */
+.TcHmi_Controls_Beckhoff_TcHmiDateTimePicker-template-overlay,
+.tchmi-date-time-picker-template-overlay {
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.6);
+    background: #ffffff;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiDateTimePicker-selected-area-template,
+.tchmi-date-time-picker-selected-area-template {
+    border: 1px solid #C0C0C5;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiDateTimePicker-calendar-template,
+.tchmi-date-time-picker-calendar-template {
+    border: 1px solid #C0C0C5;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiDateTimePicker-button-area-template,
+.tchmi-date-time-picker-button-area-template {
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiDateTimePicker-template-label, .TcHmi_Controls_Beckhoff_TcHmiDateTimePicker-template-value,
+.tchmi-date-time-picker-template-label, .tchmi-date-time-picker-template-value {
+    color: #4794da;
+}
+
+/* calendar style */
+.TcHmi_Controls_Beckhoff_TcHmiDateTimePicker-calendar-template-header,
+.tchmi-date-time-picker-calendar-template-header {
+    background: #4794da;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiDateTimePicker-calendar-template-header ul,
+.tchmi-date-time-picker-calendar-template-header ul{
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiDateTimePicker-calendar-template-header ul li,
+.tchmi-date-time-picker-calendar-template-header ul li{
+    color: #ffffff;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiDateTimePicker-calendar-template-next,
+.tchmi-date-time-picker-calendar-template-next {
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiDateTimePicker-calendar-template-weekdays,
+.tchmi-date-time-picker-calendar-template-weekdays {
+    background-color: #D7D7D9;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiDateTimePicker-calendar-template-weekdays li,
+.tchmi-date-time-picker-calendar-template-weekdays li {
+    color: #4c6374;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiDateTimePicker-calendar-template-days,
+.tchmi-date-time-picker-calendar-template-days {
+    background: #EDEDED;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiDateTimePicker-calendar-template-days li,
+.tchmi-date-time-picker-calendar-template-days li{
+    color: #4c6374;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiDateTimePicker-calendar-template-days .active,
+.tchmi-date-time-picker-calendar-template-days .active{
+    background: #4794da;
+    color: #ffffff;
+}
+
+/* year style */
+.TcHmi_Controls_Beckhoff_TcHmiDateTimePicker-year-template-year-element,
+.tchmi-date-time-picker-year-template-year-element {
+    color: #4794da;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiDateTimePicker-year-template .active,
+.tchmi-date-time-picker-year-template .active {
+    background-color: #EDEDED;
+}
+
+/* time style */
+.TcHmi_Controls_Beckhoff_TcHmiDateTimePicker-time-template-label,
+.TcHmi_Controls_Beckhoff_TcHmiDateTimePicker-time-template-textbox,
+.TcHmi_Controls_Beckhoff_TcHmiDateTimePicker-time-template-colon,
+.TcHmi_Controls_Beckhoff_TcHmiDateTimePicker-template-time-label,
+.tchmi-date-time-picker-time-template-label,
+.tchmi-date-time-picker-time-template-textbox,
+.tchmi-date-time-picker-time-template-colon,
+.tchmi-date-time-picker-template-time-label {
+    color: #4794da;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiDateTimePicker-template-overlay .TcHmi_Controls_Beckhoff_TcHmiDateTimePicker-time-template-textbox-error,
+.tchmi-date-time-picker-template-overlay .tchmi-date-time-picker-time-template-textbox-error {
+    background-color: rgba(255, 0,0, 0.4);
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiDateTimePicker-template-overlay .TcHmi_Controls_Beckhoff_TcHmiTextbox-template-border,
+.tchmi-date-time-picker-template-overlay .tchmi.textbox-template-border {
+    box-shadow: initial;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiDateTimePicker-time-area-template,
+.tchmi-date-time-picker-time-area-template {
+    border: 1px solid #C0C0C5;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiDateTimePicker-time-template-up-button > div,
+.tchmi-date-time-picker-time-template-up-button > div {
+    background-image: url('Images/icons_plus_normal.svg');
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiDateTimePicker-time-template-up-button:not(.TcHmi_Controls_System_TcHmiControl-disabled):not(.TcHmi_Controls_System_TcHmiControl-operate-disallowed).down > div,
+.tchmi-date-time-picker-time-template-up-button:not(.tchmi-control-disabled):not(.tchmi-control-operate-disallowed).down > div {
+    background-image: url('Images/icons_plus_pressed.svg');
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiDateTimePicker-time-template-down-button > div,
+.tchmi-date-time-picker-time-template-down-button > div {
+    background-image: url('Images/icons_minus_normal.svg');
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiDateTimePicker-time-template-down-button:not(.TcHmi_Controls_System_TcHmiControl-disabled):not(.TcHmi_Controls_System_TcHmiControl-operate-disallowed).down > div,
+.tchmi-date-time-picker-time-template-down-button:not(.tchmi-control-disabled):not(.tchmi-control-operate-disallowed).down > div {
+    background-image: url('Images/icons_minus_pressed.svg');
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+}

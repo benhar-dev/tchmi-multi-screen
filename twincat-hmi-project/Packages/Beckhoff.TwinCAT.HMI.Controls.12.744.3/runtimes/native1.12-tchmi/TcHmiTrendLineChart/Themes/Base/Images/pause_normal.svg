@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>pause bg less</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="pause-bg-less" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="backgrounds"></g>
+        <g id="icon-status" transform="translate(8.000000, 8.000000)" fill="#4794DA">
+            <g id="active">
+                <g id="icon-base">
+                    <path d="M0.875,14.1900452 L3.9375,14.1900452 L3.9375,0.886877828 L0.875,0.886877828 L0.875,14.1900452 Z M4.375,0 L0.4375,0 C0.196,0 0,0.198217195 0,0.443438914 L0,14.6334842 C0,14.8787059 0.196,15.0769231 0.4375,15.0769231 L4.375,15.0769231 C4.6165,15.0769231 4.8125,14.8787059 4.8125,14.6334842 L4.8125,0.443438914 C4.8125,0.198217195 4.6165,0 4.375,0 Z" id="Fill-1"></path>
+                    <path d="M10.0625,14.1900452 L13.125,14.1900452 L13.125,0.886877828 L10.0625,0.886877828 L10.0625,14.1900452 Z M13.5625,0 L9.625,0 C9.3830625,0 9.1875,0.198217195 9.1875,0.443438914 L9.1875,14.6334842 C9.1875,14.8787059 9.3830625,15.0769231 9.625,15.0769231 L13.5625,15.0769231 C13.8044375,15.0769231 14,14.8787059 14,14.6334842 L14,0.443438914 C14,0.198217195 13.8044375,0 13.5625,0 Z" id="Fill-3"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

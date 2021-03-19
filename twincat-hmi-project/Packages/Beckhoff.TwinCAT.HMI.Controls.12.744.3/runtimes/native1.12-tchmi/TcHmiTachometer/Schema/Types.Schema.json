@@ -1,0 +1,37 @@
+{
+   "$schema": "http://json-schema.org/draft-04/schema",
+   "definitions":
+   {
+      "TcHmi.Controls.Beckhoff.TcHmiTachometer":
+      {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "object",
+         "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+         "frameworkControlType": "TcHmiTachometer",
+         "frameworkControlNamespace": "TcHmi.Controls.Beckhoff"
+      },
+      "TcHmi.Controls.Beckhoff.TcHmiTachometer.LabelPosition":
+      {
+         "title": "LabelPosition",
+         "type": "string",
+         "enum":
+         [
+            "Outside",
+            "Inside"
+         ],
+         "default": "Inside"
+      },
+      "TcHmi.Controls.Beckhoff.TcHmiTachometer.GaugeAlignment":
+      {
+         "title": "GaugeAlignment",
+         "type": "string",
+         "enum":
+         [
+            "Start",
+            "Center",
+            "End"
+         ],
+         "default": "Inside"
+      }
+   }
+}

@@ -1,0 +1,11 @@
+<svg class="TcHmi_Controls_Beckhoff_TcHmiLinearGauge-knob-svg" version="1.1" xmlns="http://www.w3.org/2000/svg"
+     width="40" height="40"
+     style="transform: rotate(90deg);transform-origin: center;">
+  <defs>{KnobColorGradientDefinition}</defs>
+  <circle r="18px" cx="20px" cy="20px"
+    style="stroke-width:3px;{KnobColorFill}{KnobArrowsColorStroke}"></circle>
+  <path d="M 18 11 L 16 11 L 7 20 L 16 29 L 18 29 L 18 27 L 11 20 L 18 13 Z"
+        style="stroke:none;{KnobArrowsColorFill}"></path>
+  <path d="M 22 11 L 24 11 L 33 20 L 24 29 L 22 29 L 22 27 L 29 20 L 22 13 Z"
+        style="stroke:none;{KnobArrowsColorFill}"></path>
+</svg>

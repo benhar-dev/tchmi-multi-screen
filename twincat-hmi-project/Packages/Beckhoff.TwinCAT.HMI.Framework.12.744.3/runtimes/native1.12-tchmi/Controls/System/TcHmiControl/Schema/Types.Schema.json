@@ -1,0 +1,15 @@
+{
+   "$schema": "http://json-schema.org/draft-04/schema",
+   "definitions": {
+      "TcHmi.Controls.System.TcHmiControl": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "object",
+         "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+         "frameworkControlType": "TcHmiControl",
+         "frameworkControlNamespace": "TcHmi.Controls.System"
+      },
+      "TcHmiControl": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.System.TcHmiControl"
+      }
+   }
+}

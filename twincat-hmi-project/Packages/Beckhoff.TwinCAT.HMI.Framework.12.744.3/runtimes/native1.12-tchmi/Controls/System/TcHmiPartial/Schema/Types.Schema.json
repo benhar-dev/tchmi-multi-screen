@@ -1,0 +1,15 @@
+{
+   "$schema": "http://json-schema.org/draft-04/schema",
+   "definitions": {
+      "TcHmi.Controls.System.TcHmiPartial": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "object",
+         "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+         "frameworkControlType": "TcHmiPartial",
+         "frameworkControlNamespace": "TcHmi.Controls.System"
+      },
+      "TcHmiPartial": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.System.TcHmiPartial"
+      }
+   }
+}

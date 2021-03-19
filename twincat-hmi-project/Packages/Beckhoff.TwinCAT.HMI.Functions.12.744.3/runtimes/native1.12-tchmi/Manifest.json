@@ -1,0 +1,205 @@
+{
+   "$schema": "../../TcHmiFramework/Schema/Manifest.Schema.json",
+   "apiVersion": 1,
+   "modules": [
+      {
+         "type": "Package",
+         "nugetId": "Beckhoff.TwinCAT.HMI.Framework"
+      },
+      {
+         "type": "Function",
+         "basePath": "",
+         "descriptionFile": "ActivateRecipe.function.json"
+      },
+      {
+         "type": "Function",
+         "basePath": "",
+         "descriptionFile": "CheckAccess.function.json"
+      },
+      {
+         "type": "Function",
+         "basePath": "",
+         "descriptionFile": "CheckBinding.function.json"
+      },
+      {
+         "type": "Function",
+         "basePath": "",
+         "descriptionFile": "CheckBindingEx.function.json"
+      },
+      {
+         "type": "Function",
+         "basePath": "",
+         "descriptionFile": "Concatenate.function.json"
+      },
+      {
+         "type": "Function",
+         "basePath": "",
+         "descriptionFile": "ConvertBooleanToEnum.function.json"
+      },
+      {
+         "type": "Function",
+         "basePath": "",
+         "descriptionFile": "ConvertBooleanToVisibility.function.json"
+      },
+      {
+         "type": "Function",
+         "basePath": "",
+         "descriptionFile": "CreateBinding.function.json"
+      },
+      {
+         "type": "Function",
+         "basePath": "",
+         "descriptionFile": "Decrement.function.json"
+      },
+      {
+         "type": "Function",
+         "basePath": "",
+         "descriptionFile": "ForceLogout.function.json"
+      },
+      {
+         "type": "Function",
+         "basePath": "",
+         "descriptionFile": "ForceLogoutEx.function.json"
+      },
+      {
+         "type": "Function",
+         "basePath": "",
+         "descriptionFile": "FormatString.function.json"
+      },
+      {
+         "type": "Function",
+         "basePath": "",
+         "descriptionFile": "GaugeValueFormatter.function.json"
+      },
+      {
+         "type": "Function",
+         "basePath": "",
+         "descriptionFile": "GetElementByIndex.function.json"
+      },
+      {
+         "type": "Function",
+         "basePath": "",
+         "descriptionFile": "GetLocale.function.json"
+      },
+      {
+         "type": "Function",
+         "basePath": "",
+         "descriptionFile": "GetRegisteredLocales.function.json"
+      },
+      {
+         "type": "Function",
+         "basePath": "",
+         "descriptionFile": "GetTheme.function.json"
+      },
+      {
+         "type": "Function",
+         "basePath": "",
+         "descriptionFile": "GoToLoginPage.function.json"
+      },
+      {
+         "type": "Function",
+         "basePath": "",
+         "descriptionFile": "Increment.function.json"
+      },
+      {
+         "type": "Function",
+         "basePath": "",
+         "descriptionFile": "LineChartTooltipFormatter.function.json"
+      },
+      {
+         "type": "Function",
+         "basePath": "",
+         "descriptionFile": "Log.function.json"
+      },
+      {
+         "type": "Function",
+         "basePath": "",
+         "descriptionFile": "Login.function.json"
+      },
+      {
+         "type": "Function",
+         "basePath": "",
+         "descriptionFile": "LoginEx.function.json"
+      },
+      {
+         "type": "Function",
+         "basePath": "",
+         "descriptionFile": "Logout.function.json"
+      },
+      {
+         "type": "Function",
+         "basePath": "",
+         "descriptionFile": "LogoutEx.function.json"
+      },
+      {
+         "type": "Function",
+         "basePath": "",
+         "descriptionFile": "RemoveBinding.function.json"
+      },
+      {
+         "type": "Function",
+         "basePath": "",
+         "descriptionFile": "SetAttributeToThemeValue.function.json"
+      },
+      {
+         "type": "Function",
+         "basePath": "",
+         "descriptionFile": "SetElementByIndex.function.json"
+      },
+      {
+         "type": "Function",
+         "basePath": "",
+         "descriptionFile": "SetLocaleEx.function.json"
+      },
+      {
+         "type": "Function",
+         "basePath": "",
+         "descriptionFile": "SetLocale.function.json"
+      },
+      {
+         "type": "Function",
+         "basePath": "",
+         "descriptionFile": "SetTheme.function.json"
+      },
+      {
+         "type": "Function",
+         "basePath": "",
+         "descriptionFile": "TeachAsNewRecipe.function.json"
+      },
+      {
+         "type": "Function",
+         "basePath": "",
+         "descriptionFile": "TeachRecipe.function.json"
+      },
+      {
+         "type": "Function",
+         "basePath": "",
+         "descriptionFile": "ToDateString.function.json"
+      },
+      {
+         "type": "Function",
+         "basePath": "",
+         "descriptionFile": "ToDateTimeString.function.json"
+      },
+      {
+         "type": "Function",
+         "basePath": "",
+         "descriptionFile": "ToLowerCase.function.json"
+      },
+      {
+         "type": "Function",
+         "basePath": "",
+         "descriptionFile": "ToTimeString.function.json"
+      },
+      {
+         "type": "Function",
+         "basePath": "",
+         "descriptionFile": "ToUpperCase.function.json"
+      },
+      {
+         "type": "Function",
+         "basePath": "",
+         "descriptionFile": "TrimToLength.function.json"
+      }
+   ]
+}

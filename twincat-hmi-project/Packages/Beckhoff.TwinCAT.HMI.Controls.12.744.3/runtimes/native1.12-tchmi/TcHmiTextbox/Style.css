@@ -1,0 +1,102 @@
+﻿/** Styles for all themes */
+
+/* Style for the main element */
+.TcHmi_Controls_Beckhoff_TcHmiTextbox,
+.TcHmi_Controls_Beckhoff_TcHmiTextbox {
+    /* Prevent overflow if the border radius is huge */
+    overflow: hidden;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTextbox-template,
+.tchmi-textbox-template {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTextbox-template-focus-border,
+.tchmi-textbox-template-focus-border {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTextbox-template-border,
+.tchmi-textbox-template-border {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    padding: 2px;
+    overflow: hidden;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-align: start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    cursor: text;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTextbox-template-input-container,
+.tchmi-textbox-template-input-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: left;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTextbox-template-input,
+.tchmi-textbox-template-input {
+    background: transparent;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    text-align: inherit;
+    white-space: pre;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTextbox-template-focus-area,
+.tchmi-textbox-template-focus-area {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* The main use for this control is interaction. So mark when this is not allowed. */
+.TcHmi_Controls_Beckhoff_TcHmiTextbox.TcHmi_Controls_System_TcHmiControl-operate-disallowed::after,
+.tchmi-textbox.tchmi-control-operate-disallowed::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 100;
+    cursor: not-allowed;
+}

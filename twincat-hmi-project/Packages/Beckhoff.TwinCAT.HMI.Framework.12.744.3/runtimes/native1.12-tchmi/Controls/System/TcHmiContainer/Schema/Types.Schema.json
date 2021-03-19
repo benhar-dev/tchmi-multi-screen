@@ -1,0 +1,15 @@
+{
+   "$schema": "http://json-schema.org/draft-04/schema",
+   "definitions": {
+      "TcHmi.Controls.System.TcHmiContainer": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "object",
+         "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+         "frameworkControlType": "TcHmiContainer",
+         "frameworkControlNamespace": "TcHmi.Controls.System"
+      },
+      "TcHmiContainer": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.System.TcHmiContainer"
+      }
+   }
+}

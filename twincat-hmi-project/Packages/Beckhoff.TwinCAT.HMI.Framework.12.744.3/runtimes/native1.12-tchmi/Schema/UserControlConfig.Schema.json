@@ -1,0 +1,172 @@
+﻿{
+   "$schema": "http://json-schema.org/draft-04/schema",
+   "type": "object",
+   "properties": {
+      "$schema": {
+         "type": "string",
+         "description": "URL to a schema file"
+      },
+      "parameters": {
+         "type": "array",
+         "description": "A list of attributes of this User Control.",
+         "items": {
+            "type": "object",
+            "properties": {
+               "name": {
+                  "type": "string",
+                  "minLength": 1,
+                  "description": "Name of the attribute in the HTML."
+               },
+               "propertyName": {
+                  "type": "string",
+                  "minLength": 1,
+                  "description": "Name of the attribute property."
+               },
+               "propertySetterName": {
+                  "type": "string",
+                  "description": "Name of the attribute property setter (can be empty string or missing if the attribute is readonly)."
+               },
+               "propertyGetterName": {
+                  "type": "string",
+                  "minLength": 1,
+                  "description": "Name of the attribute property getter."
+               },
+               "displayName": {
+                  "type": "string",
+                  "description": "Name which should be presented the user."
+               },
+               "visible": {
+                  "type": "boolean",
+                  "description": "Determine if an attribute is shown to the user."
+               },
+               "themeable": {
+                  "type": "string",
+                  "enum": [ "None", "Standard", "Advanced" ],
+                  "description": "Determine if the attribute can be changed by a theme. Defaults to standard."
+               },
+               "type": {
+                  "type": "string",
+                  "minLength": 6,
+                  "pattern": "^tchmi:",
+                  "description": "The type of the attribute gives the tchmi creator a hint to use a custom editor for this attribute.\nThe corresponding schemas are described as dataTypes."
+               },
+               "allowedFunctions": {
+                  "type": "object",
+                  "description": "A definition of functions which are allowed to use here. The functions must match the requiredArguments signature.",
+                  "properties": {
+                     "returnType": {
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "The type of the attribute gives the tchmi creator a hint to use a custom editor for this attribute.\nThe corresponding schemas are described as dataTypes."
+                     },
+                     "requiredArguments": {
+                        "description": "A list of arguments which will be filled from the control itself. They are not changeable in the creator.",
+                        "type": "array",
+                        "items": {
+                           "type": "object",
+                           "properties": {
+                              "type": {
+                                 "type": "string",
+                                 "minLength": 6,
+                                 "pattern": "^tchmi:",
+                                 "description": "The type of the attribute gives the tchmi creator a hint to use a custom editor for this attribute.\nThe corresponding schemas are described as dataTypes."
+                              }
+                           }
+                        }
+                     },
+                     "requiredWaitMode": {
+                        "type": "string",
+                        "enum": [ "Synchronous", "Asynchronous" ]
+                     }
+                  }
+               },
+               "category": {
+                  "type": "string",
+                  "description": "Name of the area this attribute will be listed in the creator."
+               },
+               "description": {
+                  "type": "string",
+                  "description": "A long description of this attribute."
+               },
+               "requiredOnCompile": {
+                  "type": "boolean",
+                  "description": "The attribute has to be set in the HTML. Otherwise the control is not valid."
+               },
+               "refTo": {
+                  "type": "string",
+                  "description": "The name of an attribute which contains information relevant for this attribute.\nThe engineering will use this information to optimize position of attribute inputs.\nExample: MeasurementUnits are shown in the same row as the main value."
+               },
+               "readOnly": {
+                  "type": "boolean",
+                  "description": "Readonly attributes do not need a setter."
+               },
+               "bindable": {
+                  "type": "boolean",
+                  "description": "Defines if this is bindable to a Symbol."
+               },
+               "heritable": {
+                  "type": "boolean",
+                  "description": "This attribute can be overwritten by a inheritance child."
+               },
+               "defaultValue": {
+                  "description": "This value will be used as sample value while control is generated in engineering (for example while drop). If set to null the attribute will not be set."
+               },
+               "defaultValueInternal": {
+                  "description": "This value is the internal default value of the attribute if no valid value exists. This value must be valid for this attributes."
+               }
+            },
+            "additionalProperties": false,
+            "required": [ "name", "displayName", "visible", "type", "category", "readOnly", "bindable", "heritable" ]
+         }
+      },
+      "virtualRights": {
+         "type": "array",
+         "description": "Additional virtual rights for the User Control",
+         "items": {
+            "$schema": "http://json-schema.org/draft-04/schema",
+            "type": "object",
+            "description": "An access right which is checked by controls. In the Schema a defaultValue of true mean access is granted, false is denied, null is ask parent.",
+            "properties": {
+               "name": {
+                  "type": "string",
+                  "minLength": 1,
+                  "description": "Name of the access definition in the HTML."
+               },
+               "displayName": {
+                  "type": "string",
+                  "description": "Name which should be presented the user."
+               },
+               "visible": {
+                  "type": "boolean",
+                  "description": "Determine if an access definition is shown to the user."
+               },
+               "description": {
+                  "type": "string",
+                  "description": "A long description of this access definition."
+               },
+               "defaultValueInternal": {
+                  "anyOf": [
+                     {
+                        "type": "boolean"
+
+                     },
+                     {
+                        "type": "null"
+                     }
+                  ],
+                  "description": "Defines the default of this control access right. This will be used if the check for this access right does not return a result. true mean access is granted, false is denied, null is ask parent."
+               }
+            },
+            "additionalProperties": false,
+            "required": [ "name", "displayName", "visible", "defaultValueInternal" ]
+         }
+      },
+      "description": {
+         "type": "string",
+         "default": "",
+         "description": "A long description of this User Control."
+      }
+   },
+   "additionalProperties": false,
+   "required": [ "parameters" ]
+}

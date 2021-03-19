@@ -1,0 +1,199 @@
+﻿/** Styles for all themes */
+
+/* Style for the main element */
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart,
+.tchmi-trend-line-chart {
+    /* Prevent overflow if the border radius is huge */
+    overflow: hidden;
+}
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template,
+.tchmi-trend-line-chart-template {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-chart,
+.tchmi-trend-line-chart-template-chart {
+    /* margin px are set in js code, too */
+    width: calc(100% - 10px);
+    height: calc(100% - 5px);
+    position: absolute;
+    top: 0px;
+    margin: 5px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-menu-bar,
+.tchmi-trend-line-chart-template-menu-bar {
+    position: absolute;
+    overflow: hidden;
+    white-space: nowrap;
+    width: calc(100% - 15px);
+    margin: 5px;
+    margin-top: 0px;
+    height: 50px;
+    padding-left: 5px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-menu-bar-top,
+.tchmi-trend-line-chart-template-menu-bar-top {
+    top: 0px;
+    left: 0px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-menu-bar-bottom,
+.tchmi-trend-line-chart-template-menu-bar-bottom {
+    bottom: 0px;
+    left: 0px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-menu-bar > .TcHmi_Controls_Beckhoff_TcHmiToggleButton,
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-menu-bar-dropdown > .TcHmi_Controls_Beckhoff_TcHmiToggleButton,
+.tchmi-trend-line-chart-template-menu-bar > .tchmi-toggle-button,
+.tchmi-trend-line-chart-template-menu-bar-dropdown > .tchmi-toggle-button {
+    height: 30px;
+    width: 30px;
+    min-width: 30px;
+    min-height: 30px;
+    position: relative;
+    float: left;
+    box-sizing: border-box;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-menu-bar > .TcHmi_Controls_Beckhoff_TcHmiButton,
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-menu-bar-dropdown > .TcHmi_Controls_Beckhoff_TcHmiButton,
+.tchmi-trend-line-chart-template-menu-bar > .tchmi-toggle-button,
+.tchmi-trend-line-chart-template-menu-bar-dropdown > .tchmi-toggle-button {
+    height: 30px;
+    width: 30px;
+    min-width: 30px;
+    min-height: 30px;
+    position: relative;
+    float: left;
+    box-sizing: border-box;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-menu-bar > .TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-options,
+.tchmi-trend-line-chart-template-menu-bar > .tchmi-trend-line-chart-template-options {
+    top: 0px;
+    height: 50px;
+    width: 15px;
+    min-width: 15px;
+    min-height: 50px;
+    position: absolute;
+    float: right;
+    box-sizing: border-box;
+    margin: 0px;
+    right: 0px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-menu-bar .TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-stop,
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-menu-bar-dropdown .TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-stop,
+.tchmi-trend-line-chart-template-menu-bar .tchmi-trend-line-chart-template-stop,
+.tchmi-trend-line-chart-template-menu-bar-dropdown .tchmi-trend-line-chart-template-stop {
+    margin-right: 20px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-menu-bar > .TcHmi_Controls_Beckhoff_TcHmiCombobox,
+.tchmi-trend-line-chart-template-menu-bar > .tchmi-combobox {
+    height: 30px;
+    min-width: 150px;
+    position: relative;
+    float: left;
+    box-sizing: border-box;
+    width: 150px;
+    top: 10px; /* diff between combobox and button height (combobox align center to buttons) */
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-menu-bar > label,
+.tchmi-trend-line-chart-template-menu-bar > label {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-tooltip,
+.tchmi-trend-line-chart-template-tooltip {
+    position: absolute;
+    visibility: hidden;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-tooltip .TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-tooltip-text,
+.tchmi-trend-line-chart-template-tooltip .tchmi-trend-line-chart-template-tooltip-text{
+    position:relative;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-tooltip-arrow,
+.tchmi-trend-line-chart-template-tooltip-arrow {
+    content: "";
+    position: absolute;
+    width: 8px; /** used in internal calculation */
+    height: 8px; /** used in internal calculation */
+    transform: rotate(45deg);
+    /*border-width: 6px; 
+    border-style: solid;*/
+    pointer-events: none;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-tooltip-arrow-bottom,
+.tchmi-trend-line-chart-template-tooltip-arrow-bottom {
+    top: calc(100% - 4px);
+    left: calc(50% - 4px);
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-tooltip-arrow-top,
+.tchmi-trend-line-chart-template-tooltip-arrow-top {
+    bottom: calc(100% - 4px);
+    left: calc(50% - 4px);
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-tooltip-arrow-left,
+.tchmi-trend-line-chart-template-tooltip-arrow-left {
+    top: calc(50% - 4px);
+    right: calc(100% - 4px);
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-tooltip-arrow-right,
+.tchmi-trend-line-chart-template-tooltip-arrow-right {
+    top: calc(50% - 4px);
+    left: calc(100% - 4px);
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-menu-bar-dropdown,
+.tchmi-trend-line-chart-template-menu-bar-dropdown {
+    padding: 10px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-menu-bar-dropdown .TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-reset-zoom,
+.tchmi-trend-line-chart-template-menu-bar-dropdown .tchmi-trend-line-chart-template-reset-zoom{
+    margin-right:0px;
+}
+
+/* timespanpicker and datetimepicker buttons*/
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-menu-bar > .TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-timespan-button-start,
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-menu-bar > .TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-timespan-button-end,
+.tchmi-trend-line-chart-template-menu-bar > .tchmi-trend-line-chart-template-timespan-button-start,
+.tchmi-trend-line-chart-template-menu-bar > .tchmi-trend-line-chart-template-timespan-button-end {
+    margin-right: 0px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-menu-bar > .TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-datetime-button-end,
+.tchmi-trend-line-chart-template-menu-bar > .tchmi-trend-line-chart-template-datetime-button-end {
+    margin-right: 20px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTrendLineChart-template-loading,
+.tchmi-trend-line-chart-template-loading {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: calc(50% - 35px);
+    left: calc(50% - 35px);
+    pointer-events: none;
+}

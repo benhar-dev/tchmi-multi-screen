@@ -1,0 +1,140 @@
+{
+   "$schema": "../../TcHmiFramework/Schema/ControlDescription.Schema.json",
+   "apiVersion": 1,
+   "name": "TcHmiTimespanPicker",
+   "namespace": "TcHmi.Controls.Beckhoff",
+   "displayName": "Timespan Picker",
+   "version": {
+      "full": "1.12.744.3",
+      "major": 1,
+      "minor": 12,
+      "build": 744,
+      "revision": 3
+   },
+   "visible": false,
+   "themeable": "Standard",
+   "base": "TcHmi.Controls.System.TcHmiControl",
+   "description": "Internal Control for Time Span Selection.",
+   "defaultDesignerEvent": ".onPressed",
+   "properties": {
+      "containerControl": false,
+      "geometry": {
+         "width": 100,
+         "height": 50
+      }
+   },
+   "icons": [
+      {
+         "name": "Icons/16x16.png",
+         "width": 16,
+         "height": 16
+      },
+      {
+         "name": "Icons/24x24.png",
+         "width": 24,
+         "height": 24
+      },
+      {
+         "name": "Icons/32x32.png",
+         "width": 32,
+         "height": 32
+      },
+      {
+         "name": "Icons/64x64.png",
+         "width": 64,
+         "height": 64
+      }
+   ],
+   "template": "Template.html",
+   "dependencyFiles": [
+      {
+         "name": "Style.css",
+         "type": "Stylesheet",
+         "description": ""
+      },
+      {
+         "name": "TcHmiTimespanPicker.js",
+         "type": "JavaScript",
+         "description": ""
+      }
+   ],
+   "themes": {
+      "Base": {
+         "resources": [
+            {
+               "name": "Themes/Base/Style.css",
+               "type": "Stylesheet",
+               "description": ""
+            }
+         ]
+      }
+   },
+   "attributes": [
+      {
+         "name": "data-tchmi-value",
+         "propertyName": "Value",
+         "propertySetterName": "setValue",
+         "propertyGetterName": "getValue",
+         "displayName": "Value",
+         "visible": true,
+         "displayPriority": 10,
+         "type": "tchmi:general#/definitions/TimeSpan",
+         "category": "Common",
+         "description": "The timespan value defined as ISO timespan.",
+         "themeable": "Advanced",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": null
+      }
+   ],
+   "functions": [
+      {
+         "name": "openTimespanPicker",
+         "displayName": "openTimespanPicker",
+         "visible": true,
+         "description": "Open the TimespanPicker and added to TopMostLayer.",
+         "category": "Common",
+         "params": [],
+         "type": null,
+         "heritable": true
+      },
+      {
+         "name": "closeTimespanPicker",
+         "displayName": "closeTimespanPicker",
+         "visible": true,
+         "description": "Close the TimespanPicker and remove from TopMostLayer.",
+         "category": "Common",
+         "params": [],
+         "type": null,
+         "heritable": true
+      }
+   ],
+   "events": [
+      {
+         "name": ".onValueChanged",
+         "displayName": ".onValueChanged",
+         "visible": true,
+         "displayPriority": 10,
+         "category": "Control",
+         "description": "The valuechanged event is fired when the value was changed.",
+         "heritable": true
+      },
+      {
+         "name": ".onCancel",
+         "displayName": ".onCancel",
+         "visible": true,
+         "displayPriority": 20,
+         "category": "Control",
+         "description": "The cancel event is fired if the TimespanPicker has canceled (with cancel button or click next to the topmostlayer). The changes are discarded.",
+         "heritable": true
+      }
+   ],
+   "dataTypes": [
+      {
+         "schema": "Schema/Types.Schema.json"
+      }
+   ]
+}

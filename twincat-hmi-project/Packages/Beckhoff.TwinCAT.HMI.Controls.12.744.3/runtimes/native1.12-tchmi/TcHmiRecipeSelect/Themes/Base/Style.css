@@ -1,0 +1,292 @@
+﻿/** Styles for the theme: Base */
+
+.TcHmi_Controls_Beckhoff_TcHmiRecipeSelect {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiRecipeSelect-template {
+    position: relative;
+    width: 100%;
+    height: 95px;
+    padding: 5px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiRecipeSelect-table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiRecipeSelect-table-1 {
+    position: relative;
+    width: 100%;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiRecipeSelect-table-2 {
+    position: relative;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiRecipeSelect-table-row {
+    position: relative;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiRecipeSelect-table-1-row-1 {
+    display: table-row;
+    height: 35px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiRecipeSelect-table-cell {
+    position: relative;
+    display: table-cell;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiRecipeSelect-table-1-cell {
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiRecipeSelect-table-1-row-1-cell-1 {
+    vertical-align: middle;
+    background: #4794da;
+    padding-left: 3px;
+    padding-right: 3px;
+    color: white;
+    box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.02), inset 0px 0px 3px 2px rgba(0,0,0,0.3);
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiRecipeSelect-table-1-row-1-cell-1-active {
+    background: #52e159;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiRecipeSelect-table-1-row-1-cell-2 {
+    width: 75px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiRecipeSelect-table-1-row-1-cell-3 {
+    width: 75px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiRecipeSelect-breadcrumb-container {
+    position: relative;
+    background-color: #fff;
+    margin: 5px;
+    height: 35px;
+    overflow: hidden;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiRecipeSelect-breadcrumb-container-shadow-overlay {
+    box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.02), inset 0px 0px 3px 2px rgba(0,0,0,0.3);
+    pointer-events: none;
+    height: 35px;
+    margin: 5px;
+    position: relative;
+    top: -40px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiRecipeSelect-breadcrumb-scroll-container {
+    margin-right: -23px;
+    height: calc(100% + 75px);
+    overflow: hidden;
+    overflow-x: scroll;
+    display: flex;
+    flex-flow: row;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiRecipeSelect-breadcrumb-list {
+    list-style: none;
+    display: inline-block;
+    height: 35px;
+    margin: 0px;
+    margin-left:3px;
+    padding: 3px 1px 3px 1px;
+    flex-shrink: 0;
+}
+
+    .TcHmi_Controls_Beckhoff_TcHmiRecipeSelect-breadcrumb-list li {
+        float: left;
+    }
+
+        .TcHmi_Controls_Beckhoff_TcHmiRecipeSelect-breadcrumb-list li a {
+            color: #4794da;
+            display: inline-block;
+            background: #d7d7d9;
+            text-decoration: none;
+            position: relative;
+            height: 30px;
+            line-height: 30px;
+            padding: 0px 30px 0px 0px;
+            text-align: center;
+            margin-right: 23px;
+            background-image: url('Images/folder.svg');
+            background-repeat: no-repeat;
+            background-size: 30px;
+            background-position: right center;
+        }
+
+        .TcHmi_Controls_Beckhoff_TcHmiRecipeSelect-breadcrumb-list li:nth-child(even) a {
+            background-color: #d7d7d9;
+        }
+
+            .TcHmi_Controls_Beckhoff_TcHmiRecipeSelect-breadcrumb-list li:nth-child(even) a:before {
+                border-color: #d7d7d9;
+                border-left-color: transparent;
+            }
+
+            .TcHmi_Controls_Beckhoff_TcHmiRecipeSelect-breadcrumb-list li:nth-child(even) a:after {
+                border-left-color: #d7d7d9;
+            }
+
+        .TcHmi_Controls_Beckhoff_TcHmiRecipeSelect-breadcrumb-list li:first-child a {
+            padding-left: 15px;
+            -moz-border-radius: 4px 0 0 4px;
+            -webkit-border-radius: 4px;
+            border-radius: 4px 0 0 4px;
+        }
+
+            .TcHmi_Controls_Beckhoff_TcHmiRecipeSelect-breadcrumb-list li:first-child a:before {
+                border: none;
+            }
+
+        .TcHmi_Controls_Beckhoff_TcHmiRecipeSelect-breadcrumb-list li:last-child a {
+            padding-right: 30px;
+            -moz-border-radius: 0 4px 4px 0;
+            -webkit-border-radius: 0;
+            border-radius: 0 4px 4px 0;
+            background-color: #4794da;
+            background-image: url('Images/folder_active.svg');
+            color: #fff;
+        }
+            .TcHmi_Controls_Beckhoff_TcHmiRecipeSelect-breadcrumb-list li:last-child a:after {
+                border: none;
+            }
+
+        .TcHmi_Controls_Beckhoff_TcHmiRecipeSelect-breadcrumb-list li a:before, .TcHmi_Controls_Beckhoff_TcHmiRecipeSelect-breadcrumb-list li a:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            border: 0 solid #d7d7d9;
+            border-width: 15px 10px;
+            width: 0;
+            height: 0;
+        }
+
+        .TcHmi_Controls_Beckhoff_TcHmiRecipeSelect-breadcrumb-list li:last-child a:before {
+            border-color: #4794da;
+            border-left-color: transparent;
+            color: #fff;
+        }
+
+        .TcHmi_Controls_Beckhoff_TcHmiRecipeSelect-breadcrumb-list li a:before {
+            left: -20px;
+            border-left-color: transparent;
+        }
+
+        .TcHmi_Controls_Beckhoff_TcHmiRecipeSelect-breadcrumb-list li a:after {
+            left: 100%;
+            border-color: transparent;
+            border-left-color: #d7d7d9;
+        }
+
+        .TcHmi_Controls_Beckhoff_TcHmiRecipeSelect-breadcrumb-list li a:hover {
+            background-color: #4794da;
+            background-image: url('Images/folder_active.svg');
+            color: #fff;
+        }
+
+            .TcHmi_Controls_Beckhoff_TcHmiRecipeSelect-breadcrumb-list li a:hover:before {
+                border-color: #4794da;
+                border-left-color: transparent;
+                color: #fff;
+            }
+
+            .TcHmi_Controls_Beckhoff_TcHmiRecipeSelect-breadcrumb-list li a:hover:after {
+                border-left-color: #4794da;
+                color: #fff;
+            }
+
+        .TcHmi_Controls_Beckhoff_TcHmiRecipeSelect-breadcrumb-list li a:active {
+            background-color: #d7d7d9;
+        }
+
+            .TcHmi_Controls_Beckhoff_TcHmiRecipeSelect-breadcrumb-list li a:active:before {
+                border-color: #d7d7d9;
+                border-left-color: transparent;
+            }
+
+            .TcHmi_Controls_Beckhoff_TcHmiRecipeSelect-breadcrumb-list li a:active:after {
+                border-left-color: #d7d7d9;
+            }
+
+.TcHmi_Controls_Beckhoff_TcHmiRecipeSelect_topmost_selection {
+    width: 60%;
+    height: 60%;
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.6);
+    background: #ffffff;
+    padding: 10px;
+}
+
+    .TcHmi_Controls_Beckhoff_TcHmiRecipeSelect_topmost_selection > h1 {
+        font-size: 18px;
+        font-weight: normal;
+        color: #4C6374;
+    }
+
+.TcHmi_Controls_Beckhoff_TcHmiRecipeSelect_topmost_selection_list {
+    overflow: auto;
+    height: calc(100% - 83px); /* 48px Selection Area, 35px Button Area*/
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiRecipeSelect_topmost_selection_item {
+    height: 35px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiRecipeSelect_topmost_selection_list ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiRecipeSelect_topmost_selection_list li {
+    display: block;
+    background-color: #ededed;
+    color: #000;
+    padding: 3px 55px;
+    padding-right: 3px;
+    text-decoration: none;
+    margin-bottom: 3px;
+}
+
+    .TcHmi_Controls_Beckhoff_TcHmiRecipeSelect_topmost_selection_list li:hover {
+        background-color: #4794da;
+        color: #fff;
+    }
+
+.TcHmi_Controls_Beckhoff_TcHmiRecipeSelect_topmost_selection_item_folder {
+    background-image: url('Images/folder.svg');
+    background-repeat: no-repeat;
+    background-size: 60px;
+    background-position: 0px -10px;
+}
+
+    .TcHmi_Controls_Beckhoff_TcHmiRecipeSelect_topmost_selection_item_folder:hover {
+        background-image: url('Images/folder_active.svg');
+    }
+
+.TcHmi_Controls_Beckhoff_TcHmiRecipeSelect_topmost_selection_item_recipe {
+    background-image: url('Images/recipe.svg');
+    background-repeat: no-repeat;
+    background-size: 55px;
+    background-position: 3px -7px;
+}
+
+    .TcHmi_Controls_Beckhoff_TcHmiRecipeSelect_topmost_selection_item_recipe:hover {
+        background-image: url('Images/recipe_active.svg');
+    }
+
+
+.TcHmi_Controls_Beckhoff_TcHmiRecipeSelect_topmost_selection_list li.TcHmi_Controls_Beckhoff_TcHmiRecipeSelect_topmost_selected {
+    color: #fff;
+    background-color: #4794da;
+    background-image: url('Images/recipe_active.svg');
+}

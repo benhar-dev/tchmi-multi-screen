@@ -1,0 +1,6 @@
+﻿/** Styles for all themes */
+
+/* Style for the main element */
+.TcHmi_Controls_Beckhoff_TcHmiView, .tchmi-view {
+    overflow: auto; /* view is a special case as it clones the size of the browser */
+}

@@ -1,0 +1,58 @@
+﻿/** Styles for the theme: Base */
+
+/* Style for the main element */
+.TcHmi_Controls_Beckhoff_TcHmiKeyboard,
+.tchmi-keyboard {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiKeyboard-template-key,
+.tchmi-keyboard-template-key {
+    background: linear-gradient(135deg, #eff1f3, #aeb9c2);
+    color: #4794da;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.6);
+}
+
+/* tchmibutton, not disabled, not operate-disallowed, mouse over, mousedown on it and still pressed */
+.TcHmi_Controls_Beckhoff_TcHmiKeyboard:not(.TcHmi_Controls_System_TcHmiControl-disabled):not(.TcHmi_Controls_System_TcHmiControl-operate-disallowed) .TcHmi_Controls_Beckhoff_TcHmiKeyboard-template-key.hover.down,
+.TcHmi_Controls_Beckhoff_TcHmiKeyboard-template-additional-keys-container .TcHmi_Controls_Beckhoff_TcHmiKeyboard-template-key.hover.down,
+.TcHmi_Controls_Beckhoff_TcHmiKeyboard:not(.TcHmi_Controls_System_TcHmiControl-disabled):not(.TcHmi_Controls_System_TcHmiControl-operate-disallowed) .TcHmi_Controls_Beckhoff_TcHmiKeyboard-template-key.down .TcHmi_Controls_Beckhoff_TcHmiKeyboard-template-key.additional-key.hover,
+.TcHmi_Controls_Beckhoff_TcHmiKeyboard-template-key.show-additional-keys,
+.tchmi-keyboard:not(.tchmi-control-disabled):not(.tchmi-control-operate-disallowed) .tchmi-keyboard-template-key.hover.down,
+.tchmi-keyboard:not(.tchmi-control-disabled):not(.tchmi-control-operate-disallowed) .tchmi-keyboard-template-key.down .tchmi-keyboard-template-key.additional-key.hover,
+.tchmi-keyboard-template-key.show-additional-keys{
+    background: linear-gradient(135deg, #aeb9c2, #eff1f3);
+    color: #4c6374;
+    box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.3);
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiKeyboard-template-key.active,
+.tchmi-keyboard-template-key.active{
+	background: linear-gradient(135deg, #4162b0, #4994da);
+    color: #ffffff;
+    box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.4);
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiKeyboard-template-backdrop,
+.tchmi-keyboard-template-backdrop {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiKeyboard-template-label svg,
+.tchmi-keyboard-template-label svg {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.1px;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiKeyboard-template-textbox {
+    border: none;
+    box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.02), inset 0px 0px 3px 2px rgba(0,0,0,0.3);
+    color: #4c6374;
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    outline: none;
+    resize: none;
+}

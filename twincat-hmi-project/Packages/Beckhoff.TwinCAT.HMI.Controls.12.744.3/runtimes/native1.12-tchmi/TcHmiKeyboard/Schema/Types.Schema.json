@@ -1,0 +1,104 @@
+{
+   "$schema": "http://json-schema.org/draft-04/schema",
+   "definitions": {
+      "TcHmi.Controls.Beckhoff.TcHmiKeyboard.ProjectKeyboardLayouts": {
+         "type": "string",
+         "description": "A path of a keyboard layout in the project."
+      },
+      "KeyList": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiKeyboard.KeyList"
+      },
+      "TcHmi.Controls.Beckhoff.TcHmiKeyboard": {
+         "type": "object",
+         "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+         "frameworkControlType": "TcHmiKeyboard",
+         "frameworkControlNamespace": "TcHmi.Controls.Beckhoff"
+      },
+      "TcHmi.Controls.Beckhoff.TcHmiKeyboard.KeyList": {
+         "title": "KeyList",
+         "description": "Array of keys.",
+         "type": "array",
+         "items": {
+            "type": "object",
+            "engineeringColumns": [
+               "code",
+               "key"
+            ],
+            "propertiesMeta": [
+               {
+                  "name": "code",
+                  "displayName": "Code",
+                  "category": "General",
+                  "displayPriority": 10,
+                  "description": "Special string for each physical key on the keyboard (does not have to be the same as the corresponding char)",
+                  "defaultValue": null,
+                  "defaultValueInternal": null
+               },
+               {
+                  "name": "key",
+                  "displayName": "Key",
+                  "category": "General",
+                  "displayPriority": 10,
+                  "description": "Value of the key pressed",
+                  "defaultValue": null,
+                  "defaultValueInternal": null
+               },
+               {
+                  "name": "location",
+                  "displayName": "Location",
+                  "category": "General",
+                  "displayPriority": 10,
+                  "description": "Location of the pressed key",
+                  "defaultValue": null,
+                  "defaultValueInternal": null
+               }
+            ],
+            "properties": {
+               "code": {
+                  "type": "string"
+               },
+               "key": {
+                  "type": "string"
+               },
+               "unmodifiedKey": {
+                  "type": "string"
+               },
+               "location": {
+                  "type": "string",
+                  "enum": [
+                     "standard",
+                     "left",
+                     "right",
+                     "numpad"
+                  ]
+               }
+            },
+            "required": [
+               "code",
+               "key",
+               "unmodifiedKey",
+               "location"
+            ]
+         }
+      },
+      "TcHmiKeyboard": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiKeyboard"
+      },
+      "ControlKeyboardLayouts": {
+         "title": "ControlKeyboardLayouts",
+         "description": "Enum of existing Layouts from the control",
+         "type": "string",
+         "enum": [
+            "EN-US_QWERTY_standard",
+            "EN-US_QWERTY_full",
+            "EN-US_QWERTY_compact",
+            "DE-DE_QWERTZ_standard",
+            "DE-DE_QWERTZ_full",
+            "DE-DE_QWERTZ_compact",
+            "PINpad",
+            "Numpad",
+            "Calculator"
+         ]
+      }
+   }
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>verify bg less</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="verify-bg-less" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="backgrounds"></g>
+        <g id="icon-status" transform="translate(6.000000, 6.000000)" fill="#4794DA">
+            <g id="normal">
+                <g id="icon-base">
+                    <path d="M4.67178333,17.747775 C4.66228333,17.747775 4.65187857,17.747325 4.64237857,17.746875 C4.49399762,17.737425 4.36099762,17.655975 4.28454524,17.529975 L0.0647357143,10.557225 C-0.0641928571,10.344825 0.00502142857,10.068075 0.218997619,9.939825 C0.432521429,9.811125 0.710735714,9.880425 0.839664286,10.093275 L4.72380714,16.511175 L17.8247595,0.169425 C17.9817357,-0.024975 18.2662833,-0.056025 18.4603548,0.097875 C18.6562357,0.253125 18.6879024,0.536175 18.5327357,0.730575 L5.02554524,17.578125 C4.93959286,17.685675 4.80885476,17.747775 4.67178333,17.747775" id="Fill-1"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

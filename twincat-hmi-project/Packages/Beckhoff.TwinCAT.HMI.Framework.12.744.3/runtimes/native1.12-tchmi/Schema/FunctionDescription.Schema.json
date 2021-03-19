@@ -1,0 +1,206 @@
+﻿{
+   "$schema": "http://json-schema.org/draft-04/schema#",
+   "type": "object",
+   "properties": {
+      "$schema": {
+         "type": "string",
+         "description": "URL to a schema file"
+      },
+      "apiVersion": {
+         "description": "API Version",
+         "type": "integer"
+      },
+      "version": {
+         "type": "object",
+         "description": "Version of the asset.",
+         "properties": {
+            "full": {
+               "type": "string",
+               "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]+$"
+            },
+            "major": {
+               "type": "number",
+               "minimum": 0
+            },
+            "minor": {
+               "type": "number",
+               "minimum": 0
+            },
+            "revision": {
+               "type": "number",
+               "minimum": 0
+            },
+            "build": {
+               "type": "number",
+               "minimum": 0
+            }
+         },
+         "required": [ "full", "major", "minor", "revision", "build" ]
+      },
+      "dependencyFiles": {
+         "type": "array",
+         "description": "All files which will be included in the HTML file of the HMI.",
+         "items": {
+            "type": "object",
+            "properties": {
+               "name": {
+                  "type": "string",
+                  "pattern": "^(?!(\/)).*$",
+                  "description": "Path to the file",
+                  "minLength": 1
+               },
+               "type": {
+                  "type": "string",
+                  "enum": [ "Stylesheet", "JavaScript" ],
+                  "description": "Type of the function asset."
+               },
+               "description": {
+                  "type": "string",
+                  "description": "A long description of this file."
+               }
+            },
+            "additionalProperties": false,
+            "required": [ "name", "type", "description" ]
+         }
+      },
+      "function": {
+         "type": "object",
+         "description": "Description for the function itself.",
+         "properties": {
+            "name": {
+               "type": "string",
+               "minLength": 1,
+               "description": "The name of the function."
+            },
+            "namespace": {
+               "type": "string",
+               "description": "The namespace of the function."
+            },
+            "displayName": {
+               "type": "string",
+               "description": "Name which should be presented the user."
+            },
+            "visible": {
+               "type": "boolean",
+               "description": "Determine if a function is shown to the user."
+            },
+            "description": {
+               "type": "string",
+               "description": "A long description of this function."
+            },
+            "category": {
+               "type": "string",
+               "default": "Other",
+               "description": "Name of the area this function will be listed in the creator."
+            },
+            "injectContextObject": {
+               "type": "boolean",
+               "description": "Adds a context object to the function as the first parameter."
+            },
+            "waitMode": {
+               "type": "string",
+               "default": "Synchronous",
+               "enum": [ "Synchronous", "Asynchronous" ]
+            },
+            "returnValue": {
+               "anyOf": [
+                  {
+                     "type": "object",
+                     "properties": {
+                        "type": {
+                           "type": "string",
+                           "pattern": "^tchmi:",
+                           "description": "Type from the return value."
+                        },
+                        "description": {
+                           "type": "string",
+                           "description": "A long description of the return value."
+                        }
+                     }
+                  },
+                  {
+                     "type": "null"
+                  }
+               ]
+            },
+            "arguments": {
+               "type": "array",
+               "description": "Function arguments.",
+               "items": {
+                  "type": "object",
+                  "properties": {
+                     "name": {
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "Variable name in the function"
+                     },
+                     "displayName": {
+                        "type": "string",
+                        "description": "Name which should be presented the user."
+                     },
+                     "type": {
+                        "type": "string",
+                        "minLength": 6,
+                        "pattern": "^tchmi:",
+                        "description": "Type from argument."
+                     },
+                     "description": {
+                        "type": "string",
+                        "description": "A long description of this argument."
+                     },
+                     "required": {
+                        "type": "boolean",
+                        "description": "This parameter is mandatory for this function."
+                     },
+                     "bindable": {
+                        "type": "boolean",
+                        "description": "This parameter can be binded to a symbol."
+                     },
+                     "allowControlAttributeBindingOptions": {
+                        "type": "boolean",
+                        "description": "This parameter can have the same binding options as a control attribute."
+                     },
+                     "asReference": {
+                        "type": "boolean",
+                        "description": "TcHmiCreator ui state. Do not manipulate."
+                     },
+                     "defaultValue": {
+                        "description": "This value will be used as initial value while function is generated in engineering."
+                     },
+                     "restParameter": {
+                        "type": "boolean",
+                        "description": "Specified the argument as rest parameter (variable number of arguments)."
+                     },
+                     "refTo": {
+                        "type": "string",
+                        "description": "The name of an arguments which contains information relevant for this parameter.\nThe engineering will use this information to optimize data selection based on the underlying types.\nExample: Argument which contains the name of a control properrty may refer to an argument which holds a control reference."
+                     }
+                  },
+                  "additionalProperties": false,
+                  "required": [ "name", "displayName", "description", "type", "required", "bindable" ]
+               }
+            }
+         },
+         "additionalProperties": false,
+         "required": [ "name", "displayName", "namespace", "description", "arguments", "returnValue" ]
+      },
+      "dataTypes": {
+         "type": "array",
+         "description": "List of custom data types.",
+         "items": {
+            "type": "object",
+            "properties": {
+               "schema": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "^(?!(\/)).*$",
+                  "description": "Path to the schema describing the datatype."
+               }
+            },
+            "additionalProperties": false,
+            "required": [ "schema" ]
+         }
+      }
+   },
+   "required": [ "function" ]
+}

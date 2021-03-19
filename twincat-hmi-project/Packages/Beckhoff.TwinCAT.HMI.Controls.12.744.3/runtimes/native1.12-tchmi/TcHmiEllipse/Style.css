@@ -1,0 +1,26 @@
+/** Styles for all themes */
+
+.TcHmi_Controls_Beckhoff_TcHmiEllipse,
+.tchmi-ellipse
+{
+ 
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEllipse-template,
+.tchmi-ellipse-template {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEllipse-template-svg,
+.tchmi-ellipse-template-svg {
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEllipse-template-svg-ellipse,
+.tchmi-ellipse-template-svg-ellipse {
+    /* SVG default is stroke:1px and fill:black */
+    stroke-width: 0;
+    fill: transparent;
+}

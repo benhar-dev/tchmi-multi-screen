@@ -1,0 +1,49 @@
+﻿/** Styles for all themes */
+
+/* Style for the main element */
+.TcHmi_Controls_System_TcHmiGrid, .tchmi-grid {
+    overflow: hidden; /* DO NOT CHANGE Would cut 100% sized child control shadows */
+}
+
+.TcHmi_Controls_System_TcHmiGrid-template, .tchmi-grid-template {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.TcHmi_Controls_System_TcHmiGrid-grid, .tchmi-grid-grid {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    /* some styles for debugging */
+    /*border:1px solid green;*/
+}
+
+.TcHmi_Controls_System_TcHmiGrid-gridrow, .tchmi-grid-gridrow {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    /* some styles for debugging */
+    /*border:1px solid red;*/
+}
+
+.TcHmi_Controls_System_TcHmiGrid-gridcell, .tchmi-grid-gridcell {
+    position: relative;
+    /* Browser default is 3 px! */
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    /* some styles for debugging */
+    /*border: 1px solid black;*/
+    /*background-color: cyan;*/
+}
+.TcHmi_Controls_System_TcHmiGrid-cellpaddingmover, .tchmi-grid-cellpaddingmover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}

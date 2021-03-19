@@ -1,0 +1,254 @@
+{
+   "$schema": "../../TcHmiFramework/Schema/ControlDescription.Schema.json",
+   "apiVersion": 1,
+   "name": "TcHmiDateTimeDisplay",
+   "namespace": "TcHmi.Controls.Beckhoff",
+   "displayName": "Date Time Display",
+   "version": {
+      "full": "1.12.744.3",
+      "major": 1,
+      "minor": 12,
+      "build": 744,
+      "revision": 3
+   },
+   "visible": true,
+   "themeable": "Standard",
+   "base": "TcHmi.Controls.System.TcHmiControl",
+   "description": "A simple control for displaying the time by means of the users time zone.",
+   "properties": {
+      "containerControl": false,
+      "geometry": {
+         "width": 128,
+         "height": 48
+      }
+   },
+   "icons": [
+      {
+         "name": "Icons/16x16.png",
+         "width": 16,
+         "height": 16
+      },
+      {
+         "name": "Icons/24x24.png",
+         "width": 24,
+         "height": 24
+      },
+      {
+         "name": "Icons/32x32.png",
+         "width": 32,
+         "height": 32
+      },
+      {
+         "name": "Icons/64x64.png",
+         "width": 64,
+         "height": 64
+      }
+   ],
+   "template": "Template.html",
+   "dependencyFiles": [
+      {
+         "name": "TcHmiDateTimeDisplay.js",
+         "type": "JavaScript",
+         "description": "Contains all the main logic."
+      },
+      {
+         "name": "Style.css",
+         "type": "Stylesheet",
+         "description": "Theme independent style"
+      }
+   ],
+   "themes": {
+      "Base": {
+         "resources": [
+            {
+               "name": "Themes/Base/Style.css",
+               "type": "Stylesheet",
+               "description": "Theme dependent style"
+            }
+         ]
+      }
+   },
+   "attributes": [
+      {
+         "name": "data-tchmi-time-display-layout",
+         "propertyName": "TimeDisplayLayout",
+         "propertySetterName": "setTimeDisplayLayout",
+         "propertyGetterName": "getTimeDisplayLayout",
+         "displayName": "Time Display Layout",
+         "visible": true,
+         "type": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiDateTimeDisplay.TimeDisplayLayout",
+         "themeable": "Standard",
+         "category": "Common",
+         "description": "Choose how you want to display the time and/or date.",
+         "readOnly": false,
+         "bindable": true,
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": "TimeDateMultiLine"
+      },
+      {
+         "name": "data-tchmi-text-color",
+         "propertyName": "TextColor",
+         "propertySetterName": "setTextColor",
+         "propertyGetterName": "getTextColor",
+         "displayName": "Text Color",
+         "visible": true,
+         "type": "tchmi:framework#/definitions/SolidColor",
+         "themeable": "Standard",
+         "category": "Colors",
+         "description": "General Text Color",
+         "readOnly": false,
+         "bindable": true,
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": null
+      },
+      {
+         "name": "data-tchmi-text-font-size",
+         "propertyName": "TextFontSize",
+         "propertySetterName": "setTextFontSize",
+         "propertyGetterName": "getTextFontSize",
+         "displayName": "TextFontSize",
+         "visible": true,
+         "themeable": "Standard",
+         "displayPriority": 30,
+         "type": "tchmi:framework#/definitions/MeasurementValue",
+         "category": "Text",
+         "description": "The size of the font. Percent values are relative to the parent elements font size.",
+         "readOnly": false,
+         "bindable": true,
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": null
+      },
+      {
+         "name": "data-tchmi-text-font-size-unit",
+         "propertyName": "TextFontSizeUnit",
+         "propertySetterName": "setTextFontSizeUnit",
+         "propertyGetterName": "getTextFontSizeUnit",
+         "refTo": "TextFontSize",
+         "displayName": "TextFontSizeUnit",
+         "visible": true,
+         "themeable": "Advanced",
+         "displayPriority": 30,
+         "type": "tchmi:framework#/definitions/MeasurementUnit",
+         "category": "Text",
+         "description": "Could be 'px' or for relative sizing '%'.",
+         "readOnly": false,
+         "bindable": true,
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": "px"
+      },
+      {
+         "name": "data-tchmi-text-horizontal-alignment",
+         "propertyName": "TextHorizontalAlignment",
+         "propertySetterName": "setTextHorizontalAlignment",
+         "propertyGetterName": "getTextHorizontalAlignment",
+         "displayName": "TextHorizontalAlignment",
+         "visible": true,
+         "themeable": "Standard",
+         "displayPriority": 20,
+         "type": "tchmi:framework#/definitions/HorizontalAlignment",
+         "category": "Text",
+         "description": "",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": null
+      },
+      {
+         "name": "data-tchmi-text-vertical-alignment",
+         "propertyName": "TextVerticalAlignment",
+         "propertySetterName": "setTextVerticalAlignment",
+         "propertyGetterName": "getTextVerticalAlignment",
+         "displayName": "TextVerticalAlignment",
+         "visible": true,
+         "themeable": "Standard",
+         "displayPriority": 20,
+         "type": "tchmi:framework#/definitions/VerticalAlignment",
+         "category": "Text",
+         "description": "",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": null
+      },
+      {
+         "name": "data-tchmi-text-font-family",
+         "propertyName": "TextFontFamily",
+         "propertySetterName": "setTextFontFamily",
+         "propertyGetterName": "getTextFontFamily",
+         "displayName": "TextFontFamily",
+         "visible": true,
+         "themeable": "Standard",
+         "displayPriority": 60,
+         "type": "tchmi:framework#/definitions/FontFamily",
+         "category": "Text",
+         "description": "Comma separated list of family name or keyword: 'serif', 'sans-serif', 'monospace'.",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": null
+      },
+      {
+         "name": "data-tchmi-text-font-style",
+         "propertyName": "TextFontStyle",
+         "propertySetterName": "setTextFontStyle",
+         "propertyGetterName": "getTextFontStyle",
+         "displayName": "TextFontStyle",
+         "visible": true,
+         "themeable": "Standard",
+         "displayPriority": 60,
+         "type": "tchmi:framework#/definitions/FontStyle",
+         "category": "Text",
+         "description": "'Normal', 'Italic' (slanted with special glyphs), 'Oblique' (slanted normal glyphs) or 'Auto' for inherited.",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": "Auto"
+      },
+      {
+         "name": "data-tchmi-text-font-weight",
+         "propertyName": "TextFontWeight",
+         "propertySetterName": "setTextFontWeight",
+         "propertyGetterName": "getTextFontWeight",
+         "displayName": "TextFontWeight",
+         "visible": true,
+         "themeable": "Standard",
+         "displayPriority": 60,
+         "type": "tchmi:framework#/definitions/FontWeight",
+         "category": "Text",
+         "description": "'Normal', 'Bold' (glyphs with more weight) or 'Auto' for inherited.",
+         "readOnly": false,
+         "bindable": true,
+         "defaultBindingMode": "OneWay",
+         "heritable": true,
+         "defaultValue": null,
+         "defaultValueInternal": "Auto"
+      }
+   ],
+   "attributeCategories": [
+      {
+         "name": "Text",
+         "displayPriority": 550,
+         "defaultCollapsed": true,
+         "description": "Attributes defining the text of the control."
+      }
+   ],
+   "functions": [],
+   "events": [],
+   "dataTypes": [
+      {
+         "schema": "Schema/Types.Schema.json"
+      }
+   ]
+}

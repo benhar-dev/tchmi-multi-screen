@@ -1,0 +1,35 @@
+/** Styles for the theme: Base */
+.TcHmi_Controls_Beckhoff_TcHmiTachometer-template-circle-outside{
+    fill: rgba(255, 255, 255, 0.5);
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTachometer-template-main-tick,
+.TcHmi_Controls_Beckhoff_TcHmiTachometer-template-sub-tick {
+    stroke: #4794da;
+    stroke-width: 2;
+    pointer-events: none;
+}
+
+
+.TcHmi_Controls_Beckhoff_TcHmiTachometer-template-label{
+    font-size: 12px;
+    fill: #4794da;
+    font-weight: bold;
+}
+
+
+.TcHmi_Controls_Beckhoff_TcHmiTachometer-template-display-value, .TcHmi_Controls_Beckhoff_TcHmiTachometer-template-display-unit{
+    fill: #4993da;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTachometer-template-needle-pointer {
+    stroke: #4c6374;
+    fill: none;
+    stroke-width: 2px;
+    stroke-linecap: round;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiTachometer-template-needle-base {
+    fill: #4c6374;
+    stroke: none;
+}

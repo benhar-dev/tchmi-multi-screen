@@ -1,0 +1,22 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "URL to a schema file"
+    },
+    "locale": {
+      "type": "string",
+      "description": "Definition of this Language and Region as in ISO 639/BCP 47 with '-' separator (example en-US or de-AT)."
+    },
+    "localizedText": {
+      "type": "object",
+      "description": "List of localized Text.",
+      "additionalProperties": {
+        "type": "string",
+        "description": "Name of the key for the localizedText Symbol."
+      }
+    }
+  }
+}

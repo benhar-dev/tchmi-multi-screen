@@ -1,0 +1,16 @@
+﻿/** Styles for all themes */
+
+/* Style for the main element */
+.TcHmi_Controls_Beckhoff_TcHmiBarChart, .tchmi-bar-chart {
+    /* Prevent overflow if the border radius is huge */
+    overflow: hidden;
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiBarChart-template, .tchmi-bar-chart-template {
+    position: relative;
+    /* margin px are set in js code, too */
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    margin: 5px;
+}
+

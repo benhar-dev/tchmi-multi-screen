@@ -1,0 +1,51 @@
+{
+   "$schema": "http://json-schema.org/draft-04/schema",
+   "definitions": {
+      "TcHmi.Controls.Beckhoff.TcHmiVideo": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "object",
+         "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+         "frameworkControlType": "TcHmiVideo",
+         "frameworkControlNamespace": "TcHmi.Controls.Beckhoff"
+      },
+      "TcHmi.Controls.Beckhoff.TcHmiVideo.VideoSourceList": {
+         "title": "VideoSourceList",
+         "description": "Video Source List",
+         "type": "array",
+         "items": {
+            "type": "object",
+            "engineeringColumns": [
+               "source",
+               "type"
+            ],
+            "properties": {
+               "source": {
+                  "$ref": "tchmi:framework#/definitions/Path"
+               },
+               "type": {
+                  "type": "string",
+                  "category": "Common",
+                  "enum": [
+                     "",
+                     "video/mp4",
+                     "video/webm",
+                     "video/ogg",
+                     "application/dash+xml",
+                     "application/vnd.apple.mpegurl"
+                  ],
+                  "default": ""
+               }
+            },
+            "required": [
+               "source"
+            ]
+         }
+      },
+      "TcHmiVideo": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiVideo"
+      },
+      "VideoSourceList": {
+         "$ref": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiVideo.VideoSourceList"
+      }
+   }
+}

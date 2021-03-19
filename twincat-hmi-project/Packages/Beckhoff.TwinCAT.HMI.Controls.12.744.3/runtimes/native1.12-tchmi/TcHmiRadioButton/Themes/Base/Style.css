@@ -1,0 +1,16 @@
+﻿/** Styles for the theme: Base */
+.TcHmi_Controls_Beckhoff_TcHmiRadioButton {
+    --radio-state-icon-color: #4794da;
+}
+
+/* Style for the main element */
+.TcHmi_Controls_Beckhoff_TcHmiRadioButton-template {
+    background-color: white;
+    box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.02), inset 0px 0px 3px 2px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+}
+
+/* class TcHmi_Controls_Beckhoff_TcHmiRadioButton-active will be set/unset in the control */
+.TcHmi_Controls_Beckhoff_TcHmiRadioButton.TcHmi_Controls_Beckhoff_TcHmiRadioButton-active .TcHmi_Controls_Beckhoff_TcHmiRadioButton-template {
+    background: radial-gradient(circle closest-side at center, var(--radio-state-icon-color) 0, var(--radio-state-icon-color) 45%, white calc(45% + 1px), white 100%);
+}

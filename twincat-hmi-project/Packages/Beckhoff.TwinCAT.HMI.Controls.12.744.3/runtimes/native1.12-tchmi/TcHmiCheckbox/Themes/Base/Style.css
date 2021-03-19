@@ -1,0 +1,17 @@
+﻿/** Styles for the theme: Base */
+
+/* Style for the main element */
+.TcHmi_Controls_Beckhoff_TcHmiCheckbox-template, tchmi-checkbox-template {
+    background-color: white;
+    box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.02), inset 0px 0px 3px 2px rgba(0, 0, 0, 0.3);
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiCheckbox-toggle-state-icon, .tchmi-checkbox-toggle-state-icon {
+    stroke: white;
+}
+
+/* class TcHmi_Controls_Beckhoff_TcHmiCheckbox-active will be set/unset in the control */
+.TcHmi_Controls_Beckhoff_TcHmiCheckbox.TcHmi_Controls_Beckhoff_TcHmiCheckbox-active .TcHmi_Controls_Beckhoff_TcHmiCheckbox-template,
+.tchmi-checkbox.tchmi-checkbox-active .tchmi-checkbox-template {
+    background: linear-gradient(to bottom right, #2774ba, #4794da 20%);
+}

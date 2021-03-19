@@ -1,0 +1,17 @@
+﻿{
+  "function": {
+    "name": "LoadViewFromQuery",
+    "namespace": "TcHmi.Functions.demo_multi_screen",
+    "displayName": "LoadViewFromQuery",
+    "description": "",
+    "waitMode": "Synchronous",
+    "category": "",
+    "returnValue": {
+      "type": "tchmi:general#/definitions/Null"
+    },
+    "visible": true,
+    "injectContextObject": false,
+    "arguments": []
+  },
+  "$schema": "../.hmiframework/Schema/FunctionDescription.Schema.json"
+}

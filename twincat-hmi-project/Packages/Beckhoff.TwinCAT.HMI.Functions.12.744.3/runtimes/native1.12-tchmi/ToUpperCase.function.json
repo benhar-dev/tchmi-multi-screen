@@ -1,0 +1,39 @@
+{
+   "$schema": "../TcHmiFramework/Schema/FunctionDescription.Schema.json",
+   "apiVersion": 1,
+   "version": {
+      "full": "1.12.744.3",
+      "major": 1,
+      "minor": 12,
+      "build": 744,
+      "revision": 3
+   },
+   "dependencyFiles": [
+      {
+         "name": "ToUpperCase.js",
+         "type": "JavaScript",
+         "description": ""
+      }
+   ],
+   "function": {
+      "name": "ToUpperCase",
+      "namespace": "TcHmi.Functions.Beckhoff",
+      "displayName": "ToUpperCase",
+      "visible": true,
+      "description": "Convert string value to uppercase.",
+      "category": "Data Conversion",
+      "returnValue": {
+         "type": "tchmi:general#/definitions/String"
+      },
+      "arguments": [
+         {
+            "name": "value",
+            "displayName": "Value",
+            "type": "tchmi:general#/definitions/String",
+            "description": "Value to uppercase",
+            "required": true,
+            "bindable": true
+         }
+      ]
+   }
+}

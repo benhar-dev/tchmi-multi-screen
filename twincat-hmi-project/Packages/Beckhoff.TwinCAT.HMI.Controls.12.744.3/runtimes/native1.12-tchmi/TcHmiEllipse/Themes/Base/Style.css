@@ -1,0 +1,12 @@
+﻿/** Styles for the theme: Base */
+
+/* Style for the main element */
+.TcHmi_Controls_Beckhoff_TcHmiEllipse,
+.tchmi-ellipse {
+}
+
+.TcHmi_Controls_Beckhoff_TcHmiEllipse-template-svg-ellipse,
+.tchmi-ellipse-template-svg-ellipse {
+    stroke: rgba(0, 0, 0, 1);
+    /* default stroke width is defined as a controlTypeValues as this value has to run through the js code */
+}

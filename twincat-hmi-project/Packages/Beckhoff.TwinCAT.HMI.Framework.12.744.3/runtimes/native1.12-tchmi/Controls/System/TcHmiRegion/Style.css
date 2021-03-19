@@ -1,0 +1,17 @@
+﻿/** Styles for all themes */
+
+/* Style for the main element */
+.TcHmi_Controls_System_TcHmiRegion, tchmi-region {
+    overflow:auto; 
+}
+
+.TcHmi_Controls_System_TcHmiRegion-template, tchmi-region-template {
+    position:relative;
+    width:100%;
+    height:100%;
+}
+
+/* container have no own visual representation so the white overlay is not nice on non white backgrounds */
+.TcHmi_Controls_System_TcHmiRegion.TcHmi_Controls_System_TcHmiControl-disabled::after, .tchmi-region.tchmi-control-disabled::after {
+    background-color: transparent;
+}

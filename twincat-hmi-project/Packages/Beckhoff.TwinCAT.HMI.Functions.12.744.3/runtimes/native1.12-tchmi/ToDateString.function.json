@@ -1,0 +1,47 @@
+{
+   "$schema": "../TcHmiFramework/Schema/FunctionDescription.Schema.json",
+   "apiVersion": 1,
+   "version": {
+      "full": "1.12.744.3",
+      "major": 1,
+      "minor": 12,
+      "build": 744,
+      "revision": 3
+   },
+   "dependencyFiles": [
+      {
+         "name": "ToDateString.js",
+         "type": "JavaScript",
+         "description": ""
+      }
+   ],
+   "function": {
+      "name": "ToDateString",
+      "namespace": "TcHmi.Functions.Beckhoff",
+      "displayName": "ToDateString",
+      "visible": true,
+      "description": "Converts Strings, Numbers (milliseconds since 1970) and JS Date Objects to strings containing the date.",
+      "category": "Data Conversion",
+      "returnValue": {
+         "type": "tchmi:general#/definitions/String"
+      },
+      "arguments": [
+         {
+            "name": "date",
+            "displayName": "date",
+            "type": "tchmi:general#/definitions/Any",
+            "description": "Strings, Numbers (milliseconds since 1970) and JS Date Objects to be converted",
+            "required": true,
+            "bindable": true
+         },
+         {
+            "name": "timeFormatLocale",
+            "displayName": "timeFormatLocale",
+            "type": "tchmi:general#/definitions/Locale",
+            "description": "The locale of the return string",
+            "required": false,
+            "bindable": true
+         }
+      ]
+   }
+}

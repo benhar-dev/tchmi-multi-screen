@@ -1,0 +1,12 @@
+﻿{
+  "$schema": "../../../../../TcHmiFramework/Schema/ThemeDescription.Schema.json",
+  "controlTypeValues": {
+    "TcHmi.Controls.Beckhoff.TcHmiEllipse": {
+      "attributes": {
+        "StrokeThickness": 1
+      },
+      "themedResources": {
+      }
+    }
+  }
+}

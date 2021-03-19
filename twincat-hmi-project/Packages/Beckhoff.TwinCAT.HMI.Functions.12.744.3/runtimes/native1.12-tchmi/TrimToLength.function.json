@@ -1,0 +1,47 @@
+{
+   "$schema": "../TcHmiFramework/Schema/FunctionDescription.Schema.json",
+   "apiVersion": 1,
+   "version": {
+      "full": "1.12.744.3",
+      "major": 1,
+      "minor": 12,
+      "build": 744,
+      "revision": 3
+   },
+   "dependencyFiles": [
+      {
+         "name": "TrimToLength.js",
+         "type": "JavaScript",
+         "description": ""
+      }
+   ],
+   "function": {
+      "name": "TrimToLength",
+      "namespace": "TcHmi.Functions.Beckhoff",
+      "displayName": "TrimToLength",
+      "visible": true,
+      "description": "Trims a string (from left or right side) to a specific length.",
+      "category": "Data Conversion",
+      "returnValue": {
+         "type": "tchmi:general#/definitions/String"
+      },
+      "arguments": [
+         {
+            "name": "value",
+            "displayName": "Value",
+            "type": "tchmi:general#/definitions/String",
+            "description": "Value to be trimmed",
+            "required": true,
+            "bindable": true
+         },
+         {
+            "name": "trimToLength",
+            "displayName": "trimToLength",
+            "type": "tchmi:general#/definitions/Number",
+            "description": "Target length of the String. Negative values trims from left side",
+            "required": true,
+            "bindable": true
+         }
+      ]
+   }
+}

@@ -1,0 +1,49 @@
+{
+   "$schema": "../TcHmiFramework/Schema/FunctionDescription.Schema.json",
+   "apiVersion": 1,
+   "version": {
+      "full": "1.12.744.3",
+      "major": 1,
+      "minor": 12,
+      "build": 744,
+      "revision": 3
+   },
+   "dependencyFiles": [
+      {
+         "name": "ActivateRecipe.js",
+         "type": "JavaScript",
+         "description": ""
+      }
+   ],
+   "function": {
+      "name": "ActivateRecipe",
+      "namespace": "TcHmi.Functions.Beckhoff",
+      "displayName": "ActivateRecipe",
+      "visible": true,
+      "category": "Recipe",
+      "waitMode": "Asynchronous",
+      "injectContextObject": true,
+      "description": "Activates a recipe",
+      "returnValue": null,
+      "arguments": [
+         {
+            "name": "ctx",
+            "displayName": "ctx",
+            "type": "tchmi:framework#/definitions/ContextReference",
+            "description": "Context Reference",
+            "defaultValue": null,
+            "required": true,
+            "bindable": false
+         },
+         {
+            "name": "recipeReference",
+            "displayName": "recipeReference",
+            "type": "tchmi:framework#/definitions/RecipeReference",
+            "description": "Reference (path + '::' + name) of the recipe",
+            "defaultValue": "",
+            "required": true,
+            "bindable": true
+         }
+      ]
+   }
+}

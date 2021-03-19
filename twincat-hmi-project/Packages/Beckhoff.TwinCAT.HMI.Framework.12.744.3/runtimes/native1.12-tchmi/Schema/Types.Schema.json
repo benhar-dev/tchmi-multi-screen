@@ -1,0 +1,2325 @@
+{
+   "$schema": "http://json-schema.org/draft-04/schema",
+   "definitions": {
+      "AccessConfig": {
+         "definitions": {
+            "access": {
+               "title": "Access",
+               "type": "object",
+               "engineeringColumns": [
+                  "accessright",
+                  "group",
+                  "permission"
+               ],
+               "propertiesMeta": [
+                  {
+                     "name": "accessright",
+                     "displayName": "Access right",
+                     "category": "General",
+                     "displayPriority": 10,
+                     "description": "Name of the access right."
+                  },
+                  {
+                     "name": "group",
+                     "displayName": "Group",
+                     "category": "General",
+                     "displayPriority": 10,
+                     "description": "Name of the user group."
+                  },
+                  {
+                     "name": "permission",
+                     "displayName": "Permission",
+                     "category": "General",
+                     "displayPriority": 10,
+                     "description": "Name of the permission described by this rule."
+                  }
+               ],
+               "properties": {
+                  "accessright": {
+                     "type": "string",
+                     "minLength": 1
+                  },
+                  "group": {
+                     "type": "string",
+                     "minLength": 1
+                  },
+                  "permission": {
+                     "type": "string",
+                     "enum": [
+                        "Allow",
+                        "Deny",
+                        "Inherit"
+                     ]
+                  }
+               },
+               "required": [
+                  "accessright",
+                  "group",
+                  "permission"
+               ]
+            }
+         },
+         "type": "array",
+         "items": {
+            "$ref": "tchmi:framework#/definitions/AccessConfig/definitions/access"
+         }
+      },
+      "BorderRadius": {
+         "type": "object",
+         "propertiesMeta": [
+            {
+               "name": "topLeft",
+               "category": "general",
+               "displayName": "topLeft",
+               "displayPriority": 10,
+               "description": "",
+               "defaultValue": null,
+               "defaultValueInternal": null
+            },
+            {
+               "name": "topLeftUnit",
+               "category": "general",
+               "refTo": "topLeft",
+               "displayName": "topLeftUnit",
+               "displayPriority": 10,
+               "description": "",
+               "defaultValue": null,
+               "defaultValueInternal": "px"
+            },
+            {
+               "name": "topRight",
+               "category": "general",
+               "displayName": "topRight",
+               "displayPriority": 10,
+               "description": "",
+               "defaultValue": null,
+               "defaultValueInternal": null
+            },
+            {
+               "name": "topRightUnit",
+               "category": "general",
+               "refTo": "topRight",
+               "displayName": "topRightUnit",
+               "displayPriority": 10,
+               "description": "",
+               "defaultValue": null,
+               "defaultValueInternal": "px"
+            },
+            {
+               "name": "bottomRight",
+               "category": "general",
+               "displayName": "bottomRight",
+               "displayPriority": 10,
+               "description": "",
+               "defaultValue": null,
+               "defaultValueInternal": null
+            },
+            {
+               "name": "bottomRightUnit",
+               "category": "general",
+               "refTo": "bottomRight",
+               "displayName": "bottomRightUnit",
+               "displayPriority": 10,
+               "description": "",
+               "defaultValue": null,
+               "defaultValueInternal": "px"
+            },
+            {
+               "name": "bottomLeft",
+               "category": "general",
+               "displayName": "bottomLeft",
+               "displayPriority": 10,
+               "description": "",
+               "defaultValue": null,
+               "defaultValueInternal": null
+            },
+            {
+               "name": "bottomLeftUnit",
+               "category": "general",
+               "refTo": "bottomLeft",
+               "displayName": "bottomLeftUnit",
+               "displayPriority": 10,
+               "description": "",
+               "defaultValue": null,
+               "defaultValueInternal": "px"
+            }
+         ],
+         "properties": {
+            "topLeft": {
+               "$ref": "tchmi:framework#/definitions/PositiveNumber"
+            },
+            "topLeftUnit": {
+               "$ref": "tchmi:framework#/definitions/MeasurementUnit"
+            },
+            "topRight": {
+               "$ref": "tchmi:framework#/definitions/PositiveNumber"
+            },
+            "topRightUnit": {
+               "$ref": "tchmi:framework#/definitions/MeasurementUnit"
+            },
+            "bottomRight": {
+               "$ref": "tchmi:framework#/definitions/PositiveNumber"
+            },
+            "bottomRightUnit": {
+               "$ref": "tchmi:framework#/definitions/MeasurementUnit"
+            },
+            "bottomLeft": {
+               "$ref": "tchmi:framework#/definitions/PositiveNumber"
+            },
+            "bottomLeftUnit": {
+               "$ref": "tchmi:framework#/definitions/MeasurementUnit"
+            }
+         },
+         "required": [
+            "topLeft",
+            "topRight",
+            "bottomRight",
+            "bottomLeft"
+         ]
+      },
+      "BorderStyle": {
+         "definitions": {
+            "style": {
+               "type": "string",
+               "enum": [
+                  "Solid",
+                  "Dashed",
+                  "Dotted",
+                  "None"
+               ],
+               "default": "Solid"
+            }
+         },
+         "type": "object",
+         "properties": {
+            "left": {
+               "$ref": "tchmi:framework#/definitions/BorderStyle/definitions/style"
+            },
+            "top": {
+               "$ref": "tchmi:framework#/definitions/BorderStyle/definitions/style"
+            },
+            "right": {
+               "$ref": "tchmi:framework#/definitions/BorderStyle/definitions/style"
+            },
+            "bottom": {
+               "$ref": "tchmi:framework#/definitions/BorderStyle/definitions/style"
+            }
+         },
+         "required": [
+            "left",
+            "top",
+            "right",
+            "bottom"
+         ]
+      },
+      "BorderWidth": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "object",
+         "properties": {
+            "left": {
+               "$ref": "tchmi:framework#/definitions/PositiveNumber"
+            },
+            "leftUnit": {
+               "$ref": "tchmi:framework#/definitions/PixelUnit"
+            },
+            "top": {
+               "$ref": "tchmi:framework#/definitions/PositiveNumber"
+            },
+            "topUnit": {
+               "$ref": "tchmi:framework#/definitions/PixelUnit"
+            },
+            "right": {
+               "$ref": "tchmi:framework#/definitions/PositiveNumber"
+            },
+            "rightUnit": {
+               "$ref": "tchmi:framework#/definitions/PixelUnit"
+            },
+            "bottom": {
+               "$ref": "tchmi:framework#/definitions/PositiveNumber"
+            },
+            "bottomUnit": {
+               "$ref": "tchmi:framework#/definitions/PixelUnit"
+            }
+         },
+         "required": [
+            "left",
+            "top",
+            "right",
+            "bottom"
+         ]
+      },
+      "BoxShadowList": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "array",
+         "items": {
+            "title": "BoxShadow definition",
+            "type": "object",
+            "propertiesMeta": [
+               {
+                  "name": "color",
+                  "category": "Colors",
+                  "displayName": "Color",
+                  "displayPriority": 10,
+                  "description": "Color of this Box Shadow",
+                  "defaultValue": null,
+                  "defaultValueInternal": null
+               },
+               {
+                  "name": "offsetX",
+                  "category": "General",
+                  "displayName": "OffsetX",
+                  "displayPriority": 10,
+                  "description": "The Shadow Offset.",
+                  "defaultValue": null,
+                  "defaultValueInternal": 0
+               },
+               {
+                  "name": "offsetXUnit",
+                  "refTo": "offsetX",
+                  "category": "General",
+                  "displayName": "OffsetX Unit",
+                  "displayPriority": 10,
+                  "description": "The Shadow Offset.",
+                  "defaultValue": null,
+                  "defaultValueInternal": "px"
+               },
+               {
+                  "name": "offsetY",
+                  "category": "General",
+                  "displayName": "OffsetY",
+                  "displayPriority": 10,
+                  "description": "The Shadow Offset.",
+                  "defaultValue": null,
+                  "defaultValueInternal": 0
+               },
+               {
+                  "name": "offsetYUnit",
+                  "refTo": "offsetY",
+                  "category": "General",
+                  "displayName": "OffsetY Unit",
+                  "displayPriority": 10,
+                  "description": "The Shadow Offset.",
+                  "defaultValue": null,
+                  "defaultValueInternal": "px"
+               },
+               {
+                  "name": "inset",
+                  "category": "General",
+                  "displayName": "Inset",
+                  "displayPriority": 10,
+                  "description": "Inset shadows are drawn inside the border (even transparent ones), above the background, but below content.",
+                  "defaultValue": null,
+                  "defaultValueInternal": false
+               },
+               {
+                  "name": "blur",
+                  "category": "General",
+                  "displayName": "Blur",
+                  "displayPriority": 10,
+                  "description": "The larger this value, the bigger the blur, so the shadow becomes bigger and lighter.",
+                  "defaultValue": null,
+                  "defaultValueInternal": 0
+               },
+               {
+                  "name": "blurUnit",
+                  "refTo": "blur",
+                  "category": "General",
+                  "displayName": "BlurUnit",
+                  "displayPriority": 10,
+                  "description": "The larger this value, the bigger the blur, so the shadow becomes bigger and lighter.",
+                  "defaultValue": null,
+                  "defaultValueInternal": "px"
+               },
+               {
+                  "name": "spread",
+                  "category": "General",
+                  "displayName": "Spread",
+                  "displayPriority": 10,
+                  "description": "Positive values will cause the shadow to expand and grow bigger, negative values will cause the shadow to shrink.",
+                  "defaultValue": null,
+                  "defaultValueInternal": 0
+               },
+               {
+                  "name": "spreadUnit",
+                  "refTo": "spread",
+                  "category": "General",
+                  "displayName": "SpreadUnit",
+                  "displayPriority": 10,
+                  "description": "Positive values will cause the shadow to expand and grow bigger, negative values will cause the shadow to shrink.",
+                  "defaultValue": null,
+                  "defaultValueInternal": "px"
+               }
+            ],
+            "properties": {
+               "color": {
+                  "$ref": "tchmi:framework#/definitions/SolidColor"
+               },
+               "offsetX": {
+                  "$ref": "tchmi:framework#/definitions/MeasurementValue"
+               },
+               "offsetXUnit": {
+                  "$ref": "tchmi:framework#/definitions/PixelUnit"
+               },
+               "offsetY": {
+                  "$ref": "tchmi:framework#/definitions/MeasurementValue"
+               },
+               "offsetYUnit": {
+                  "$ref": "tchmi:framework#/definitions/PixelUnit"
+               },
+               "inset": {
+                  "type": "boolean"
+               },
+               "blur": {
+                  "$ref": "tchmi:framework#/definitions/MeasurementValue"
+               },
+               "blurUnit": {
+                  "$ref": "tchmi:framework#/definitions/PixelUnit"
+               },
+               "spread": {
+                  "$ref": "tchmi:framework#/definitions/MeasurementValue"
+               },
+               "spreadUnit": {
+                  "$ref": "tchmi:framework#/definitions/PixelUnit"
+               }
+            }
+         },
+         "minItems": 0
+      },
+      "ClassNameList": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "array",
+         "items": {
+            "type": "string"
+         },
+         "minItems": 0
+      },
+      "Color": {
+         "anyOf": [
+            {
+               "$ref": "tchmi:framework#/definitions/SolidColor"
+            },
+            {
+               "$ref": "tchmi:framework#/definitions/LinearGradientColor"
+            },
+            {
+               "type": "null"
+            }
+         ],
+         "default": null
+      },
+      "ContentPath": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "string",
+         "minLength": 1
+      },
+      "ContextReference": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "object"
+      },
+      "Control": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "object",
+         "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+         "frameworkControlType": "TcHmiControl",
+         "frameworkControlNamespace": "TcHmi.Controls.System"
+      },
+      "ControlAccessRight": {
+         "type": "object",
+         "description": "An access right which is checked by controls. In the Schema a defaultValue of true mean access is granted, false is denied, null is ask parent.",
+         "properties": {
+            "name": {
+               "type": "string",
+               "minLength": 1,
+               "description": "Name of the access definition in the HTML."
+            },
+            "displayName": {
+               "type": "string",
+               "description": "Name which should be presented the user."
+            },
+            "visible": {
+               "type": "boolean",
+               "description": "Determine if an access definition is shown to the user."
+            },
+            "description": {
+               "type": "string",
+               "description": "A long description of this access definition."
+            },
+            "defaultValueInternal": {
+               "anyOf": [
+                  {
+                     "type": "boolean"
+                  },
+                  {
+                     "type": "null"
+                  }
+               ],
+               "default": null,
+               "description": "Defines the default of this control access right. This will be used if the check for this access right does not return a result. true mean access is granted, false is denied, null is ask parent."
+            }
+         },
+         "required": [
+            "name",
+            "displayName",
+            "visible",
+            "defaultValueInternal"
+         ]
+      },
+      "ControlAccessRightName": {
+         "type": "string"
+      },
+      "ControlNamespace": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "string",
+         "minLength": 1
+      },
+      "ControlPropertyName": {
+         "type": "string"
+      },
+      "ControlType": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "string",
+         "minLength": 1
+      },
+      "Empty": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "string",
+         "enum": [
+            ""
+         ]
+      },
+      "FontFamily": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "string"
+      },
+      "FontSizeUnit": {
+         "type": "string",
+         "enum": [
+            "px",
+            "%"
+         ],
+         "default": "px"
+      },
+      "FontStyle": {
+         "type": "string",
+         "enum": [
+            "Normal",
+            "Italic",
+            "Oblique",
+            "Auto"
+         ],
+         "default": "Normal"
+      },
+      "FontWeight": {
+         "type": "string",
+         "enum": [
+            "Normal",
+            "Bold",
+            "Auto"
+         ],
+         "default": "Normal"
+      },
+      "Fraction": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "number",
+         "minimum": 0,
+         "maximum": 1
+      },
+      "Function": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "object",
+         "definitions": {
+            "value": {
+               "anyOf": [
+                  {
+                     "title": "StaticValue",
+                     "type": "object",
+                     "properties": {
+                        "objectType": {
+                           "description": "An enum defining the variable type.",
+                           "type": "string",
+                           "enum": [
+                              "StaticValue"
+                           ]
+                        },
+                        "value": {
+                           "anyOf": [
+                              {
+                                 "type": "string"
+                              },
+                              {
+                                 "type": "number"
+                              },
+                              {
+                                 "type": "boolean"
+                              },
+                              {
+                                 "type": "array"
+                              },
+                              {
+                                 "type": "object"
+                              }
+                           ]
+                        },
+                        "valueType": {
+                           "type": "string"
+                        }
+                     },
+                     "required": [
+                        "objectType",
+                        "value",
+                        "valueType"
+                     ]
+                  },
+                  {
+                     "title": "Symbol",
+                     "type": "object",
+                     "properties": {
+                        "objectType": {
+                           "description": "An enum defining the variable type.",
+                           "type": "string",
+                           "enum": [
+                              "Symbol"
+                           ]
+                        },
+                        "symbolExpression": {
+                           "$ref": "tchmi:framework#/definitions/Function/definitions/symbolExpression"
+                        }
+                     },
+                     "required": [
+                        "objectType",
+                        "symbolExpression"
+                     ]
+                  },
+                  {
+                     "title": "ControlApiFunction",
+                     "type": "object",
+                     "properties": {
+                        "objectType": {
+                           "description": "An enum defining the variable type.",
+                           "type": "string",
+                           "enum": [
+                              "ControlApiFunction"
+                           ]
+                        },
+                        "control": {
+                           "type": "string"
+                        },
+                        "fn": {
+                           "type": "string"
+                        },
+                        "valueType": {
+                           "type": "string"
+                        }
+                     },
+                     "required": [
+                        "objectType",
+                        "control",
+                        "fn",
+                        "valueType"
+                     ]
+                  },
+                  {
+                     "title": "EventDataObject",
+                     "type": "object",
+                     "properties": {
+                        "objectType": {
+                           "description": "An enum defining the variable type.",
+                           "type": "string",
+                           "enum": [
+                              "EventDataObject"
+                           ]
+                        },
+                        "propertyPath": {
+                           "type": "string"
+                        }
+                     },
+                     "required": [
+                        "objectType",
+                        "propertyPath"
+                     ]
+                  }
+               ]
+            },
+            "symbolExpression": {
+               "title": "SymbolExpression",
+               "type": "string",
+               "pattern": "^%(s|i|l|pp|tp|f|ctrl|ca)%.+%\\1%$"
+            }
+         },
+         "properties": {
+            "objectType": {
+               "type": "string",
+               "enum": [
+                  "Function"
+               ]
+            },
+            "fn": {
+               "type": "string"
+            },
+            "fnParams": {
+               "type": "array",
+               "items": {
+                  "$ref": "tchmi:framework#/definitions/Function/definitions/value"
+               }
+            }
+         },
+         "required": [
+            "objectType",
+            "fn",
+            "fnParams"
+         ]
+      },
+      "FunctionList": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "array",
+         "items": {
+            "$ref": "tchmi:framework#/definitions/Function"
+         }
+      },
+      "HorizontalAlignment": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "string",
+         "enum": [
+            "Left",
+            "Center",
+            "Right"
+         ]
+      },
+      "Id": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "string",
+         "minLength": 1
+      },
+      "LinearGradientColor": {
+         "type": "object",
+         "engineeringColumns": [
+            "angle"
+         ],
+         "propertiesMeta": [
+            {
+               "name": "angle",
+               "displayName": "Angle",
+               "category": "General",
+               "displayPriority": 10,
+               "description": "Angle this Gradient is defined"
+            }
+         ],
+         "properties": {
+            "angle": {
+               "type": "number"
+            },
+            "stopPoints": {
+               "type": "array",
+               "items": {
+                  "$ref": "tchmi:framework#/definitions/StopPoint"
+               },
+               "minItems": 2
+            }
+         },
+         "default": {
+            "angle": 0,
+            "stopPoints": [
+               {
+                  "color": "rgba(0, 0, 0, 1)",
+                  "stop": "0%"
+               },
+               {
+                  "color": "rgba(255, 255, 255, 1)",
+                  "stop": "100%"
+               }
+            ]
+         },
+         "required": [
+            "angle",
+            "stopPoints"
+         ]
+      },
+      "Locale": {
+         "default": "en",
+         "description": "(Deprecated, use ProjectLocale from general) A list of locales for which we have a localization file in the project.",
+         "type": "string"
+      },
+      "MeasurementUnit": {
+         "type": "string",
+         "enum": [
+            "px",
+            "%"
+         ],
+         "default": "px"
+      },
+      "MeasurementValue": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "number"
+      },
+      "Padding": {
+         "type": "object",
+         "propertiesMeta": [
+            {
+               "name": "Left",
+               "category": "general",
+               "displayName": "Left",
+               "displayPriority": 10,
+               "description": "",
+               "defaultValue": null,
+               "defaultValueInternal": null
+            },
+            {
+               "name": "LeftUnit",
+               "category": "general",
+               "refTo": "Left",
+               "displayName": "LeftUnit",
+               "displayPriority": 10,
+               "description": "",
+               "defaultValue": null,
+               "defaultValueInternal": "px"
+            },
+            {
+               "name": "Top",
+               "category": "general",
+               "displayName": "Top",
+               "displayPriority": 10,
+               "description": "",
+               "defaultValue": null,
+               "defaultValueInternal": null
+            },
+            {
+               "name": "TopUnit",
+               "category": "general",
+               "refTo": "Top",
+               "displayName": "TopUnit",
+               "displayPriority": 10,
+               "description": "",
+               "defaultValue": null,
+               "defaultValueInternal": "px"
+            },
+            {
+               "name": "Right",
+               "category": "general",
+               "displayName": "Right",
+               "displayPriority": 10,
+               "description": "",
+               "defaultValue": null,
+               "defaultValueInternal": null
+            },
+            {
+               "name": "RightUnit",
+               "category": "general",
+               "refTo": "topRight",
+               "displayName": "topRightUnit",
+               "displayPriority": 10,
+               "description": "",
+               "defaultValue": null,
+               "defaultValueInternal": "px"
+            },
+            {
+               "name": "bottom",
+               "category": "general",
+               "displayName": "bottom",
+               "displayPriority": 10,
+               "description": "",
+               "defaultValue": null,
+               "defaultValueInternal": null
+            },
+            {
+               "name": "bottomUnit",
+               "category": "general",
+               "refTo": "bottom",
+               "displayName": "bottomUnit",
+               "displayPriority": 10,
+               "description": "",
+               "defaultValue": null,
+               "defaultValueInternal": "px"
+            }
+         ],
+         "properties": {
+            "left": {
+               "$ref": "tchmi:framework#/definitions/PositiveNumber"
+            },
+            "leftUnit": {
+               "$ref": "tchmi:framework#/definitions/MeasurementUnit"
+            },
+            "top": {
+               "$ref": "tchmi:framework#/definitions/PositiveNumber"
+            },
+            "topUnit": {
+               "$ref": "tchmi:framework#/definitions/MeasurementUnit"
+            },
+            "right": {
+               "$ref": "tchmi:framework#/definitions/PositiveNumber"
+            },
+            "rightUnit": {
+               "$ref": "tchmi:framework#/definitions/MeasurementUnit"
+            },
+            "bottom": {
+               "$ref": "tchmi:framework#/definitions/PositiveNumber"
+            },
+            "bottomUnit": {
+               "$ref": "tchmi:framework#/definitions/MeasurementUnit"
+            }
+         },
+         "required": [
+            "left",
+            "top",
+            "right",
+            "bottom"
+         ]
+      },
+      "Path": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "string",
+         "minLength": 1
+      },
+      "PixelUnit": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "string",
+         "enum": [
+            "px"
+         ]
+      },
+      "PositiveNumber": {
+         "allOf": [
+            {
+               "$ref": "tchmi:general#/definitions/Number"
+            },
+            {
+               "minimum": 0
+            }
+         ]
+      },
+      "RecipeReference": {
+         "type": "string",
+         "minLength": 1
+      },
+      "RecipeTypeReference": {
+         "type": "string",
+         "minLength": 1
+      },
+      "ScaleMode": {
+         "type": "string",
+         "enum": [
+            "None",
+            "ScaleToFill",
+            "ScaleToFit",
+            "ScaleToFitWidth",
+            "ScaleToFitHeight"
+         ],
+         "default": "None"
+      },
+      "ScrollMode": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "string",
+         "enum": [
+            "No",
+            "Yes",
+            "Auto"
+         ]
+      },
+      "SizeMode": {
+         "type": "string",
+         "enum": [
+            "Value",
+            "Parent"
+         ],
+         "default": "Value"
+      },
+      "SizeModeWithContent": {
+         "type": "string",
+         "enum": [
+            "Value",
+            "Parent",
+            "Content"
+         ],
+         "default": "Value"
+      },
+      "SolidColor": {
+         "type": "object",
+         "properties": {
+            "color": {
+               "description": "Defining a color as CSS color: #-hexadecimal, rgb(), rgba(), hsl(), hsla(), css color keyword, none or transparent.",
+               "type": "string",
+               "minLength": 1,
+               "default": "#000000"
+            }
+         },
+         "required": [
+            "color"
+         ]
+      },
+      "StopPoint": {
+         "title": "StopPoint definition",
+         "type": "object",
+         "engineeringColumns": [
+            "color",
+            "stop"
+         ],
+         "properties": {
+            "color": {
+               "description": "Defining a color as CSS color: #-hexadecimal, rgb(), rgba(), hsl(), hsla(), lowercase css color keyword or transparent.",
+               "type": "string",
+               "minLength": 1
+            },
+            "stop": {
+               "type": "string",
+               "pattern": "^[0-9]*\\.?[0-9]+(?:px|%)$"
+            }
+         },
+         "required": [
+            "color"
+         ]
+      },
+      "Symbol": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "object",
+         "frameworkInstanceOf": "TcHmi.Symbol"
+      },
+      "ThemeName": {
+         "type": "string",
+         "default": "Base"
+      },
+      "ToggleState": {
+         "type": "string",
+         "enum": [
+            "Normal",
+            "Active"
+         ],
+         "default": "Normal"
+      },
+      "TransformList": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "definitions": {
+            "transform": {
+               "anyOf": [
+                  {
+                     "title": "Translate",
+                     "type": "object",
+                     "propertiesMeta": [
+                        {
+                           "name": "transformType",
+                           "category": "general",
+                           "displayName": "transformType",
+                           "displayPriority": 10,
+                           "description": "",
+                           "defaultValue": null,
+                           "defaultValueInternal": null
+                        },
+                        {
+                           "name": "x",
+                           "category": "general",
+                           "displayName": "x",
+                           "displayPriority": 10,
+                           "description": "",
+                           "defaultValue": null,
+                           "defaultValueInternal": null
+                        },
+                        {
+                           "name": "xUnit",
+                           "category": "general",
+                           "refTo": "x",
+                           "displayName": "xUnit",
+                           "displayPriority": 10,
+                           "description": "",
+                           "defaultValue": null,
+                           "defaultValueInternal": "px"
+                        },
+                        {
+                           "name": "y",
+                           "category": "general",
+                           "displayName": "y",
+                           "displayPriority": 10,
+                           "description": "",
+                           "defaultValue": null,
+                           "defaultValueInternal": null
+                        },
+                        {
+                           "name": "yUnit",
+                           "category": "general",
+                           "refTo": "y",
+                           "displayName": "yUnit",
+                           "displayPriority": 10,
+                           "description": "",
+                           "defaultValue": null,
+                           "defaultValueInternal": "px"
+                        },
+                        {
+                           "name": "z",
+                           "category": "general",
+                           "displayName": "z",
+                           "displayPriority": 10,
+                           "description": "",
+                           "defaultValue": null,
+                           "defaultValueInternal": null
+                        },
+                        {
+                           "name": "zUnit",
+                           "category": "general",
+                           "refTo": "z",
+                           "displayName": "zUnit",
+                           "displayPriority": 10,
+                           "description": "",
+                           "defaultValue": null,
+                           "defaultValueInternal": "px"
+                        }
+                     ],
+                     "properties": {
+                        "transformType": {
+                           "type": "string",
+                           "enum": [
+                              "Translate"
+                           ]
+                        },
+                        "x": {
+                           "$ref": "tchmi:framework#/definitions/MeasurementValue"
+                        },
+                        "xUnit": {
+                           "$ref": "tchmi:framework#/definitions/MeasurementUnit"
+                        },
+                        "y": {
+                           "$ref": "tchmi:framework#/definitions/MeasurementValue"
+                        },
+                        "yUnit": {
+                           "$ref": "tchmi:framework#/definitions/MeasurementUnit"
+                        },
+                        "z": {
+                           "$ref": "tchmi:framework#/definitions/MeasurementValue"
+                        },
+                        "zUnit": {
+                           "$ref": "tchmi:framework#/definitions/MeasurementUnit"
+                        }
+                     },
+                     "required": [
+                        "transformType"
+                     ]
+                  },
+                  {
+                     "title": "Rotate",
+                     "type": "object",
+                     "propertiesMeta": [
+                        {
+                           "name": "transformType",
+                           "category": "general",
+                           "displayName": "transformType",
+                           "displayPriority": 10,
+                           "description": "",
+                           "defaultValue": null,
+                           "defaultValueInternal": null
+                        },
+                        {
+                           "name": "angle",
+                           "category": "general",
+                           "displayName": "angle",
+                           "displayPriority": 10,
+                           "description": "",
+                           "defaultValue": null,
+                           "defaultValueInternal": null
+                        },
+                        {
+                           "name": "angleUnit",
+                           "category": "general",
+                           "refTo": "angle",
+                           "displayName": "angleUnit",
+                           "displayPriority": 10,
+                           "description": "",
+                           "defaultValue": null,
+                           "defaultValueInternal": "deg"
+                        }
+                     ],
+                     "properties": {
+                        "transformType": {
+                           "type": "string",
+                           "enum": [
+                              "Rotate"
+                           ]
+                        },
+                        "angle": {
+                           "$ref": "tchmi:framework#/definitions/MeasurementValue"
+                        },
+                        "angleUnit": {
+                           "$ref": "tchmi:framework#/definitions/TransformList/definitions/angleUnit"
+                        },
+                        "vector": {
+                           "type": "object",
+                           "properties": {
+                              "x": {
+                                 "type": "number"
+                              },
+                              "y": {
+                                 "type": "number"
+                              },
+                              "z": {
+                                 "type": "number"
+                              }
+                           },
+                           "required": [
+                              "x",
+                              "y",
+                              "z"
+                           ]
+                        }
+                     },
+                     "required": [
+                        "transformType",
+                        "angle"
+                     ]
+                  },
+                  {
+                     "title": "Scale",
+                     "type": "object",
+                     "properties": {
+                        "transformType": {
+                           "type": "string",
+                           "enum": [
+                              "Scale"
+                           ]
+                        },
+                        "x": {
+                           "type": "number"
+                        },
+                        "y": {
+                           "type": "number"
+                        },
+                        "z": {
+                           "type": "number"
+                        }
+                     },
+                     "required": [
+                        "transformType"
+                     ]
+                  },
+                  {
+                     "title": "Skew",
+                     "type": "object",
+                     "propertiesMeta": [
+                        {
+                           "name": "transformType",
+                           "category": "general",
+                           "displayName": "transformType",
+                           "displayPriority": 10,
+                           "description": "",
+                           "defaultValue": null,
+                           "defaultValueInternal": null
+                        },
+                        {
+                           "name": "xAngle",
+                           "category": "general",
+                           "displayName": "xAngle",
+                           "displayPriority": 10,
+                           "description": "",
+                           "defaultValue": null,
+                           "defaultValueInternal": null
+                        },
+                        {
+                           "name": "xAngleUnit",
+                           "category": "general",
+                           "refTo": "xAngle",
+                           "displayName": "xAngleUnit",
+                           "displayPriority": 10,
+                           "description": "",
+                           "defaultValue": null,
+                           "defaultValueInternal": "deg"
+                        },
+                        {
+                           "name": "yAngle",
+                           "category": "general",
+                           "displayName": "yAngle",
+                           "displayPriority": 10,
+                           "description": "",
+                           "defaultValue": null,
+                           "defaultValueInternal": null
+                        },
+                        {
+                           "name": "yAngleUnit",
+                           "category": "general",
+                           "refTo": "yAngle",
+                           "displayName": "yAngleUnit",
+                           "displayPriority": 10,
+                           "description": "",
+                           "defaultValue": null,
+                           "defaultValueInternal": "deg"
+                        }
+                     ],
+                     "properties": {
+                        "transformType": {
+                           "type": "string",
+                           "enum": [
+                              "Skew"
+                           ]
+                        },
+                        "xAngle": {
+                           "$ref": "tchmi:framework#/definitions/MeasurementValue"
+                        },
+                        "xAngleUnit": {
+                           "$ref": "tchmi:framework#/definitions/TransformList/definitions/angleUnit"
+                        },
+                        "yAngle": {
+                           "$ref": "tchmi:framework#/definitions/MeasurementValue"
+                        },
+                        "yAngleUnit": {
+                           "$ref": "tchmi:framework#/definitions/TransformList/definitions/angleUnit"
+                        }
+                     },
+                     "required": [
+                        "transformType"
+                     ]
+                  },
+                  {
+                     "title": "Origin",
+                     "type": "object",
+                     "propertiesMeta": [
+                        {
+                           "name": "transformType",
+                           "category": "general",
+                           "displayName": "transformType",
+                           "displayPriority": 10,
+                           "description": "",
+                           "defaultValue": null,
+                           "defaultValueInternal": null
+                        },
+                        {
+                           "name": "x",
+                           "category": "general",
+                           "displayName": "x",
+                           "displayPriority": 10,
+                           "description": "",
+                           "defaultValue": null,
+                           "defaultValueInternal": null
+                        },
+                        {
+                           "name": "xUnit",
+                           "category": "general",
+                           "refTo": "x",
+                           "displayName": "xUnit",
+                           "displayPriority": 10,
+                           "description": "",
+                           "defaultValue": null,
+                           "defaultValueInternal": "px"
+                        },
+                        {
+                           "name": "y",
+                           "category": "general",
+                           "displayName": "y",
+                           "displayPriority": 10,
+                           "description": "",
+                           "defaultValue": null,
+                           "defaultValueInternal": null
+                        },
+                        {
+                           "name": "yUnit",
+                           "category": "general",
+                           "refTo": "y",
+                           "displayName": "yUnit",
+                           "displayPriority": 10,
+                           "description": "",
+                           "defaultValue": null,
+                           "defaultValueInternal": "px"
+                        },
+                        {
+                           "name": "z",
+                           "category": "general",
+                           "displayName": "z",
+                           "displayPriority": 10,
+                           "description": "",
+                           "defaultValue": null,
+                           "defaultValueInternal": null
+                        },
+                        {
+                           "name": "zUnit",
+                           "category": "general",
+                           "refTo": "z",
+                           "displayName": "zUnit",
+                           "displayPriority": 10,
+                           "description": "",
+                           "defaultValue": null,
+                           "defaultValueInternal": "px"
+                        }
+                     ],
+                     "properties": {
+                        "transformType": {
+                           "type": "string",
+                           "enum": [
+                              "Origin"
+                           ]
+                        },
+                        "x": {
+                           "$ref": "tchmi:framework#/definitions/MeasurementValue"
+                        },
+                        "xUnit": {
+                           "$ref": "tchmi:framework#/definitions/MeasurementUnit"
+                        },
+                        "y": {
+                           "$ref": "tchmi:framework#/definitions/MeasurementValue"
+                        },
+                        "yUnit": {
+                           "$ref": "tchmi:framework#/definitions/MeasurementUnit"
+                        },
+                        "z": {
+                           "$ref": "tchmi:framework#/definitions/MeasurementValue"
+                        },
+                        "zUnit": {
+                           "$ref": "tchmi:framework#/definitions/MeasurementUnit"
+                        }
+                     },
+                     "required": [
+                        "transformType"
+                     ]
+                  },
+                  {
+                     "title": "Perspective",
+                     "type": "object",
+                     "propertiesMeta": [
+                        {
+                           "name": "transformType",
+                           "category": "general",
+                           "displayName": "transformType",
+                           "displayPriority": 10,
+                           "description": "",
+                           "defaultValue": null,
+                           "defaultValueInternal": null
+                        },
+                        {
+                           "name": "distance",
+                           "category": "general",
+                           "displayName": "distance",
+                           "displayPriority": 10,
+                           "description": "",
+                           "defaultValue": null,
+                           "defaultValueInternal": null
+                        },
+                        {
+                           "name": "distanceUnit",
+                           "category": "general",
+                           "refTo": "distance",
+                           "displayName": "distanceUnit",
+                           "displayPriority": 10,
+                           "description": "",
+                           "defaultValue": null,
+                           "defaultValueInternal": "px"
+                        }
+                     ],
+                     "properties": {
+                        "transformType": {
+                           "type": "string",
+                           "enum": [
+                              "Perspective"
+                           ]
+                        },
+                        "distance": {
+                           "$ref": "tchmi:framework#/definitions/MeasurementValue"
+                        },
+                        "distanceUnit": {
+                           "$ref": "tchmi:framework#/definitions/MeasurementUnit"
+                        },
+                        "origin": {
+                           "type": "object",
+                           "propertiesMeta": [
+                              {
+                                 "name": "x",
+                                 "category": "general",
+                                 "displayName": "x",
+                                 "displayPriority": 10,
+                                 "description": "",
+                                 "defaultValue": null,
+                                 "defaultValueInternal": null
+                              },
+                              {
+                                 "name": "xUnit",
+                                 "category": "general",
+                                 "refTo": "x",
+                                 "displayName": "xUnit",
+                                 "displayPriority": 10,
+                                 "description": "",
+                                 "defaultValue": null,
+                                 "defaultValueInternal": "px"
+                              },
+                              {
+                                 "name": "y",
+                                 "category": "general",
+                                 "displayName": "y",
+                                 "displayPriority": 10,
+                                 "description": "",
+                                 "defaultValue": null,
+                                 "defaultValueInternal": null
+                              },
+                              {
+                                 "name": "yUnit",
+                                 "category": "general",
+                                 "refTo": "y",
+                                 "displayName": "yUnit",
+                                 "displayPriority": 10,
+                                 "description": "",
+                                 "defaultValue": null,
+                                 "defaultValueInternal": "px"
+                              }
+                           ],
+                           "properties": {
+                              "x": {
+                                 "$ref": "tchmi:framework#/definitions/MeasurementValue"
+                              },
+                              "xUnit": {
+                                 "$ref": "tchmi:framework#/definitions/MeasurementUnit"
+                              },
+                              "y": {
+                                 "$ref": "tchmi:framework#/definitions/MeasurementValue"
+                              },
+                              "yUnit": {
+                                 "$ref": "tchmi:framework#/definitions/MeasurementUnit"
+                              }
+                           }
+                        }
+                     },
+                     "required": [
+                        "transformType",
+                        "distance"
+                     ]
+                  }
+               ]
+            },
+            "angleUnit": {
+               "type": "string",
+               "enum": [
+                  "deg",
+                  "rad",
+                  "turn",
+                  "grad"
+               ]
+            }
+         },
+         "type": "array",
+         "items": {
+            "$ref": "tchmi:framework#/definitions/TransformList/definitions/transform"
+         }
+      },
+      "Trigger": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "definitions": {
+            "action": {
+               "anyOf": [
+                  {
+                     "title": "Condition",
+                     "type": "object",
+                     "description": "IF .. THEN ..ELSE - style condition",
+                     "properties": {
+                        "objectType": {
+                           "type": "string",
+                           "enum": [
+                              "Condition"
+                           ]
+                        },
+                        "parts": {
+                           "type": "array",
+                           "items": {
+                              "anyOf": [
+                                 {
+                                    "type": "object",
+                                    "properties": {
+                                       "if": {
+                                          "$ref": "tchmi:framework#/definitions/Trigger/definitions/expression"
+                                       },
+                                       "then": {
+                                          "type": "array",
+                                          "items": {
+                                             "$ref": "tchmi:framework#/definitions/Trigger/definitions/action"
+                                          }
+                                       },
+                                       "showThenActions": {
+                                          "type": "boolean",
+                                          "description": "Holds the current state of the Trigger GUI. Not used in runtime"
+                                       }
+                                    }
+                                 },
+                                 {
+                                    "type": "object",
+                                    "properties": {
+                                       "elseif": {
+                                          "$ref": "tchmi:framework#/definitions/Trigger/definitions/expression"
+                                       },
+                                       "then": {
+                                          "type": "array",
+                                          "items": {
+                                             "$ref": "tchmi:framework#/definitions/Trigger/definitions/action"
+                                          }
+                                       },
+                                       "showThenActions": {
+                                          "type": "boolean",
+                                          "description": "Holds the current state of the Trigger GUI. Not used in runtime"
+                                       }
+                                    }
+                                 },
+                                 {
+                                    "type": "object",
+                                    "properties": {
+                                       "else": {
+                                          "type": "array",
+                                          "items": {
+                                             "$ref": "tchmi:framework#/definitions/Trigger/definitions/action"
+                                          }
+                                       },
+                                       "showThenActions": {
+                                          "type": "boolean",
+                                          "description": "Holds the current state of the Trigger GUI. Not used in runtime"
+                                       }
+                                    }
+                                 }
+                              ]
+                           }
+                        },
+                        "success": {
+                           "description": "Success callback action list.",
+                           "type": "array",
+                           "items": {
+                              "$ref": "tchmi:framework#/definitions/Trigger/definitions/action"
+                           }
+                        },
+                        "error": {
+                           "description": "Error callback action list.",
+                           "type": "array",
+                           "items": {
+                              "$ref": "tchmi:framework#/definitions/Trigger/definitions/action"
+                           }
+                        },
+                        "active": {
+                           "type": "boolean",
+                           "description": "Should action be active? Defaults to true.",
+                           "default": true
+                        },
+                        "collapsed": {
+                           "type": "boolean",
+                           "description": "Should action be collapsed? Not used in runtime",
+                           "default": false
+                        },
+                        "asyncWait": {
+                           "type": "boolean"
+                        }
+                     },
+                     "required": [
+                        "objectType",
+                        "true",
+                        "false"
+                     ]
+                  },
+                  {
+                     "title": "SwitchCase",
+                     "type": "object",
+                     "description": "SWITCH .. CASE ..CASE - style condition",
+                     "properties": {
+                        "objectType": {
+                           "type": "string",
+                           "enum": [
+                              "SwitchCase"
+                           ]
+                        },
+                        "compare": {
+                           "$ref": "tchmi:framework#/definitions/Trigger/definitions/value"
+                        },
+                        "cases": {
+                           "type": "array",
+                           "items": {
+                              "$ref": "tchmi:framework#/definitions/Trigger/definitions/vCase"
+                           }
+                        },
+                        "caseDefault": {
+                           "$ref": "tchmi:framework#/definitions/Trigger/definitions/dCase"
+                        },
+                        "success": {
+                           "type": "array",
+                           "items": {
+                              "$ref": "tchmi:framework#/definitions/Trigger/definitions/action"
+                           }
+                        },
+                        "error": {
+                           "type": "array",
+                           "items": {
+                              "$ref": "tchmi:framework#/definitions/Trigger/definitions/action"
+                           }
+                        },
+                        "active": {
+                           "type": "boolean",
+                           "description": "Should action be active? Defaults to true.",
+                           "default": true
+                        },
+                        "collapsed": {
+                           "type": "boolean",
+                           "description": "Should action be collapsed? Not used in runtime",
+                           "default": false
+                        },
+                        "asyncWait": {
+                           "type": "boolean"
+                        }
+                     },
+                     "required": [
+                        "objectType",
+                        "compare",
+                        "cases",
+                        "caseDefault"
+                     ]
+                  },
+                  {
+                     "title": "WriteToSymbol",
+                     "type": "object",
+                     "description": "Write To Symbol",
+                     "properties": {
+                        "objectType": {
+                           "type": "string",
+                           "enum": [
+                              "WriteToSymbol"
+                           ]
+                        },
+                        "symbolExpression": {
+                           "$ref": "tchmi:framework#/definitions/Trigger/definitions/symbolExpression"
+                        },
+                        "value": {
+                           "$ref": "tchmi:framework#/definitions/Trigger/definitions/value"
+                        },
+                        "success": {
+                           "type": "array",
+                           "items": {
+                              "$ref": "tchmi:framework#/definitions/Trigger/definitions/action"
+                           }
+                        },
+                        "error": {
+                           "type": "array",
+                           "items": {
+                              "$ref": "tchmi:framework#/definitions/Trigger/definitions/action"
+                           }
+                        },
+                        "active": {
+                           "type": "boolean",
+                           "description": "Should action be active? Defaults to true.",
+                           "default": true
+                        },
+                        "collapsed": {
+                           "type": "boolean",
+                           "description": "Should action be collapsed? Not used in runtime",
+                           "default": false
+                        },
+                        "asyncWait": {
+                           "type": "boolean"
+                        }
+                     },
+                     "required": [
+                        "objectType",
+                        "symbolExpression",
+                        "value"
+                     ]
+                  },
+                  {
+                     "title": "Function",
+                     "type": "object",
+                     "properties": {
+                        "objectType": {
+                           "type": "string",
+                           "enum": [
+                              "Function"
+                           ]
+                        },
+                        "fn": {
+                           "type": "string"
+                        },
+                        "fnParams": {
+                           "type": "array",
+                           "items": {
+                              "$ref": "tchmi:framework#/definitions/Trigger/definitions/value"
+                           }
+                        },
+                        "success": {
+                           "type": "array",
+                           "items": {
+                              "$ref": "tchmi:framework#/definitions/Trigger/definitions/action"
+                           }
+                        },
+                        "error": {
+                           "type": "array",
+                           "items": {
+                              "$ref": "tchmi:framework#/definitions/Trigger/definitions/action"
+                           }
+                        },
+                        "active": {
+                           "type": "boolean",
+                           "description": "Should action be active? Defaults to true.",
+                           "default": true
+                        },
+                        "collapsed": {
+                           "type": "boolean",
+                           "description": "Should action be collapsed? Not used in runtime",
+                           "default": false
+                        },
+                        "asyncWait": {
+                           "type": "boolean"
+                        }
+                     },
+                     "required": [
+                        "objectType",
+                        "fn",
+                        "fnParams"
+                     ]
+                  },
+                  {
+                     "title": "JavaScript",
+                     "type": "object",
+                     "description": "Executes a user-defined JavaScript",
+                     "properties": {
+                        "objectType": {
+                           "type": "string",
+                           "enum": [
+                              "JavaScript"
+                           ]
+                        },
+                        "sourceLines": {
+                           "type": "array",
+                           "items": {
+                              "type": "string"
+                           }
+                        },
+                        "injectContextObject": {
+                           "type": "boolean",
+                           "description": "Inject context object.\nCall ctx.success() or ctx.error(TcHmi.Errors.ERROR)"
+                        },
+                        "waitMode": {
+                           "type": "string",
+                           "enum": [
+                              "Synchronous",
+                              "Asynchronous"
+                           ],
+                           "description": "Synchronous: Next step will called after last JavaScript line. Asynchronous: Next step will called after calling ctx.success() or ctx.error(TcHmi.Errors.ERROR)"
+                        },
+                        "success": {
+                           "type": "array",
+                           "items": {
+                              "$ref": "tchmi:framework#/definitions/Trigger/definitions/action"
+                           },
+                           "description": "Steps which will be called after call of ctx.success() with Asynchronous or last line with Synchronous."
+                        },
+                        "error": {
+                           "type": "array",
+                           "items": {
+                              "$ref": "tchmi:framework#/definitions/Trigger/definitions/action"
+                           },
+                           "description": "Steps which will be called after call of ctx.success() with Asynchronous or an exception with Synchronous."
+                        },
+                        "active": {
+                           "type": "boolean",
+                           "description": "Should action be active? Defaults to true.",
+                           "default": true
+                        },
+                        "collapsed": {
+                           "type": "boolean",
+                           "description": "Should action be collapsed? Not used in runtime",
+                           "default": false
+                        },
+                        "asyncWait": {
+                           "type": "boolean",
+                           "description": "The next step is called after the completion of this step."
+                        }
+                     },
+                     "required": [
+                        "objectType",
+                        "sourceLines"
+                     ]
+                  },
+                  {
+                     "title": "ActionTemplate",
+                     "type": "object",
+                     "properties": {
+                        "objectType": {
+                           "type": "string",
+                           "enum": [
+                              "ActionTemplate"
+                           ]
+                        },
+                        "description": {
+                           "type": "string",
+                           "description": "A long description of this control."
+                        },
+                        "templateName": {
+                           "type": "string"
+                        },
+                        "fnParams": {
+                           "type": "array",
+                           "items": {
+                              "$ref": "tchmi:framework#/definitions/Trigger/definitions/value"
+                           }
+                        },
+                        "success": {
+                           "type": "array",
+                           "items": {
+                              "$ref": "tchmi:framework#/definitions/Trigger/definitions/action"
+                           }
+                        },
+                        "error": {
+                           "type": "array",
+                           "items": {
+                              "$ref": "tchmi:framework#/definitions/Trigger/definitions/action"
+                           }
+                        },
+                        "active": {
+                           "type": "boolean",
+                           "description": "Should action be active? Defaults to true.",
+                           "default": true
+                        },
+                        "collapsed": {
+                           "type": "boolean",
+                           "description": "Should action be collapsed? Not used in runtime",
+                           "default": false
+                        },
+                        "asyncWait": {
+                           "type": "boolean"
+                        }
+                     },
+                     "required": [
+                        "objectType",
+                        "templateName",
+                        "fnParams"
+                     ]
+                  },
+                  {
+                     "title": "ControlApiFunction",
+                     "type": "object",
+                     "description": "",
+                     "properties": {
+                        "objectType": {
+                           "type": "string",
+                           "enum": [
+                              "ControlApiFunction"
+                           ]
+                        },
+                        "control": {
+                           "type": "string"
+                        },
+                        "fn": {
+                           "type": "string"
+                        },
+                        "fnParams": {
+                           "type": "array",
+                           "items": {
+                              "$ref": "tchmi:framework#/definitions/Trigger/definitions/value"
+                           }
+                        },
+                        "success": {
+                           "type": "array",
+                           "items": {
+                              "$ref": "tchmi:framework#/definitions/Trigger/definitions/action"
+                           }
+                        },
+                        "error": {
+                           "type": "array",
+                           "items": {
+                              "$ref": "tchmi:framework#/definitions/Trigger/definitions/action"
+                           }
+                        },
+                        "active": {
+                           "type": "boolean",
+                           "description": "Should action be active? Defaults to true.",
+                           "default": true
+                        },
+                        "collapsed": {
+                           "type": "boolean",
+                           "description": "Should action be collapsed? Not used in runtime",
+                           "default": false
+                        },
+                        "asyncWait": {
+                           "type": "boolean"
+                        }
+                     },
+                     "required": [
+                        "objectType",
+                        "control",
+                        "fn"
+                     ]
+                  },
+                  {
+                     "title": "FunctionExpression",
+                     "type": "object",
+                     "properties": {
+                        "objectType": {
+                           "type": "string",
+                           "enum": [
+                              "FunctionExpression"
+                           ]
+                        },
+                        "functionExpression": {
+                           "type": "string"
+                        },
+                        "success": {
+                           "type": "array",
+                           "items": {
+                              "$ref": "tchmi:framework#/definitions/Trigger/definitions/action"
+                           }
+                        },
+                        "error": {
+                           "type": "array",
+                           "items": {
+                              "$ref": "tchmi:framework#/definitions/Trigger/definitions/action"
+                           }
+                        },
+                        "active": {
+                           "type": "boolean",
+                           "description": "Should action be active? Defaults to true.",
+                           "default": true
+                        },
+                        "collapsed": {
+                           "type": "boolean",
+                           "description": "Should action be collapsed? Not used in runtime",
+                           "default": false
+                        },
+                        "asyncWait": {
+                           "type": "boolean"
+                        }
+                     },
+                     "required": [
+                        "objectType",
+                        "functionExpression"
+                     ]
+                  },
+                  {
+                     "title": "Comment",
+                     "type": "object",
+                     "description": "Free comment. Will be ignored on runtime.",
+                     "properties": {
+                        "objectType": {
+                           "type": "string",
+                           "enum": [
+                              "Comment"
+                           ]
+                        },
+                        "target": {
+                           "$ref": "tchmi:framework#/definitions/Trigger/definitions/comment"
+                        },
+                        "success": {
+                           "type": "array",
+                           "items": {
+                              "$ref": "tchmi:framework#/definitions/Trigger/definitions/action"
+                           }
+                        },
+                        "error": {
+                           "type": "array",
+                           "items": {
+                              "$ref": "tchmi:framework#/definitions/Trigger/definitions/action"
+                           }
+                        },
+                        "active": {
+                           "type": "boolean",
+                           "description": "Should action be active? Defaults to true.",
+                           "default": true
+                        },
+                        "collapsed": {
+                           "type": "boolean",
+                           "description": "Should action be collapsed? Not used in runtime",
+                           "default": false
+                        },
+                        "asyncWait": {
+                           "type": "boolean"
+                        }
+                     },
+                     "required": [
+                        "objectType"
+                     ]
+                  }
+               ]
+            },
+            "value": {
+               "anyOf": [
+                  {
+                     "title": "StaticValue",
+                     "type": "object",
+                     "properties": {
+                        "objectType": {
+                           "type": "string",
+                           "enum": [
+                              "StaticValue"
+                           ]
+                        },
+                        "value": {
+                           "anyOf": [
+                              {
+                                 "type": "string"
+                              },
+                              {
+                                 "type": "number"
+                              },
+                              {
+                                 "type": "boolean"
+                              },
+                              {
+                                 "type": "array"
+                              },
+                              {
+                                 "type": "object"
+                              }
+                           ]
+                        },
+                        "valueType": {
+                           "type": "string"
+                        }
+                     },
+                     "required": [
+                        "objectType",
+                        "value",
+                        "valueType"
+                     ]
+                  },
+                  {
+                     "title": "Symbol",
+                     "type": "object",
+                     "properties": {
+                        "objectType": {
+                           "type": "string",
+                           "enum": [
+                              "Symbol"
+                           ]
+                        },
+                        "symbolExpression": {
+                           "$ref": "tchmi:framework#/definitions/Trigger/definitions/symbolExpression"
+                        }
+                     },
+                     "required": [
+                        "objectType",
+                        "symbolExpression"
+                     ]
+                  },
+                  {
+                     "title": "EventDataObject",
+                     "type": "object",
+                     "properties": {
+                        "objectType": {
+                           "type": "string",
+                           "enum": [
+                              "EventDataObject"
+                           ]
+                        },
+                        "propertyPath": {
+                           "type": "string"
+                        }
+                     },
+                     "required": [
+                        "objectType",
+                        "propertyPath"
+                     ]
+                  },
+                  {
+                     "title": "FunctionExpression",
+                     "type": "object",
+                     "properties": {
+                        "objectType": {
+                           "type": "string",
+                           "enum": [
+                              "FunctionExpression"
+                           ]
+                        },
+                        "functionExpression": {
+                           "type": "string"
+                        }
+                     },
+                     "required": [
+                        "objectType",
+                        "functionExpression"
+                     ]
+                  }
+               ]
+            },
+            "comment": {
+               "title": "Comment",
+               "type": "string"
+            },
+            "bindingTarget": {
+               "anyOf": [
+                  {
+                     "title": "ControlAttributeBindingTarget",
+                     "type": "object",
+                     "description": "",
+                     "properties": {
+                        "objectType": {
+                           "type": "string",
+                           "enum": [
+                              "ControlAttributeBindingTarget"
+                           ]
+                        },
+                        "attributeExpression": {
+                           "$ref": "tchmi:framework#/definitions/Trigger/definitions/controlAttributeSymbolExpression"
+                        }
+                     },
+                     "required": [ "objectType" ]
+                  }
+               ]
+            },
+            "expression": {
+               "title": "Expression",
+               "type": "object",
+               "properties": {
+                  "compare1": {
+                     "$ref": "tchmi:framework#/definitions/Trigger/definitions/value"
+                  },
+                  "compare2": {
+                     "$ref": "tchmi:framework#/definitions/Trigger/definitions/value"
+                  },
+                  "compareOperator": {
+                     "type": "string",
+                     "enum": [
+                        "==",
+                        "===",
+                        "!=",
+                        "!==",
+                        "<",
+                        "<=",
+                        ">",
+                        ">="
+                     ]
+                  },
+                  "logic": {
+                     "anyOf": [
+                        {
+                           "type": "string",
+                           "enum": [
+                              "AND",
+                              "OR"
+                           ]
+                        },
+                        {
+                           "type": "null"
+                        }
+                     ]
+                  }
+               },
+               "required": [
+                  "compare1",
+                  "compare2",
+                  "compareOperator"
+               ]
+            },
+            "vCase": {
+               "title": "VCase",
+               "type": "object",
+               "properties": {
+                  "actions": {
+                     "type": "array",
+                     "items": {
+                        "$ref": "tchmi:framework#/definitions/Trigger/definitions/action"
+                     }
+                  },
+                  "caseValue": {
+                     "$ref": "tchmi:framework#/definitions/Trigger/definitions/value"
+                  }
+               },
+               "required": [
+                  "actions",
+                  "caseValue"
+               ]
+            },
+            "dCase": {
+               "title": "DCase",
+               "type": "object",
+               "properties": {
+                  "actions": {
+                     "type": "array",
+                     "items": {
+                        "$ref": "tchmi:framework#/definitions/Trigger/definitions/action"
+                     }
+                  }
+               },
+               "required": [
+                  "actions"
+               ]
+            },
+            "symbolExpression": {
+               "title": "SymbolExpression",
+               "type": "string",
+               "pattern": "^%(s|i|l|pp|tp|f|ctrl)%.+%\\1%$"
+            },
+            "controlSymbolExpression": {
+               "title": "controlSymbolExpression",
+               "type": "string",
+               "pattern": "^%(ctrl)%.+%\\1%$"
+            },
+            "controlAttributeSymbolExpression": {
+               "title": "ControlAttributeSymbolExpression",
+               "type": "string",
+               "pattern": "^%(ctrl)%.+%\\1%$"
+            }
+         },
+         "type": "object",
+         "properties": {
+            "event": {
+               "type": "string",
+               "minLength": 1
+            },
+            "preventDefault": {
+               "type": "boolean",
+               "description": "If activated the default action of the event will not be triggered.\nIf set on touch events the corresponding mouse events will not be triggered."
+            },
+            "displayName": {
+               "type": "string",
+               "description": "Name which should be presented the user."
+            },
+            "actions": {
+               "type": "array",
+               "minItems": 1,
+               "items": {
+                  "$ref": "tchmi:framework#/definitions/Trigger/definitions/action"
+               }
+            }
+         },
+         "additionalProperties": false,
+         "required": [
+            "event",
+            "actions"
+         ]
+      },
+      "TriggerList": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "array",
+         "items": {
+            "$ref": "tchmi:framework#/definitions/Trigger"
+         },
+         "minItems": 1
+      },
+      "TypeRef": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "string"
+      },
+      "UserControlPath": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "string",
+         "minLength": 1
+      },
+      "VerticalAlignment": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "string",
+         "enum": [
+            "Top",
+            "Center",
+            "Bottom"
+         ]
+      },
+      "VirtualControlRightMappingList": {
+         "$schema": "http://json-schema.org/draft-04/schema",
+         "type": "array",
+         "items": {
+            "type": "object",
+            "engineeringColumns": [
+               "virtualControlRight",
+               "controlRight"
+            ],
+            "properties": {
+               "virtualControlRight": {
+                  "description": "Name of the virtual control right.",
+                  "type": "string",
+                  "minLength": 1
+               },
+               "controlRight": {
+                  "description": "Real control right.",
+                  "type": "string",
+                  "minLength": 1
+               }
+            },
+            "required": [ "controlRight", "virtualControlRight" ]
+         }
+      },
+      "Visibility": {
+         "type": "string",
+         "enum": [
+            "Visible",
+            "Hidden",
+            "Collapsed"
+         ],
+         "default": "Visible"
+      }
+   }
+}

@@ -1,0 +1,46 @@
+{
+  "$schema": "../../../../../TcHmiFramework/Schema/ThemeDescription.Schema.json",
+  "controlTypeValues": {
+    "TcHmi.Controls.Beckhoff.TcHmiEventGrid": {
+      "attributes": {
+      },
+      "themedResources": {
+        "MessageIcon": {
+          "imagePath": "Images/message.svg",
+          "width": 30,
+          "height": 30
+        },
+        "AlarmIcon": {
+          "imagePath": "Images/alarm.svg",
+          "width": 30,
+          "height": 30
+        },
+        "VerboseIcon": {
+          "imagePath": "Images/verbose.svg",
+          "width": 30,
+          "height": 30
+        },
+        "InfoIcon": {
+          "imagePath": "Images/info.svg",
+          "width": 30,
+          "height": 30
+        },
+        "WarningIcon": {
+          "imagePath": "Images/warning.svg",
+          "width": 30,
+          "height": 30
+        },
+        "ErrorIcon": {
+          "imagePath": "Images/error.svg",
+          "width": 30,
+          "height": 30
+        },
+        "CriticalIcon": {
+          "imagePath": "Images/critical.svg",
+          "width": 30,
+          "height": 30
+        }
+      }
+    }
+  }
+}
