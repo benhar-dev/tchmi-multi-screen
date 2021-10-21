@@ -92,6 +92,8 @@ Please note that you will need to set the second window-position so that it corr
 ```
 This may require setting a positive or negative position depending on which side the second screen is placed.  
 
+![screen layout](docs/png/monitors.png)
+
 It is also important to set the two profiles to different values as the window position is stored here. 
 
 ### 3. Change the default url
