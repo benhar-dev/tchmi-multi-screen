@@ -1,1 +1,0 @@
-var TcHmi;!function(TcHmi){let Functions;!function(Functions){let Beckhoff;!function(Beckhoff){Beckhoff.SetLocale=function(locale){TcHmi.Locale.load(locale)}}(Beckhoff=Functions.Beckhoff||(Functions.Beckhoff={})),Functions.registerFunctionEx("SetLocale","TcHmi.Functions.Beckhoff",Beckhoff.SetLocale)}(Functions=TcHmi.Functions||(TcHmi.Functions={}))}(TcHmi||(TcHmi={}));

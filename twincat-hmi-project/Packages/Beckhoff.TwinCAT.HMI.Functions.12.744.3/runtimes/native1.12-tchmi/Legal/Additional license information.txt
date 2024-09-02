@@ -1,1 +1,0 @@
-The Beckhoff.TwinCAT.HMI.Functions package is using the following open source software components:

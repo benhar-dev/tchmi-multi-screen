@@ -1,4 +1,4 @@
-﻿-- Designer --
+-- Designer --
 <!DOCTYPE html>
 <html lang="en" class="tchmi-html-designer">
 <head>
@@ -19,7 +19,6 @@
 				"websocketIntervalTime": 200
 			}
 		};
-		TCHMI_ENGINEERING_VS_THEME = {{TCHMI_ENGINEERING_VS_THEME}};
 
    	    window.onload = function load() {
 			if((!this['TcHmi'] || !this['TcHmi'].System) && document.body){
@@ -49,7 +48,7 @@
 <html lang="en" class="tchmi-html-runtime">
 <head>
   <title>{{TITLE}}</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
   <!-- target-densitydpi=device-dpi -->
   <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">

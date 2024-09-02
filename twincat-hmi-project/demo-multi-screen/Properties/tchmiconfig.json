@@ -1,5 +1,5 @@
-﻿{
-  "$schema": "../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.744.3/runtimes/native1.12-tchmi/Schema/TchmiConfig.Schema.json",
+{
+  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.762.42/runtimes/native1.12-tchmi/Schema/TchmiConfig.Schema.json",
   "basePath": "./framework",
   "scaleMode": "None",
   "startupView": "Desktop.view",
@@ -25,7 +25,8 @@
           "type": "Stylesheet"
         }
       ],
-      "replacesThemeForControls": []
+      "replacesThemeForControls": [],
+      "replacesThemeForPackageComponents": []
     }
   },
   "dependencyFiles": [
@@ -35,7 +36,7 @@
       "type": "Stylesheet"
     },
     {
-      "name": "Function/LoadViewFromQuery.js",
+      "name": "CodeBehind/ViewSelector.js",
       "description": "",
       "type": "JavaScript"
     }
@@ -44,42 +45,28 @@
   "content": [],
   "views": [
     {
-      "url": "Desktop.view",
-      "preload": false,
-      "keepAlive": false
-    },
-    {
       "url": "ExtendedDesktop.view",
       "preload": false,
-      "keepAlive": false
-    }
-  ],
-  "userFunctions": [
+      "keepAlive": false,
+      "preloadBindings": false
+    },
     {
-      "url": "Function\\LoadViewFromQuery.js"
+      "url": "Desktop.view",
+      "preload": false,
+      "keepAlive": false,
+      "preloadBindings": false
     }
   ],
+  "userFunctions": [],
   "symbols": {
-    "internal": {}
+    "internal": {},
+    "themedResources": {}
   },
-  "trigger": [
-    {
-      "event": "onInitialized",
-      "actions": [
-        {
-          "objectType": "Function",
-          "active": true,
-          "fn": "TcHmi.Functions.demo_multi_screen.LoadViewFromQuery",
-          "fnParams": [],
-          "asyncWait": true
-        }
-      ]
-    }
-  ],
+  "trigger": [],
   "actionTemplates": [],
   "languages": {
-    "de-DE": "Localization\\de-DE.localization",
-    "en-US": "Localization\\en-US.localization"
+    "de-DE": "Localization/de-DE.localization",
+    "en-US": "Localization/en-US.localization"
   },
   "languageFallback": "",
   "disableLoadingOptimization": false,
@@ -88,6 +75,9 @@
       "defaultWidth": 800,
       "defaultHeight": 600
     }
+  },
+  "binding": {
+    "symbolError": "Ignore"
   },
   "packages": [
     {
@@ -110,5 +100,23 @@
     {
       "url": "KeyboardLayouts/US - compact.keyboard.json"
     }
-  ]
+  ],
+  "systemKeyboard": {
+    "providerName": "",
+    "projectKeyboardMapping": {
+      "de-DE": {
+        "text": "",
+        "decimal": "",
+        "numeric": ""
+      },
+      "en-US": {
+        "text": "",
+        "decimal": "",
+        "numeric": ""
+      }
+    }
+  },
+  "systemPopups": {
+    "providerName": "Beckhoff.TcHmiPopups"
+  }
 }

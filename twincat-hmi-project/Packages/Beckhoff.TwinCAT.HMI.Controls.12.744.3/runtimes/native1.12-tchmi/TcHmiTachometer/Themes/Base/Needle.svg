@@ -1,4 +1,0 @@
-<svg class="TcHmi_Controls_Beckhoff_TcHmiTachometer-needle-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-    <rect ry="1" y="7.5" x="39.5" height="32.5" width="1" stroke="none" fill="var(--needle-fill-color)"/>
-    <circle r="1.5" cy="40" cx="40" stroke="none" fill="var(--needle-fill-color)"/>
-</svg>

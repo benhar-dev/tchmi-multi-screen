@@ -1,4 +1,4 @@
-﻿{
+{
   "$schema": "http://json.schemastore.org/tsconfig",
   "compileOnSave": true,
   "compilerOptions": {
@@ -28,6 +28,6 @@
     "bin/"
   ],
   "include": [
-    "C:/dev/demo-multi-screen/twincat-hmi-project/Packages/Beckhoff.TwinCAT.HMI.Framework.12.744.3/runtimes/native1.12-tchmi/TcHmi.d.ts"
+    "../Packages/Beckhoff.TwinCAT.HMI.Framework.12.762.42/runtimes/native1.12-tchmi/TcHmi.d.ts"
   ]
 }
