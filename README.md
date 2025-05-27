@@ -1,19 +1,11 @@
 # Example using TcHmi on IPC with multiple screens (or multiple clients accessing different screens)
 
 ## Disclaimer
+This guide is a personal project and not a peer-reviewed publication or sponsored document. It is provided “as is,” without any warranties—express or implied—including, but not limited to, accuracy, completeness, reliability, or suitability for any purpose. The author(s) shall not be held liable for any errors, omissions, delays, or damages arising from the use or display of this information.
 
-This is a personal guide not a peer reviewed journal or a sponsored publication. We make
-no representations as to accuracy, completeness, correctness, suitability, or validity of any
-information and will not be liable for any errors, omissions, or delays in this information or any
-losses injuries, or damages arising from its display or use. All information is provided on an as
-is basis. It is the reader’s responsibility to verify their own facts.
+All opinions expressed are solely those of the author(s) and do not necessarily represent those of any organization, employer, or other entity. Any assumptions or conclusions presented are subject to revision or rethinking at any time.
 
-The views and opinions expressed in this guide are those of the authors and do not
-necessarily reflect the official policy or position of any other agency, organization, employer or
-company. Assumptions made in the analysis are not reflective of the position of any entity
-other than the author(s) and, since we are critically thinking human beings, these views are
-always subject to change, revision, and rethinking at any time. Please do not hold us to them
-in perpetuity.
+Use of this information, code, or scripts provided is at your own risk. Readers are encouraged to independently verify facts. This content does not constitute professional advice, and no client or advisory relationship is formed through its use.
 
 ## Overview
 
